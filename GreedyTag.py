@@ -9,8 +9,14 @@ def read_input(f_name):
 
 def greedy_train(sentence):
     tags = mle.get_possible_tags()
-    # MISSING START TAG!!!
-
+    for t1, t2, t3 in mle.combinations(tags, 3):
+        max_tag = 0
+        for word in sentence:
+            # MISSING START TAG!!!
+            e = mle.get_e(word, t3, e_mle)
+            q = mle.get_q(t1, t2, t3, q_mle)
+            if e * q >= max_tag: # might need to make in minimum log
+                max_tag = e * q
 
 
 
