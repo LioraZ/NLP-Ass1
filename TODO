@@ -1,0 +1,3 @@
+Deal with unknown characters
+create interpolation for the calculation of get_q and get_e in MLETrain
+Deal with start tag, when calling get_q, on two first items of sentence

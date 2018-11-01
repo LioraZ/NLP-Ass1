@@ -16,24 +16,28 @@ def reading_input(fname):
 
 
 def counting_quantities(tags):
-    pairs = [a + " " + b for a, b in combinations(tags, 2)]
-    triplets = [a + " " + b + " " + c for a, b, c in combinations(tags, 3)]
+    pairs = [join([a, b]) for a, b in combinations(tags, 2)]
+    triplets = [join([a, b, c]) for a, b, c in combinations(tags, 3)]
     return Counter(pairs), Counter(triplets)
 
 
 def write_estimations(pairs, tags, f_name):
     with open(f_name, "w") as file:
         for i in pairs:
-            file.write(i + '\t' + str(pairs[i]) + '\n' + str(i.split(" ")[1]) + '\t' + str(tags[i.split(" ")[1]]) + '\n')
+            file.write(join([i, '\t', str(pairs[i]), '\n', str(i.split(" ")[1]),
+                             '\t', str(tags[i.split(" ")[1]]), '\n']))
 
 
 def write_quantities(pairs, triplets, f_name):
     with open(f_name, "w") as file:
         for key in triplets:
-            pair_key = " ".join([k for k in key.split()[:-1]])
-            file.write(str(key) + '\t' + str(triplets[key]) + '\n')
-            file.write(str(pair_key) + '\t' + str(pairs[pair_key]) + '\n')
+            pair_key = join([k for k in key.split()[:-1]])
+            file.write(join([str(key), '\t', str(triplets[key]), '\n']))
+            file.write(join([str(pair_key), '\t', str(pairs[pair_key]), '\n']))
 
+
+def join(str_list):
+    return " ".join(str_list)
 
 
 def combinations(seq, n=2):
@@ -48,9 +52,58 @@ def combinations(seq, n=2):
         yield result
 
 
+def get_q(t1, t2, t3, f_name):
+    """
+    REMEMBER TO MAKE INTERPOLATION, BECAUSE CAN HAVE ZERO VALUE!!!
+    :param t1:
+    :param t2:
+    :param t3:
+    :return:
+    """
+    with open(f_name, encoding="utf8") as file:
+        for line in file:
+            tags, count = line.split('\t')
+            if tags is join([t1, t2, t3]):
+                next_line = next(line)
+                next_tags, next_count = next_line.split('\t')
+                return float(count) / float(next_count)
+            else:
+                next(line)
+        return None
+
+
+def get_e(w, t, f_name):
+    with open(f_name, encoding="utf8") as file:
+        for line in file:
+            word_and_tag, count = line.split('\t')
+            if word_and_tag is join([w, t]):
+                next_line = next(line)
+                next_tags, next_count = next_line.split('\t')
+                return float(count) / float(next_count)
+            else:
+                next(line)
+    return None
+
+
+def create_possible_tags(tags):
+    tags = set(tags)
+    with open("possible_tags", "w") as file:
+        for tag in tags:
+            file.write(tag + '\n')
+
+
+def get_possible_tags():
+    tags = []
+    with open("possible_tags", "w") as file:
+        for line in file:
+            tags.append(line)
+    return tags
+
+
 if __name__ == '__main__':
     script_name, f_name, q_mle, e_mle = sys.argv
     tags, data = reading_input(f_name)
-    write_estimations(Counter(data), Counter(tags), e_mle)
+    create_possible_tags(tags)
     pairs, triplets = counting_quantities(tags)
     write_quantities(pairs, triplets, q_mle)
+    write_estimations(Counter(data), Counter(tags), e_mle)
