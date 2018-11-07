@@ -5,13 +5,13 @@ import sys
 
 def reading_input(fname):
     tags = []
+    data = []
     with open(fname, encoding="utf8") as file:
-        data = [word for line in file for word in line.split()]
-        for word in data:
-            item = word.split('/')
-            tags.append(item[-1])
-        for i in range(len(data)):
-            data[i] = data[i].replace("/", " ")
+        input_data = [word for line in file for word in line.split()]
+    for word in input_data:
+        items = word.split('/')
+        tags.append(items[-1])
+        data.append(join(["/".join(items[:-1]), items[-1]]))
     return tags, data
 
 
@@ -52,13 +52,16 @@ def combinations(seq, n=2):
         yield result
 
 
-def get_q(t1, t2, t3, f_name):
-    """
-    REMEMBER TO MAKE INTERPOLATION, BECAUSE CAN HAVE ZERO VALUE!!!
-    :param t1:
-    :param t2:
-    :param t3:
-    :return:
+def get_q(t1, t2, t3, q_dic, f_name):
+    with open(f_name, encoding="utf8") as file:
+        lines = [line for line in file]
+    for line, next_line in zip(lines[::2], lines[1::2]):
+        tags, count = line.split('\t')
+        count = count.split("\n")[0]
+        if tags is join([t1, t2, t3]):
+            next_tags, next_count = next_line.split('\t')
+            return float(count) / float(next_count)
+    return 0
     """
     with open(f_name, encoding="utf8") as file:
         for line in file:
@@ -69,20 +72,43 @@ def get_q(t1, t2, t3, f_name):
                 return float(count) / float(next_count)
             else:
                 next(line)
-        return None
+        return None"""
 
 
-def get_e(w, t, f_name):
+def get_e_dict(f_name):
     with open(f_name, encoding="utf8") as file:
-        for line in file:
-            word_and_tag, count = line.split('\t')
-            if word_and_tag is join([w, t]):
-                next_line = next(line)
-                next_tags, next_count = next_line.split('\t')
-                return float(count) / float(next_count)
-            else:
-                next(line)
-    return None
+        lines = [line for line in file]
+    e_dict = {}
+    for line, next_line in zip(lines[::2], lines[1::2]):
+        word_and_tag, count = line.split('\t')
+        count = count.split("\n")[0]
+        next_tags, next_count = next_line.split('\t')
+        next_count = next_count.split("\n")[0]
+        if float(count) is 0 or float(next_count) is 0: #might be better way for handling division by 0
+            e_dict[word_and_tag] = 0
+        else:
+            prob = float(count) / float(next_count)
+            e_dict[word_and_tag] = prob
+            #e_dict[word_and_tag] = float(count) / float(next_count)
+    return e_dict
+
+
+def get_e(w, t, e_dict):
+    word_and_tag = join([w, t])
+    if word_and_tag in e_dict:
+        return e_dict[word_and_tag]
+    return 0
+    """with open(f_name, encoding="utf8") as file:
+        lines = [line for line in file]
+    for line, next_line in zip(lines[::2], lines[1::2]):
+        word_and_tag, count = line.split('\t')
+        count = count.split("\n")[0]
+        temp = join([w, t])
+        if word_and_tag is join([w, t]):
+            # next_line = next(line)
+            next_tags, next_count = next_line.split('\t')
+            return float(count) / float(next_count)"""
+    #return 0
 
 
 def create_possible_tags(tags):
@@ -94,9 +120,9 @@ def create_possible_tags(tags):
 
 def get_possible_tags():
     tags = []
-    with open("possible_tags", "w") as file:
+    with open("possible_tags", "r") as file:
         for line in file:
-            tags.append(line)
+            tags.append(line.split("\n")[0])
     return tags
 
 
