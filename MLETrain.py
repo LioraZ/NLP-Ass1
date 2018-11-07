@@ -100,6 +100,25 @@ def get_possible_tags():
     return tags
 
 
+def train_unknown(word, data):
+    data # get data
+    word = word.split()[0] # only if needed
+    pred = classify_unknown(word)
+
+
+def classify_unknown(word):
+    if word[-3:] is "ing":
+        return unk_type
+    # word contains a number
+    # word contains an upper-case letter
+    # word contains a hyphen
+    # word is all upper-case
+    # word contains a particular prefix (up to length 4)
+    # word contains a particular suffix (up to length 4)
+    # word is upper-case and has a digit and and a dash
+    return "NN"
+
+
 if __name__ == '__main__':
     script_name, f_name, q_mle, e_mle = sys.argv
     tags, data = reading_input(f_name)
