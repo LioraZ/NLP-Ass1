@@ -101,9 +101,10 @@ def get_possible_tags():
 
 
 def train_unknown(word, data):
-    data # get data
-    word = word.split()[0] # only if needed
-    pred = classify_unknown(word)
+    data = [k for k, v in data.items() if v is 1]
+    for key in data:
+        word = key.split()[0] # only if needed
+        pred = classify_unknown(word)
 
 
 def classify_unknown(word):
