@@ -52,8 +52,12 @@ def combinations(seq, n=2):
         yield result
 
 
-def get_q(t1, t2, t3, q_dic, f_name):
-    with open(f_name, encoding="utf8") as file:
+def get_q(t1, t2, t3, q_dic):
+    tags = join([t1, t2, t3])
+    if tags in q_dic:
+        return q_dic[tags]
+    return 0
+    """with open(f_name, encoding="utf8") as file:
         lines = [line for line in file]
     for line, next_line in zip(lines[::2], lines[1::2]):
         tags, count = line.split('\t')
@@ -61,7 +65,7 @@ def get_q(t1, t2, t3, q_dic, f_name):
         if tags is join([t1, t2, t3]):
             next_tags, next_count = next_line.split('\t')
             return float(count) / float(next_count)
-    return 0
+    return 0"""
     """
     with open(f_name, encoding="utf8") as file:
         for line in file:
@@ -75,12 +79,33 @@ def get_q(t1, t2, t3, q_dic, f_name):
         return None"""
 
 
+def get_q_dict(f_name):
+    with open(f_name, encoding="utf8") as file:
+        lines = [line for line in file]
+    q_dict = {}
+    for line, next_line in zip(lines[::2], lines[1::2]):
+        tags, count = line.split('\t')
+        tags = tags[:-1]
+        count = count.split("\n")[0]
+        next_tags, next_count = next_line.split('\t')
+        next_count = next_count.split("\n")[0]
+        if float(count) is 0 or float(next_count) is 0: #might be better way for handling division by 0
+            q_dict[tags] = 0
+        else:
+            prob = float(count) / float(next_count)
+            q_dict[tags] = prob
+            #e_dict[word_and_tag] = float(count) / float(next_count)
+    return q_dict
+
+
+
 def get_e_dict(f_name):
     with open(f_name, encoding="utf8") as file:
         lines = [line for line in file]
     e_dict = {}
     for line, next_line in zip(lines[::2], lines[1::2]):
         word_and_tag, count = line.split('\t')
+        word_and_tag = word_and_tag[:-1]
         count = count.split("\n")[0]
         next_tags, next_count = next_line.split('\t')
         next_count = next_count.split("\n")[0]
@@ -95,9 +120,10 @@ def get_e_dict(f_name):
 
 def get_e(w, t, e_dict):
     word_and_tag = join([w, t])
-    if word_and_tag in e_dict:
+    if word_and_tag in e_dict.keys():
         return e_dict[word_and_tag]
     return 0
+    #return e_dict.get(word_and_tag, 0)
     """with open(f_name, encoding="utf8") as file:
         lines = [line for line in file]
     for line, next_line in zip(lines[::2], lines[1::2]):
@@ -108,7 +134,6 @@ def get_e(w, t, e_dict):
             # next_line = next(line)
             next_tags, next_count = next_line.split('\t')
             return float(count) / float(next_count)"""
-    #return 0
 
 
 def create_possible_tags(tags):
