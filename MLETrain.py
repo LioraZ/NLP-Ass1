@@ -4,6 +4,7 @@ import sys
 
 
 def reading_input(fname):
+    """ data is list of words and there tags (in one string)"""
     tags = []
     data = []
     with open(fname, encoding="utf8") as file:
@@ -21,7 +22,15 @@ def counting_quantities(tags):
     return Counter(pairs), Counter(triplets)
 
 
-def write_estimations(pairs, tags, f_name):
+def merge_two_dicts(x, y):
+    """Given two dicts, merge them into a new dict as a shallow copy."""
+    z = x.copy()
+    z.update(y)
+    return z
+
+
+def write_estimations(pairs1, tags, f_name):
+    pairs = merge_two_dicts(pairs1, train_unknown(pairs1))
     with open(f_name, "w") as file:
         for i in pairs:
             file.write(join([i, '\t', str(pairs[i]), '\n', str(i.split(" ")[1]),
@@ -151,11 +160,52 @@ def get_possible_tags():
     return tags
 
 
-def train_unknown(word, data):
-    data = [k for k, v in data.items() if v is 1]
-    for key in data:
-        word = key.split()[0] # only if needed
-        pred = classify_unknown(word)
+
+def my_counter(data):
+    wordsCount = {}
+    words = []  # list of words
+    for word in data:
+        if word[0] not in wordsCount:
+            wordsCount[word[0]] = [0, ""]
+        wordsCount[word[0]][0] += 1   
+        wordsCount[word[0]][1] = word[1]
+    return wordsCount
+
+def train_unknown(data):
+    """ data is dict of words and there tags -> there count """
+    data1 = [[k.split()[0],k.split()[1]] for k in data]    
+    data1 = my_counter(data1)
+    data1 = [[k, data1[k][1]] for k in data1 if data1[k][0] is 1] #now data1 is list of words which appear only once and there tag [word, tag]
+    dict_to_e = {} # dictionary of unknowns to add to e.mle
+    for word, tag in data1:
+        current_str = "unk"
+        if (word[0].isupper()):
+            current_str = "Unk"
+        if (word[-3:] is "ing"):    
+            current_str = current_str + "ing"
+        elif (word[-2:] == 'ly'):
+            current_str = current_str + "ly"
+        elif (word[-4:] == 'tial'):
+            current_str = current_str + "tial"  
+        elif (word[-2:] == 'al'):
+            current_str = current_str + "al"
+        elif (word[-4:] == 'tion'):
+            current_str = current_str + "tion"  
+        elif (word[-4:] == 'ed'):
+            current_str = current_str + "ed"  
+        #maybe should add some more ifs..
+        try:
+            word = float(word)
+            current_str =  'unk-num'
+        except ValueError:
+            pass  # it was a string, not an float
+
+        current_str = current_str + " " + tag
+        if current_str not in dict_to_e:
+            dict_to_e[current_str] = 0
+        dict_to_e[current_str] += 1
+   # print (dict_to_e)
+    return dict_to_e
 
 
 def classify_unknown(word):
@@ -173,8 +223,11 @@ def classify_unknown(word):
 
 if __name__ == '__main__':
     script_name, f_name, q_mle, e_mle = sys.argv
-    tags, data = reading_input(f_name)
+    tags, data = reading_input(f_name)    
     create_possible_tags(tags)
     pairs, triplets = counting_quantities(tags)
     write_quantities(pairs, triplets, q_mle)
     write_estimations(Counter(data), Counter(tags), e_mle)
+    
+
+
