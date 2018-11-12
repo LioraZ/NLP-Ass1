@@ -17,9 +17,10 @@ def reading_input(fname):
 
 
 def counting_quantities(tags):
+    singles = [a for a in tags]
     pairs = [join([a, b]) for a, b in combinations(tags, 2)]
     triplets = [join([a, b, c]) for a, b, c in combinations(tags, 3)]
-    return Counter(pairs), Counter(triplets)
+    return Counter(pairs), Counter(triplets), Counter(singles)
 
 
 def merge_two_dicts(x, y):
@@ -37,12 +38,15 @@ def write_estimations(pairs1, tags, f_name):
                              '\t', str(tags[i.split(" ")[1]]), '\n']))
 
 
-def write_quantities(pairs, triplets, f_name):
+def write_quantities(pairs, triplets, singles, f_name):
     with open(f_name, "w") as file:
         for key in triplets:
             pair_key = join([k for k in key.split()[:-1]])
             file.write(join([str(key), '\t', str(triplets[key]), '\n']))
             file.write(join([str(pair_key), '\t', str(pairs[pair_key]), '\n']))
+        for key in pairs:
+            single_key = join([k for k in key.split()[:-1]])
+
 
 
 def join(str_list):
@@ -66,26 +70,6 @@ def get_q(t1, t2, t3, q_dic):
     if tags in q_dic:
         return q_dic[tags]
     return 0
-    """with open(f_name, encoding="utf8") as file:
-        lines = [line for line in file]
-    for line, next_line in zip(lines[::2], lines[1::2]):
-        tags, count = line.split('\t')
-        count = count.split("\n")[0]
-        if tags is join([t1, t2, t3]):
-            next_tags, next_count = next_line.split('\t')
-            return float(count) / float(next_count)
-    return 0"""
-    """
-    with open(f_name, encoding="utf8") as file:
-        for line in file:
-            tags, count = line.split('\t')
-            if tags is join([t1, t2, t3]):
-                next_line = next(line)
-                next_tags, next_count = next_line.split('\t')
-                return float(count) / float(next_count)
-            else:
-                next(line)
-        return None"""
 
 
 def get_q_dict(f_name):
@@ -105,7 +89,6 @@ def get_q_dict(f_name):
             q_dict[tags] = prob
             #e_dict[word_and_tag] = float(count) / float(next_count)
     return q_dict
-
 
 
 def get_e_dict(f_name):
@@ -132,17 +115,6 @@ def get_e(w, t, e_dict):
     if word_and_tag in e_dict.keys():
         return e_dict[word_and_tag]
     return 0
-    #return e_dict.get(word_and_tag, 0)
-    """with open(f_name, encoding="utf8") as file:
-        lines = [line for line in file]
-    for line, next_line in zip(lines[::2], lines[1::2]):
-        word_and_tag, count = line.split('\t')
-        count = count.split("\n")[0]
-        temp = join([w, t])
-        if word_and_tag is join([w, t]):
-            # next_line = next(line)
-            next_tags, next_count = next_line.split('\t')
-            return float(count) / float(next_count)"""
 
 
 def create_possible_tags(tags):
@@ -160,7 +132,6 @@ def get_possible_tags():
     return tags
 
 
-
 def my_counter(data):
     wordsCount = {}
     words = []  # list of words
@@ -170,6 +141,7 @@ def my_counter(data):
         wordsCount[word[0]][0] += 1   
         wordsCount[word[0]][1] = word[1]
     return wordsCount
+
 
 def train_unknown(data):
     """ data is dict of words and there tags -> there count """
@@ -206,6 +178,7 @@ def train_unknown(data):
         dict_to_e[current_str] += 1
    # print (dict_to_e)
     return dict_to_e
+    #return {**data, **dict_to_e}
 
 
 def classify_unknown(word):
@@ -223,10 +196,11 @@ def classify_unknown(word):
 
 if __name__ == '__main__':
     script_name, f_name, q_mle, e_mle = sys.argv
-    tags, data = reading_input(f_name)    
+    tags, data = reading_input(f_name)
+    unknown_dict = train_unknown(data)
     create_possible_tags(tags)
-    pairs, triplets = counting_quantities(tags)
-    write_quantities(pairs, triplets, q_mle)
+    pairs, triplets, singles = counting_quantities(tags)
+    write_quantities(pairs, triplets, singles, q_mle)
     write_estimations(Counter(data), Counter(tags), e_mle)
     
 
