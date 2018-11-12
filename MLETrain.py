@@ -197,6 +197,12 @@ def classify_unknown(word):
 if __name__ == '__main__':
     script_name, f_name, q_mle, e_mle = sys.argv
     tags, data = reading_input(f_name)
+    """
+    print (tags)
+    print (data)
+    exit()
+    """
+
     unknown_dict = train_unknown(data)
     create_possible_tags(tags)
     pairs, triplets, singles = counting_quantities(tags)
