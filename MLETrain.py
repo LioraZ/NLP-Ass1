@@ -20,7 +20,7 @@ def counting_quantities(tags):
     singles = [a for a in tags]
     pairs = [join([a, b]) for a, b in combinations(tags, 2)]
     triplets = [join([a, b, c]) for a, b, c in combinations(tags, 3)]
-    return Counter(pairs), Counter(triplets), Counter(singles)
+    return Counter(pairs), Counter(triplets), Counter(singles), len(tags)
 
 
 def merge_two_dicts(x, y):
@@ -38,14 +38,20 @@ def write_estimations(pairs1, tags, f_name):
                              '\t', str(tags[i.split(" ")[1]]), '\n']))
 
 
-def write_quantities(pairs, triplets, singles, f_name):
-    with open(f_name, "w") as file:
+def write_quantities():
+    with open(q_mle, "w") as file:
         for key in triplets:
             pair_key = join([k for k in key.split()[:-1]])
             file.write(join([str(key), '\t', str(triplets[key]), '\n']))
             file.write(join([str(pair_key), '\t', str(pairs[pair_key]), '\n']))
         for key in pairs:
             single_key = join([k for k in key.split()[:-1]])
+            file.write(join([str(key), '\t', str(pairs[key]), '\n']))
+            file.write(join([str(single_key), '\t', str(singles[single_key]), '\n']))
+        for key in singles:
+            file.write(join([str(key), '\t', str(singles[key]), '\n']))
+            file.write(join(["All tags", '\t', str(tags_size), '\n']))
+
 
 
 
@@ -65,11 +71,25 @@ def combinations(seq, n=2):
         yield result
 
 
-def get_q(t1, t2, t3, q_dic):
-    tags = join([t1, t2, t3])
-    if tags in q_dic:
-        return q_dic[tags]
-    return 0
+def get_q(t1, t2, t3, lambda_values, q_dic):
+    l1, l2, l3 = lambda_values
+    #print(lambda_values)
+    #print(str(t1) + "    " + str(t2) + "   " + str(t3) + "\n")
+    if t1 is None:
+        pred1 = 0
+    else:
+        pred1 = l1 * q_dic.get(join([t1, t2, t3]), 0)
+    if t2 is None:
+        pred2 = 0
+    else:
+        pred2 = l2 * q_dic.get(join([t2, t3]), 0)
+    pred3 = l3 * q_dic.get(t3, 0)
+    return pred1 + pred2 + pred3
+
+
+def isclose(a, b, rel_tol=1e-09, abs_tol=0.0):
+    return abs(a-b) <= max(rel_tol * max(abs(a), abs(b)), abs_tol)
+
 
 
 def get_q_dict(f_name):
@@ -197,10 +217,10 @@ def classify_unknown(word):
 if __name__ == '__main__':
     script_name, f_name, q_mle, e_mle = sys.argv
     tags, data = reading_input(f_name)
-    unknown_dict = train_unknown(data)
+    #unknown_dict = train_unknown(data)
+    pairs, triplets, singles, tags_size = counting_quantities(tags)
     create_possible_tags(tags)
-    pairs, triplets, singles = counting_quantities(tags)
-    write_quantities(pairs, triplets, singles, q_mle)
+    write_quantities()
     write_estimations(Counter(data), Counter(tags), e_mle)
     
 
