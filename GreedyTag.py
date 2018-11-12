@@ -26,6 +26,8 @@ def greedy_train(sentence):
     for word in sentence.split():
         max_score = 0
         best_tag = ""
+        best_unknown_score = 0
+        best_unknown_tag = ""
         #best_tag = {"", 0}
         for tag in tags:
             e = mle.get_e(word, tag, e_dict)
@@ -37,12 +39,22 @@ def greedy_train(sentence):
             if e is not 0:
                 e = - math.log(e)"""
             if e * q > max_score:
+                max_score = e * q
                 best_tag = tag
+            if e == 0:
+                temp_score = q * mle.get_unknown_e(word, tag, e_dict)
+                if temp_score > best_unknown_score:
+                    best_unknown_score = temp_score
+                    best_unknown_tag = tag
+        if max_score == 0:
+            best_tag = best_unknown_tag
         preds.append(best_tag)
     return preds[2::]
 
 
 def greedy_train_with_tag(num_epoch, sentence):
+    if int(num_epoch) == 1:
+        print("yay")
     print("Epoch: " + str(num_epoch) + "\n")
     tags = []
     data = []

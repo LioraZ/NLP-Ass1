@@ -131,10 +131,16 @@ def get_e_dict(f_name):
 
 
 def get_e(w, t, e_dict):
-    word_and_tag = join([w, t])
+    return e_dict.get(join([w, t]), 0)
+    """word_and_tag = join([w, t])
+    #e = e_dict.get(join([w, t]), 0)
     if word_and_tag in e_dict.keys():
-        return e_dict[word_and_tag]
-    return 0
+        return e_dict[word_and_tag]"""
+
+
+def get_unknown_e(w, t, e_dict):
+    unk = classify_unknown(w)
+    return e_dict.get(join([unk, t]), 0)
 
 
 def create_possible_tags(tags):
@@ -170,9 +176,9 @@ def train_unknown(data):
     data1 = [[k, data1[k][1]] for k in data1 if data1[k][0] is 1] #now data1 is list of words which appear only once and there tag [word, tag]
     dict_to_e = {} # dictionary of unknowns to add to e.mle
     for word, tag in data1:
-        current_str = "unk"
+        current_str = "^unk"
         if (word[0].isupper()):
-            current_str = "Unk"
+            current_str = "^Unk"
         if (word[-3:] is "ing"):    
             current_str = current_str + "ing"
         elif (word[-2:] == 'ly'):
@@ -188,10 +194,11 @@ def train_unknown(data):
         #maybe should add some more ifs..
         try:
             word = float(word)
-            current_str =  'unk-num'
+            current_str = "^unk-num"
         except ValueError:
             pass  # it was a string, not an float
-
+        if current_str == "^unk":
+            continue
         current_str = current_str + " " + tag
         if current_str not in dict_to_e:
             dict_to_e[current_str] = 0
@@ -202,7 +209,30 @@ def train_unknown(data):
 
 
 def classify_unknown(word):
-    if word[-3:] is "ing":
+    current_str = "^unk"
+    if (word[0].isupper()):
+        current_str = "^Unk"
+    if (word[-3:] is "ing"):
+        current_str = current_str + "ing"
+    elif (word[-2:] == 'ly'):
+        current_str = current_str + "ly"
+    elif (word[-4:] == 'tial'):
+        current_str = current_str + "tial"
+    elif (word[-2:] == 'al'):
+        current_str = current_str + "al"
+    elif (word[-4:] == 'tion'):
+        current_str = current_str + "tion"
+    elif (word[-4:] == 'ed'):
+        current_str = current_str + "ed"
+        # maybe should add some more ifs..
+    try:
+        word = float(word)
+        current_str = "^unk-num"
+    except ValueError:
+        pass  # it was a string, not an float
+    return current_str
+
+    """if word[-3:] is "ing":
         return unk_type
     # word contains a number
     # word contains an upper-case letter
@@ -211,7 +241,7 @@ def classify_unknown(word):
     # word contains a particular prefix (up to length 4)
     # word contains a particular suffix (up to length 4)
     # word is upper-case and has a digit and and a dash
-    return "NN"
+    return "NN"""""
 
 
 if __name__ == '__main__':
