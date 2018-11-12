@@ -32232,3 +32232,2821 @@ WRB VBZ RB 	 1
 WRB VBZ 	 17 
 NN WRB CD 	 1 
 NN WRB 	 321 
+IN DT 	 34872 
+IN 	 107862 
+DT NNP 	 9046 
+DT 	 81832 
+NNP CD 	 1752 
+NNP 	 91466 
+CD NN 	 7378 
+CD 	 36568 
+NN IN 	 35541 
+NN 	 132935 
+IN `` 	 575 
+IN 	 107862 
+`` DT 	 1014 
+`` 	 7092 
+DT NN 	 38873 
+DT 	 81832 
+NN '' 	 686 
+NN 	 132935 
+'' IN 	 949 
+'' 	 6919 
+IN NNP 	 15763 
+IN 	 107862 
+NNP POS 	 5094 
+NNP 	 91466 
+POS NNP 	 905 
+POS 	 8701 
+NNP NNP 	 34528 
+NNP 	 91466 
+NNP ( 	 313 
+NNP 	 91466 
+( `` 	 42 
+( 	 1366 
+`` VBN 	 75 
+`` 	 7092 
+VBN NNS 	 760 
+VBN 	 20024 
+NNS VBP 	 5077 
+NNS 	 59856 
+VBP DT 	 1473 
+VBP 	 12491 
+NNP , 	 12688 
+NNP 	 91466 
+, '' 	 2796 
+, 	 48727 
+'' NN 	 299 
+'' 	 6919 
+NN CC 	 5369 
+NN 	 132935 
+CC NNS 	 1715 
+CC 	 23959 
+NNS ) 	 98 
+NNS 	 59856 
+) , 	 225 
+) 	 1376 
+, DT 	 6489 
+, 	 48727 
+, VBN 	 993 
+, 	 48727 
+VBN IN 	 8093 
+VBN 	 20024 
+, VBD 	 2555 
+, 	 48727 
+VBD RB 	 2519 
+VBD 	 29889 
+RB VBN 	 2431 
+RB 	 30970 
+NNP . 	 4987 
+NNP 	 91466 
+. NNP 	 7360 
+. 	 39478 
+NNP VBZ 	 3532 
+NNP 	 91466 
+VBZ NNP 	 1301 
+VBZ 	 21672 
+NNP NNPS 	 1530 
+NNP 	 91466 
+NNPS NNP 	 750 
+NNPS 	 2673 
+NNP VBD 	 6013 
+NNP 	 91466 
+VBD PRP 	 1800 
+VBD 	 29889 
+PRP VBZ 	 3875 
+PRP 	 17436 
+VBZ PRP$ 	 261 
+VBZ 	 21672 
+PRP$ NNP 	 408 
+PRP$ 	 8407 
+NNP NNS 	 2220 
+NNP 	 91466 
+NNS TO 	 1481 
+NNS 	 59856 
+TO VB 	 12777 
+TO 	 13049 
+VB JJ 	 2239 
+VB 	 26438 
+JJ IN 	 4016 
+JJ 	 61217 
+IN IN 	 2232 
+IN 	 107862 
+IN CD 	 7629 
+IN 	 107862 
+CD NNS 	 5737 
+CD 	 36568 
+NNS IN 	 14963 
+NNS 	 59856 
+CD . 	 2634 
+CD 	 36568 
+. DT 	 8090 
+. 	 39478 
+NN NN 	 16252 
+NN 	 132935 
+NN JJ 	 1179 
+NN 	 132935 
+JJ NN 	 27550 
+JJ 	 61217 
+NN VBD 	 6310 
+NN 	 132935 
+VBD CD 	 1979 
+VBD 	 29889 
+, NN 	 2404 
+, 	 48727 
+CC JJ 	 2645 
+CC 	 23959 
+NN , 	 15248 
+NN 	 132935 
+VBZ NN 	 753 
+VBZ 	 21672 
+NNP CC 	 3787 
+NNP 	 91466 
+CC NNP 	 3824 
+CC 	 23959 
+, CC 	 4517 
+, 	 48727 
+CC IN 	 1270 
+CC 	 23959 
+IN JJ 	 9572 
+IN 	 107862 
+JJ JJ 	 4571 
+JJ 	 61217 
+JJ NNS 	 14209 
+JJ 	 61217 
+NNS . 	 8098 
+NNS 	 59856 
+VBD PRP$ 	 792 
+VBD 	 29889 
+PRP$ NN 	 3744 
+PRP$ 	 8407 
+NNS DT 	 1022 
+NNS 	 59856 
+NN . 	 14493 
+NN 	 132935 
+DT JJ 	 17848 
+DT 	 81832 
+NN MD 	 2347 
+NN 	 132935 
+MD VB 	 7818 
+MD 	 9803 
+JJ NNP 	 2278 
+JJ 	 61217 
+NN VBZ 	 5812 
+NN 	 132935 
+VBZ RB 	 2916 
+VBZ 	 21672 
+VBN VBN 	 639 
+VBN 	 20024 
+VBN . 	 994 
+VBN 	 20024 
+, VBZ 	 1560 
+, 	 48727 
+VBZ CC 	 60 
+VBZ 	 21672 
+CC VBZ 	 552 
+CC 	 23959 
+VBZ JJ 	 1629 
+VBZ 	 21672 
+JJ , 	 1780 
+JJ 	 61217 
+CC NN 	 2856 
+CC 	 23959 
+NN NNS 	 10344 
+NN 	 132935 
+. NNS 	 1538 
+. 	 39478 
+VBP VBG 	 1089 
+VBP 	 12491 
+VBG IN 	 2767 
+VBG 	 14846 
+DT NNPS 	 416 
+DT 	 81832 
+NNPS CC 	 210 
+NNPS 	 2673 
+NNP RB 	 851 
+NNP 	 91466 
+RB TO 	 432 
+RB 	 30970 
+VB PRP$ 	 1159 
+VB 	 26438 
+IN NN 	 11424 
+IN 	 107862 
+NNS CC 	 3589 
+NNS 	 59856 
+NNP NN 	 5344 
+NNP 	 91466 
+NN TO 	 2605 
+NN 	 132935 
+VB NN 	 1629 
+VB 	 26438 
+NNS MD 	 1676 
+NNS 	 59856 
+VB DT 	 5850 
+VB 	 26438 
+, JJ 	 2029 
+, 	 48727 
+VBP . 	 239 
+VBP 	 12491 
+. PRP 	 2195 
+. 	 39478 
+PRP VBP 	 3076 
+PRP 	 17436 
+IN NNS 	 6346 
+IN 	 107862 
+NNS VBD 	 4328 
+NNS 	 59856 
+VBD DT 	 5057 
+VBD 	 29889 
+IN , 	 254 
+IN 	 107862 
+, IN 	 4428 
+, 	 48727 
+NNS , 	 7446 
+NNS 	 59856 
+, MD 	 501 
+, 	 48727 
+IN VBG 	 3227 
+IN 	 107862 
+VBG NNS 	 1317 
+VBG 	 14846 
+IN PRP$ 	 3867 
+IN 	 107862 
+PRP$ JJ 	 2023 
+PRP$ 	 8407 
+NNS POS 	 547 
+NNS 	 59856 
+POS NNS 	 1128 
+POS 	 8701 
+DT VBN 	 689 
+DT 	 81832 
+NNS RB 	 1882 
+NNS 	 59856 
+RB MD 	 330 
+RB 	 30970 
+VB NNS 	 1341 
+VB 	 26438 
+NNS RBR 	 119 
+NNS 	 59856 
+RBR CC 	 39 
+RBR 	 1768 
+CC RBR 	 65 
+CC 	 23959 
+RBR RB 	 132 
+RBR 	 1768 
+RB . 	 1552 
+RB 	 30970 
+. JJ 	 1518 
+. 	 39478 
+DT NNS 	 5988 
+DT 	 81832 
+VBP IN 	 1215 
+VBP 	 12491 
+VBZ VBN 	 3197 
+VBZ 	 21672 
+VBN RB 	 973 
+VBN 	 20024 
+DT CD 	 1876 
+DT 	 81832 
+NN : 	 1498 
+NN 	 132935 
+: CC 	 321 
+: 	 4772 
+CC DT 	 2698 
+CC 	 23959 
+RB RB 	 2263 
+RB 	 30970 
+: IN 	 384 
+: 	 4772 
+VB RB 	 1318 
+VB 	 26438 
+RB IN 	 4391 
+RB 	 30970 
+. `` 	 2944 
+. 	 39478 
+VBN NN 	 1305 
+VBN 	 20024 
+'' VBD 	 618 
+'' 	 6919 
+VBD NNP 	 1642 
+VBD 	 29889 
+NNP IN 	 3889 
+NNP 	 91466 
+, NNP 	 6196 
+, 	 48727 
+CD IN 	 4427 
+CD 	 36568 
+VBD VBN 	 2887 
+VBD 	 29889 
+VBN NNP 	 527 
+VBN 	 20024 
+`` RB 	 351 
+`` 	 7092 
+RB DT 	 1465 
+RB 	 30970 
+RB VB 	 3185 
+RB 	 30970 
+VB IN 	 3360 
+VB 	 26438 
+. '' 	 2358 
+. 	 39478 
+'' RB 	 240 
+'' 	 6919 
+RB , 	 2992 
+RB 	 30970 
+VBP NNS 	 423 
+VBP 	 12491 
+, NNS 	 1295 
+, 	 48727 
+PRP$ NNS 	 1638 
+PRP$ 	 8407 
+. CC 	 2086 
+. 	 39478 
+, VBG 	 2187 
+, 	 48727 
+, VBP 	 419 
+, 	 48727 
+VBP PRP$ 	 133 
+VBP 	 12491 
+CC VB 	 771 
+CC 	 23959 
+NNS `` 	 135 
+NNS 	 59856 
+`` WP 	 70 
+`` 	 7092 
+WP VBP 	 382 
+WP 	 2363 
+VBP RB 	 2070 
+VBP 	 12491 
+RB VBG 	 926 
+RB 	 30970 
+VBG DT 	 2779 
+VBG 	 14846 
+POS NN 	 3617 
+POS 	 8701 
+, WDT 	 1743 
+, 	 48727 
+WDT VBD 	 987 
+WDT 	 4294 
+VBD IN 	 3998 
+VBD 	 29889 
+VBN JJR 	 66 
+VBN 	 20024 
+JJR NN 	 903 
+JJR 	 3238 
+IN RB 	 1483 
+IN 	 107862 
+VBD . 	 1350 
+VBD 	 29889 
+NNP MD 	 1024 
+NNP 	 91466 
+MD RB 	 1665 
+MD 	 9803 
+NN RB 	 2431 
+NN 	 132935 
+RB JJ 	 3200 
+RB 	 30970 
+, PRP 	 2086 
+, 	 48727 
+PRP VBD 	 4308 
+PRP 	 17436 
+. RB 	 2056 
+. 	 39478 
+RB PDT 	 20 
+RB 	 30970 
+PDT DT 	 341 
+PDT 	 368 
+DT WP 	 66 
+DT 	 81832 
+WP VBD 	 645 
+WP 	 2363 
+VBD VBP 	 4 
+VBD 	 29889 
+IN NNPS 	 178 
+IN 	 107862 
+NNPS IN 	 182 
+NNPS 	 2673 
+VBZ , 	 555 
+VBZ 	 21672 
+`` MD 	 89 
+`` 	 7092 
+DT ( 	 43 
+DT 	 81832 
+( NN 	 94 
+( 	 1366 
+NN ) 	 233 
+NN 	 132935 
+) IN 	 186 
+) 	 1376 
+VBG PRP 	 359 
+VBG 	 14846 
+PRP RBR 	 27 
+PRP 	 17436 
+'' WP 	 21 
+'' 	 6919 
+WP DT 	 105 
+WP 	 2363 
+NNS WP 	 416 
+NNS 	 59856 
+IN RBS 	 20 
+IN 	 107862 
+RBS VBZ 	 1 
+RBS 	 451 
+VBZ DT 	 3528 
+VBZ 	 21672 
+NN PRP 	 581 
+NN 	 132935 
+JJ `` 	 122 
+JJ 	 61217 
+`` NNS 	 259 
+`` 	 7092 
+NNS '' 	 232 
+NNS 	 59856 
+: NN 	 210 
+: 	 4772 
+IN JJR 	 540 
+IN 	 107862 
+JJR IN 	 1061 
+JJR 	 3238 
+. VBG 	 441 
+. 	 39478 
+RB VBD 	 1668 
+RB 	 30970 
+NNS VBG 	 860 
+NNS 	 59856 
+VB JJR 	 292 
+VB 	 26438 
+JJ TO 	 1096 
+JJ 	 61217 
+VB VBN 	 2236 
+VB 	 26438 
+VBN TO 	 1380 
+VBN 	 20024 
+VBP TO 	 569 
+VBP 	 12491 
+. VBN 	 214 
+. 	 39478 
+VBD , 	 691 
+VBD 	 29889 
+NNS VBN 	 1264 
+NNS 	 59856 
+RBS IN 	 21 
+RBS 	 451 
+RB RBR 	 230 
+RB 	 30970 
+'' CC 	 418 
+'' 	 6919 
+NN WDT 	 1040 
+NN 	 132935 
+WDT VBZ 	 1247 
+WDT 	 4294 
+VB TO 	 741 
+VB 	 26438 
+VBD VBG 	 680 
+VBD 	 29889 
+NNP TO 	 526 
+NNP 	 91466 
+, RB 	 2624 
+, 	 48727 
+VBZ WP 	 41 
+VBZ 	 21672 
+WP VBZ 	 536 
+WP 	 2363 
+VBZ PRP 	 521 
+VBZ 	 21672 
+PRP WRB 	 21 
+PRP 	 17436 
+WRB TO 	 59 
+WRB 	 2143 
+VBD NNS 	 705 
+VBD 	 29889 
+DT RBR 	 141 
+DT 	 81832 
+RBR JJ 	 538 
+RBR 	 1768 
+NN POS 	 2903 
+NN 	 132935 
+POS JJS 	 225 
+POS 	 8701 
+JJS NN 	 696 
+JJS 	 1947 
+VBZ $ 	 91 
+VBZ 	 21672 
+$ CD 	 7309 
+$ 	 7372 
+CD CD 	 7370 
+CD 	 36568 
+VBZ TO 	 936 
+VBZ 	 21672 
+VB CD 	 541 
+VB 	 26438 
+CD JJ 	 1331 
+CD 	 36568 
+PRP$ CD 	 166 
+PRP$ 	 8407 
+PRP MD 	 2146 
+PRP 	 17436 
+WDT MD 	 582 
+WDT 	 4294 
+JJ '' 	 278 
+JJ 	 61217 
+'' NNS 	 199 
+'' 	 6919 
+VBP VBN 	 2046 
+VBP 	 12491 
+CD , 	 3566 
+CD 	 36568 
+. IN 	 4705 
+. 	 39478 
+VB RP 	 860 
+VB 	 26438 
+RP IN 	 736 
+RP 	 2662 
+VBP NN 	 377 
+VBP 	 12491 
+VBP RP 	 111 
+VBP 	 12491 
+RP NN 	 132 
+RP 	 2662 
+CC TO 	 136 
+CC 	 23959 
+`` JJ 	 812 
+`` 	 7092 
+VBN MD 	 23 
+VBN 	 20024 
+NN VBG 	 1013 
+NN 	 132935 
+NNS NN 	 1257 
+NNS 	 59856 
+. CD 	 405 
+. 	 39478 
+JJ CC 	 1056 
+JJ 	 61217 
+VBG JJ 	 1083 
+VBG 	 14846 
+JJ RB 	 223 
+JJ 	 61217 
+VB CC 	 247 
+VB 	 26438 
+NNS NNS 	 632 
+NNS 	 59856 
+CC , 	 184 
+CC 	 23959 
+VBN , 	 654 
+VBN 	 20024 
+, VB 	 185 
+, 	 48727 
+RB VBP 	 800 
+RB 	 30970 
+, CD 	 1023 
+, 	 48727 
+NNS JJ 	 1019 
+NNS 	 59856 
+DT VBG 	 628 
+DT 	 81832 
+VBG NN 	 1843 
+VBG 	 14846 
+IN PRP 	 3086 
+IN 	 107862 
+NN VBP 	 519 
+NN 	 132935 
+VBP JJ 	 1078 
+VBP 	 12491 
+JJ . 	 1493 
+JJ 	 61217 
+NN NNP 	 1307 
+NN 	 132935 
+VBN DT 	 1371 
+VBN 	 20024 
+: PRP 	 209 
+: 	 4772 
+CC RB 	 1241 
+CC 	 23959 
+RB VBZ 	 1223 
+RB 	 30970 
+RB CC 	 287 
+RB 	 30970 
+DT JJR 	 465 
+DT 	 81832 
+JJR , 	 129 
+JJR 	 3238 
+, RBR 	 37 
+, 	 48727 
+NNS NNP 	 192 
+NNS 	 59856 
+DT RB 	 844 
+DT 	 81832 
+NNS RP 	 41 
+NNS 	 59856 
+POS `` 	 102 
+POS 	 8701 
+`` NN 	 599 
+`` 	 7092 
+NN ( 	 213 
+NN 	 132935 
+( IN 	 115 
+( 	 1366 
+VBZ ) 	 5 
+VBZ 	 21672 
+) CC 	 88 
+) 	 1376 
+VBZ IN 	 2087 
+VBZ 	 21672 
+PRP$ RB 	 46 
+PRP$ 	 8407 
+CC PRP 	 900 
+CC 	 23959 
+VB NNP 	 827 
+VB 	 26438 
+CC PRP$ 	 420 
+CC 	 23959 
+IN WP 	 255 
+IN 	 107862 
+WP PRP 	 212 
+WP 	 2363 
+. PRP$ 	 296 
+. 	 39478 
+VBN `` 	 98 
+VBN 	 20024 
+VBD RBR 	 121 
+VBD 	 29889 
+RBR IN 	 427 
+RBR 	 1768 
+, `` 	 637 
+, 	 48727 
+RB PRP 	 292 
+RB 	 30970 
+VBG TO 	 754 
+VBG 	 14846 
+'' DT 	 691 
+'' 	 6919 
+IN TO 	 81 
+IN 	 107862 
+: DT 	 588 
+: 	 4772 
+NN JJR 	 144 
+NN 	 132935 
+NNS : 	 1123 
+NNS 	 59856 
+: NNP 	 526 
+: 	 4772 
+'' WDT 	 65 
+'' 	 6919 
+NNP DT 	 239 
+NNP 	 91466 
+RP PRP$ 	 141 
+RP 	 2662 
+NN RP 	 74 
+NN 	 132935 
+PRP `` 	 61 
+PRP 	 17436 
+NNP JJ 	 756 
+NNP 	 91466 
+CD RB 	 156 
+CD 	 36568 
+VBD CC 	 92 
+VBD 	 29889 
+CC VBD 	 912 
+CC 	 23959 
+POS JJ 	 1803 
+POS 	 8701 
+JJ VBG 	 191 
+JJ 	 61217 
+`` NNP 	 526 
+`` 	 7092 
+VBD WP 	 19 
+VBD 	 29889 
+VBD TO 	 1088 
+VBD 	 29889 
+VB VBG 	 464 
+VB 	 26438 
+IN : 	 27 
+IN 	 107862 
+, WP 	 603 
+, 	 48727 
+'' JJ 	 141 
+'' 	 6919 
+`` IN 	 464 
+`` 	 7092 
+RB '' 	 50 
+RB 	 30970 
+'' : 	 60 
+'' 	 6919 
+IN WDT 	 376 
+IN 	 107862 
+WDT NNP 	 92 
+WDT 	 4294 
+'' `` 	 74 
+'' 	 6919 
+, FW 	 18 
+, 	 48727 
+FW . 	 24 
+FW 	 234 
+PRP RB 	 938 
+PRP 	 17436 
+VBN RP 	 429 
+VBN 	 20024 
+PRP , 	 368 
+PRP 	 17436 
+. WDT 	 25 
+. 	 39478 
+. VBD 	 25 
+. 	 39478 
+DT WRB 	 1 
+DT 	 81832 
+WRB DT 	 526 
+WRB 	 2143 
+DT IN 	 804 
+DT 	 81832 
+IN CC 	 146 
+IN 	 107862 
+PRP IN 	 689 
+PRP 	 17436 
+DT RBS 	 228 
+DT 	 81832 
+RBS JJ 	 331 
+RBS 	 451 
+'' CD 	 37 
+'' 	 6919 
+NNS WDT 	 734 
+NNS 	 59856 
+WDT VBP 	 606 
+WDT 	 4294 
+PRP$ CC 	 5 
+PRP$ 	 8407 
+. ( 	 183 
+. 	 39478 
+( NNP 	 445 
+( 	 1366 
+. ) 	 214 
+. 	 39478 
+) NNP 	 75 
+) 	 1376 
+VB PRP 	 984 
+VB 	 26438 
+PRP : 	 58 
+PRP 	 17436 
+'' VBZ 	 879 
+'' 	 6919 
+VBZ CD 	 447 
+VBZ 	 21672 
+PRP . 	 544 
+PRP 	 17436 
+VBD JJR 	 221 
+VBD 	 29889 
+JJR JJ 	 148 
+JJR 	 3238 
+VBD JJ 	 1708 
+VBD 	 29889 
+. VBZ 	 47 
+. 	 39478 
+DT DT 	 125 
+DT 	 81832 
+CC MD 	 245 
+CC 	 23959 
+MD NNS 	 4 
+MD 	 9803 
+CC VBN 	 343 
+CC 	 23959 
+. WP 	 112 
+. 	 39478 
+JJ : 	 186 
+JJ 	 61217 
+: JJ 	 179 
+: 	 4772 
+NN VBN 	 1427 
+NN 	 132935 
+VBZ RBS 	 20 
+VBZ 	 21672 
+DT VBZ 	 657 
+DT 	 81832 
+VBN JJ 	 876 
+VBN 	 20024 
+NNPS TO 	 28 
+NNPS 	 2673 
+RB NNP 	 216 
+RB 	 30970 
+VBG NNP 	 592 
+VBG 	 14846 
+VB . 	 640 
+VB 	 26438 
+IN . 	 191 
+IN 	 107862 
+NN WRB 	 321 
+NN 	 132935 
+WRB PRP$ 	 53 
+WRB 	 2143 
+IN WRB 	 166 
+IN 	 107862 
+WRB JJ 	 205 
+WRB 	 2143 
+CC WRB 	 99 
+CC 	 23959 
+RB PRP$ 	 75 
+RB 	 30970 
+VBP , 	 249 
+VBP 	 12491 
+DT `` 	 454 
+DT 	 81832 
+RB POS 	 6 
+RB 	 30970 
+NNP `` 	 104 
+NNP 	 91466 
+'' MD 	 34 
+'' 	 6919 
+: NNS 	 170 
+: 	 4772 
+CC `` 	 142 
+CC 	 23959 
+NNPS RB 	 40 
+NNPS 	 2673 
+. FW 	 8 
+. 	 39478 
+FW MD 	 2 
+FW 	 234 
+VBD NN 	 958 
+VBD 	 29889 
+'' NNP 	 943 
+'' 	 6919 
+VBG PRP$ 	 455 
+VBG 	 14846 
+JJ VBZ 	 84 
+JJ 	 61217 
+VBZ `` 	 198 
+VBZ 	 21672 
+`` VBG 	 109 
+`` 	 7092 
+'' PRP 	 742 
+'' 	 6919 
+. NNPS 	 78 
+. 	 39478 
+NNPS VBP 	 147 
+NNPS 	 2673 
+NNS VBZ 	 486 
+NNS 	 59856 
+POS CD 	 228 
+POS 	 8701 
+CD VBP 	 39 
+CD 	 36568 
+NNPS , 	 347 
+NNPS 	 2673 
+WDT RB 	 199 
+WDT 	 4294 
+VBG `` 	 81 
+VBG 	 14846 
+RB `` 	 51 
+RB 	 30970 
+WP JJ 	 12 
+WP 	 2363 
+VBG RP 	 396 
+VBG 	 14846 
+RP DT 	 571 
+RP 	 2662 
+NN DT 	 906 
+NN 	 132935 
+VBZ . 	 672 
+VBZ 	 21672 
+RB JJR 	 394 
+RB 	 30970 
+NNP VBG 	 166 
+NNP 	 91466 
+RB WRB 	 109 
+RB 	 30970 
+WRB VBN 	 18 
+WRB 	 2143 
+: WDT 	 60 
+: 	 4772 
+WDT IN 	 37 
+WDT 	 4294 
+RP RB 	 138 
+RP 	 2662 
+DT MD 	 181 
+DT 	 81832 
+CC EX 	 79 
+CC 	 23959 
+EX VBZ 	 394 
+EX 	 863 
+RB NN 	 358 
+RB 	 30970 
+DT JJS 	 762 
+DT 	 81832 
+VBD RP 	 470 
+VBD 	 29889 
+PRP JJ 	 140 
+PRP 	 17436 
+VBN VBG 	 411 
+VBN 	 20024 
+RP . 	 166 
+RP 	 2662 
+'' VBN 	 46 
+'' 	 6919 
+VBN CC 	 278 
+VBN 	 20024 
+NN CD 	 797 
+NN 	 132935 
+VBZ VBG 	 1272 
+VBZ 	 21672 
+VBN VBP 	 25 
+VBN 	 20024 
+IN $ 	 3790 
+IN 	 107862 
+EX VBP 	 209 
+EX 	 863 
+NN `` 	 319 
+NN 	 132935 
+`` EX 	 144 
+`` 	 7092 
+VBG RB 	 562 
+VBG 	 14846 
+VBZ RBR 	 85 
+VBZ 	 21672 
+VBZ NNS 	 354 
+VBZ 	 21672 
+`` PRP 	 1536 
+`` 	 7092 
+VB , 	 448 
+VB 	 26438 
+DT TO 	 14 
+DT 	 81832 
+TO RB 	 107 
+TO 	 13049 
+VBP NNP 	 220 
+VBP 	 12491 
+IN VB 	 119 
+IN 	 107862 
+VB : 	 64 
+VB 	 26438 
+: RB 	 267 
+: 	 4772 
+CD DT 	 1065 
+CD 	 36568 
+VBG VBN 	 390 
+VBG 	 14846 
+JJ ( 	 40 
+JJ 	 61217 
+( $ 	 231 
+( 	 1366 
+CD ) 	 315 
+CD 	 36568 
+) NN 	 81 
+) 	 1376 
+PRP VB 	 233 
+PRP 	 17436 
+RP JJ 	 135 
+RP 	 2662 
+, JJS 	 46 
+, 	 48727 
+JJS NNS 	 295 
+JJS 	 1947 
+PRP DT 	 208 
+PRP 	 17436 
+CD NNP 	 482 
+CD 	 36568 
+NNS ( 	 258 
+NNS 	 59856 
+CD PRP 	 25 
+CD 	 36568 
+MD PRP 	 53 
+MD 	 9803 
+PRP RP 	 79 
+PRP 	 17436 
+VB WP 	 100 
+VB 	 26438 
+VBP PRP 	 455 
+VBP 	 12491 
+RP NNS 	 128 
+RP 	 2662 
+CC VBG 	 510 
+CC 	 23959 
+. NN 	 1480 
+. 	 39478 
+VBP : 	 37 
+VBP 	 12491 
+CC VBP 	 297 
+CC 	 23959 
+: JJS 	 5 
+: 	 4772 
+JJS IN 	 301 
+JJS 	 1947 
+PRP JJR 	 23 
+PRP 	 17436 
+: VBP 	 54 
+: 	 4772 
+POS RBS 	 18 
+POS 	 8701 
+JJ VBP 	 52 
+JJ 	 61217 
+DT VBP 	 145 
+DT 	 81832 
+NNP WDT 	 89 
+NNP 	 91466 
+RB CD 	 1211 
+RB 	 30970 
+VBZ RP 	 158 
+VBZ 	 21672 
+WP , 	 17 
+WP 	 2363 
+NNPS . 	 198 
+NNPS 	 2673 
+RB RP 	 11 
+RB 	 30970 
+RP , 	 112 
+RP 	 2662 
+CD CC 	 609 
+CD 	 36568 
+CC CD 	 1047 
+CC 	 23959 
+RB NNS 	 140 
+RB 	 30970 
+CD JJR 	 82 
+CD 	 36568 
+NNPS NN 	 104 
+NNPS 	 2673 
+VBP CD 	 113 
+VBP 	 12491 
+JJR : 	 12 
+JJR 	 3238 
+, EX 	 123 
+, 	 48727 
+JJR . 	 154 
+JJR 	 3238 
+, TO 	 227 
+, 	 48727 
+DT , 	 191 
+DT 	 81832 
+NNP FW 	 45 
+NNP 	 91466 
+FW NNP 	 49 
+FW 	 234 
+PRP TO 	 200 
+PRP 	 17436 
+NNP : 	 628 
+NNP 	 91466 
+: WP 	 26 
+: 	 4772 
+. WRB 	 228 
+. 	 39478 
+WRB PRP 	 477 
+WRB 	 2143 
+VBG CD 	 248 
+VBG 	 14846 
+CD VBD 	 227 
+CD 	 36568 
+( NNS 	 21 
+( 	 1366 
+CC JJR 	 249 
+CC 	 23959 
+IN VBP 	 27 
+IN 	 107862 
+IN JJS 	 468 
+IN 	 107862 
+JJS VBP 	 28 
+JJS 	 1947 
+NNS VB 	 234 
+NNS 	 59856 
+PRP CC 	 139 
+PRP 	 17436 
+`` PRP$ 	 82 
+`` 	 7092 
+MD VBN 	 5 
+MD 	 9803 
+RP CD 	 53 
+RP 	 2662 
+NNS PRP 	 274 
+NNS 	 59856 
+NNPS POS 	 66 
+NNPS 	 2673 
+POS VBG 	 103 
+POS 	 8701 
+'' JJR 	 1 
+'' 	 6919 
+. JJS 	 92 
+. 	 39478 
+( DT 	 98 
+( 	 1366 
+CC JJS 	 47 
+CC 	 23959 
+JJS VB 	 4 
+JJS 	 1947 
+EX MD 	 73 
+EX 	 863 
+DT PRP$ 	 58 
+DT 	 81832 
+VB VB 	 130 
+VB 	 26438 
+RB WP 	 36 
+RB 	 30970 
+RBR VBZ 	 4 
+RBR 	 1768 
+`` WRB 	 80 
+`` 	 7092 
+JJ PRP 	 85 
+JJ 	 61217 
+IN VBZ 	 62 
+IN 	 107862 
+. VB 	 111 
+. 	 39478 
+VB `` 	 151 
+VB 	 26438 
+: `` 	 327 
+: 	 4772 
+VBP WRB 	 30 
+VBP 	 12491 
+JJR NNS 	 545 
+JJR 	 3238 
+CD VBZ 	 97 
+CD 	 36568 
+VBP VB 	 39 
+VBP 	 12491 
+NNP SYM 	 3 
+NNP 	 91466 
+SYM NNP 	 3 
+SYM 	 58 
+VBG $ 	 99 
+VBG 	 14846 
+CD TO 	 235 
+CD 	 36568 
+: CD 	 577 
+: 	 4772 
+CD : 	 257 
+CD 	 36568 
+JJ NNPS 	 108 
+JJ 	 61217 
+NNPS ( 	 8 
+NNPS 	 2673 
+NNP ) 	 323 
+NNP 	 91466 
+) : 	 103 
+) 	 1376 
+: VBN 	 66 
+: 	 4772 
+( VBN 	 24 
+( 	 1366 
+JJ ) 	 34 
+JJ 	 61217 
+) CD 	 12 
+) 	 1376 
+JJ CD 	 954 
+JJ 	 61217 
+, NNPS 	 56 
+, 	 48727 
+, PRP$ 	 210 
+, 	 48727 
+NNPS VBZ 	 71 
+NNPS 	 2673 
+POS NNPS 	 33 
+POS 	 8701 
+VBN '' 	 39 
+VBN 	 20024 
+PRP$ NNPS 	 5 
+PRP$ 	 8407 
+RB $ 	 380 
+RB 	 30970 
+, $ 	 76 
+, 	 48727 
+CD VBN 	 116 
+CD 	 36568 
+NNP VBP 	 376 
+NNP 	 91466 
+PRP ( 	 16 
+PRP 	 17436 
+) MD 	 31 
+) 	 1376 
+NNP VB 	 96 
+NNP 	 91466 
+NNPS VBD 	 225 
+NNPS 	 2673 
+) DT 	 54 
+) 	 1376 
+JJ DT 	 207 
+JJ 	 61217 
+IN # 	 89 
+IN 	 107862 
+# CD 	 141 
+# 	 142 
+CD ( 	 61 
+CD 	 36568 
+) . 	 190 
+) 	 1376 
+JJ WRB 	 43 
+JJ 	 61217 
+`` VBZ 	 145 
+`` 	 7092 
+IN ( 	 37 
+IN 	 107862 
+RP NNP 	 67 
+RP 	 2662 
+EX RB 	 21 
+EX 	 863 
+`` VBD 	 86 
+`` 	 7092 
+TO `` 	 56 
+TO 	 13049 
+`` VB 	 187 
+`` 	 7092 
+RBR . 	 229 
+RBR 	 1768 
+VBN WRB 	 41 
+VBN 	 20024 
+VB RBR 	 123 
+VB 	 26438 
+`` VBP 	 82 
+`` 	 7092 
+`` TO 	 34 
+`` 	 7092 
+JJS JJ 	 202 
+JJS 	 1947 
+IN VBN 	 454 
+IN 	 107862 
+NNPS NNPS 	 42 
+NNPS 	 2673 
+NNPS NNS 	 32 
+NNPS 	 2673 
+VBG . 	 241 
+VBG 	 14846 
+NNS CD 	 98 
+NNS 	 59856 
+NN VB 	 186 
+NN 	 132935 
+. LS 	 24 
+. 	 39478 
+LS , 	 8 
+LS 	 36 
+RP TO 	 59 
+RP 	 2662 
+JJ VBD 	 80 
+JJ 	 61217 
+PRP$ `` 	 41 
+PRP$ 	 8407 
+DT . 	 131 
+DT 	 81832 
+NNP VBN 	 77 
+NNP 	 91466 
+VBD VB 	 84 
+VBD 	 29889 
+NN RBR 	 348 
+NN 	 132935 
+. TO 	 106 
+. 	 39478 
+CD VBG 	 59 
+CD 	 36568 
+VBN CD 	 232 
+VBN 	 20024 
+DT VBD 	 180 
+DT 	 81832 
+DT $ 	 757 
+DT 	 81832 
+JJR VBD 	 7 
+JJR 	 3238 
+NNS JJR 	 64 
+NNS 	 59856 
+WRB NN 	 119 
+WRB 	 2143 
+CD WRB 	 27 
+CD 	 36568 
+NN FW 	 7 
+NN 	 132935 
+FW NN 	 17 
+FW 	 234 
+DT FW 	 21 
+DT 	 81832 
+( VB 	 20 
+( 	 1366 
+VBG ) 	 6 
+VBG 	 14846 
+IN FW 	 22 
+IN 	 107862 
+FW FW 	 56 
+FW 	 234 
+FW IN 	 9 
+FW 	 234 
+JJR NNPS 	 2 
+JJR 	 3238 
+. . 	 7 
+. 	 39478 
+'' NNPS 	 3 
+'' 	 6919 
+NNPS PRP 	 4 
+NNPS 	 2673 
+VBZ VBP 	 5 
+VBZ 	 21672 
+) VBP 	 30 
+) 	 1376 
+VBD PDT 	 21 
+VBD 	 29889 
+( RB 	 43 
+( 	 1366 
+) PRP 	 14 
+) 	 1376 
+( PRP 	 29 
+( 	 1366 
+VB VBP 	 10 
+VB 	 26438 
+JJS RB 	 28 
+JJS 	 1947 
+) WP 	 6 
+) 	 1376 
+NN WP 	 330 
+NN 	 132935 
+( CC 	 34 
+( 	 1366 
+) VBD 	 42 
+) 	 1376 
+, WRB 	 404 
+, 	 48727 
+VBP JJS 	 8 
+VBP 	 12491 
+JJS . 	 22 
+JJS 	 1947 
+IN VBD 	 61 
+IN 	 107862 
+VBG WP 	 34 
+VBG 	 14846 
+WP MD 	 154 
+WP 	 2363 
+WDT NN 	 72 
+WDT 	 4294 
+'' VBG 	 93 
+'' 	 6919 
+NNPS VBG 	 11 
+NNPS 	 2673 
+PRP$ FW 	 3 
+PRP$ 	 8407 
+RP WRB 	 13 
+RP 	 2662 
+WRB `` 	 4 
+WRB 	 2143 
+`` FW 	 22 
+`` 	 7092 
+FW '' 	 12 
+FW 	 234 
+MD PRP$ 	 2 
+MD 	 9803 
+RB ( 	 17 
+RB 	 30970 
+VBZ VB 	 70 
+VBZ 	 21672 
+NN EX 	 17 
+NN 	 132935 
+VBG : 	 30 
+VBG 	 14846 
+RB FW 	 2 
+RB 	 30970 
+FW : 	 3 
+FW 	 234 
+: VBZ 	 88 
+: 	 4772 
+, UH 	 19 
+, 	 48727 
+UH , 	 47 
+UH 	 97 
+PRP VBG 	 45 
+PRP 	 17436 
+CC WP$ 	 6 
+CC 	 23959 
+WP$ NNS 	 50 
+WP$ 	 168 
+'' PRP$ 	 32 
+'' 	 6919 
+NNPS WP 	 26 
+NNPS 	 2673 
+VBG PDT 	 17 
+VBG 	 14846 
+RP CC 	 28 
+RP 	 2662 
+PRP$ VBG 	 66 
+PRP$ 	 8407 
+CC PDT 	 14 
+CC 	 23959 
+VBN PRP$ 	 188 
+VBN 	 20024 
+VBD `` 	 201 
+VBD 	 29889 
+VBZ JJR 	 170 
+VBZ 	 21672 
+MD TO 	 32 
+MD 	 9803 
+VBG NNPS 	 11 
+VBG 	 14846 
+JJR NNP 	 56 
+JJR 	 3238 
+WP RB 	 106 
+WP 	 2363 
+NNPS MD 	 62 
+NNPS 	 2673 
+VBG JJR 	 128 
+VBG 	 14846 
+VBP `` 	 56 
+VBP 	 12491 
+VBP JJR 	 99 
+VBP 	 12491 
+POS ) 	 8 
+POS 	 8701 
+WP IN 	 41 
+WP 	 2363 
+VBP RBR 	 65 
+VBP 	 12491 
+EX VBD 	 143 
+EX 	 863 
+CD NNPS 	 38 
+CD 	 36568 
+JJR VBN 	 7 
+JJR 	 3238 
+VBZ WRB 	 83 
+VBZ 	 21672 
+WRB NNP 	 220 
+WRB 	 2143 
+VBG , 	 179 
+VBG 	 14846 
+WRB NNS 	 164 
+WRB 	 2143 
+VB WRB 	 141 
+VB 	 26438 
+POS VBZ 	 38 
+POS 	 8701 
+IN PDT 	 151 
+IN 	 107862 
+IN RBR 	 75 
+IN 	 107862 
+WP NNP 	 44 
+WP 	 2363 
+NNP RBR 	 31 
+NNP 	 91466 
+RBR DT 	 162 
+RBR 	 1768 
+VBN PRP 	 189 
+VBN 	 20024 
+JJ $ 	 171 
+JJ 	 61217 
+WDT DT 	 121 
+WDT 	 4294 
+JJ MD 	 26 
+JJ 	 61217 
+, ( 	 15 
+, 	 48727 
+) VBG 	 8 
+) 	 1376 
+VBN RBR 	 67 
+VBN 	 20024 
+RBR `` 	 5 
+RBR 	 1768 
+VBD NNPS 	 4 
+VBD 	 29889 
+NNPS `` 	 3 
+NNPS 	 2673 
+WDT PRP 	 151 
+WDT 	 4294 
+`` RBR 	 14 
+`` 	 7092 
+POS VBD 	 55 
+POS 	 8701 
+VBG VBG 	 67 
+VBG 	 14846 
+VBG CC 	 138 
+VBG 	 14846 
+VBD $ 	 475 
+VBD 	 29889 
+. JJR 	 57 
+. 	 39478 
+, PDT 	 13 
+, 	 48727 
+POS $ 	 87 
+POS 	 8701 
+JJ VBN 	 117 
+JJ 	 61217 
+. PDT 	 26 
+. 	 39478 
+VBN $ 	 120 
+VBN 	 20024 
+PRP$ $ 	 60 
+PRP$ 	 8407 
+RB : 	 134 
+RB 	 30970 
+JJS , 	 50 
+JJS 	 1947 
+'' ( 	 58 
+'' 	 6919 
+VBG VB 	 15 
+VBG 	 14846 
+VB PDT 	 40 
+VB 	 26438 
+PRP PRP 	 28 
+PRP 	 17436 
+TO , 	 7 
+TO 	 13049 
+TO '' 	 2 
+TO 	 13049 
+NN PRP$ 	 36 
+NN 	 132935 
+VB $ 	 227 
+VB 	 26438 
+) VBZ 	 68 
+) 	 1376 
+JJR TO 	 56 
+JJR 	 3238 
+CC NNPS 	 88 
+CC 	 23959 
+MD `` 	 45 
+MD 	 9803 
+VB '' 	 63 
+VB 	 26438 
+VB ( 	 30 
+VB 	 26438 
+, WP$ 	 103 
+, 	 48727 
+WP$ NN 	 61 
+WP$ 	 168 
+PRP NN 	 50 
+PRP 	 17436 
+VBP WP 	 26 
+VBP 	 12491 
+NNS WRB 	 129 
+NNS 	 59856 
+VBD JJS 	 24 
+VBD 	 29889 
+NNP $ 	 24 
+NNP 	 91466 
+NN WP$ 	 24 
+NN 	 132935 
+CD RBS 	 9 
+CD 	 36568 
+: VBD 	 85 
+: 	 4772 
+VBZ PDT 	 12 
+VBZ 	 21672 
+VB WP$ 	 1 
+VB 	 26438 
+`` CD 	 60 
+`` 	 7092 
+: . 	 90 
+: 	 4772 
+RP $ 	 24 
+RP 	 2662 
+VBG RBR 	 71 
+VBG 	 14846 
+PRP POS 	 18 
+PRP 	 17436 
+VBD RBS 	 13 
+VBD 	 29889 
+RBS RB 	 51 
+RBS 	 451 
+. RBR 	 81 
+. 	 39478 
+RBR , 	 109 
+RBR 	 1768 
+VBG VBD 	 46 
+VBG 	 14846 
+WDT JJ 	 36 
+WDT 	 4294 
+VBG ( 	 7 
+VBG 	 14846 
+VB ) 	 12 
+VB 	 26438 
+) RB 	 34 
+) 	 1376 
+CC WDT 	 25 
+CC 	 23959 
+VBD MD 	 12 
+VBD 	 29889 
+: $ 	 151 
+: 	 4772 
+VB VBZ 	 40 
+VB 	 26438 
+POS CC 	 60 
+POS 	 8701 
+( JJ 	 64 
+( 	 1366 
+CD FW 	 2 
+CD 	 36568 
+FW NNS 	 8 
+FW 	 234 
+`` CC 	 130 
+`` 	 7092 
+MD RBR 	 12 
+MD 	 9803 
+VBD WRB 	 48 
+VBD 	 29889 
+CD $ 	 4 
+CD 	 36568 
+VBP POS 	 2 
+VBP 	 12491 
+TO . 	 12 
+TO 	 13049 
+JJ RBR 	 10 
+JJ 	 61217 
+. MD 	 25 
+. 	 39478 
+MD DT 	 38 
+MD 	 9803 
+RB JJS 	 22 
+RB 	 30970 
+PRP$ JJS 	 86 
+PRP$ 	 8407 
+NNP WRB 	 53 
+NNP 	 91466 
+( PRP$ 	 7 
+( 	 1366 
+PRP$ ) 	 3 
+PRP$ 	 8407 
+VBP EX 	 24 
+VBP 	 12491 
+WDT NNS 	 73 
+WDT 	 4294 
+FW , 	 21 
+FW 	 234 
+RP VBG 	 51 
+RP 	 2662 
+JJ POS 	 12 
+JJ 	 61217 
+NNPS CD 	 3 
+NNPS 	 2673 
+VB WDT 	 19 
+VB 	 26438 
+NNP '' 	 217 
+NNP 	 91466 
+: TO 	 36 
+: 	 4772 
+TO NNP 	 2 
+TO 	 13049 
+NNS JJS 	 4 
+NNS 	 59856 
+VBZ NNPS 	 7 
+VBZ 	 21672 
+: VBG 	 109 
+: 	 4772 
+: VB 	 49 
+: 	 4772 
+WP$ JJ 	 33 
+WP$ 	 168 
+JJS NNPS 	 3 
+JJS 	 1947 
+JJR RB 	 16 
+JJR 	 3238 
+CD `` 	 27 
+CD 	 36568 
+`` NNPS 	 14 
+`` 	 7092 
+NNPS '' 	 10 
+NNPS 	 2673 
+JJS VBD 	 5 
+JJS 	 1947 
+JJ PRP$ 	 18 
+JJ 	 61217 
+WP RBR 	 2 
+WP 	 2363 
+JJS $ 	 21 
+JJS 	 1947 
+`` `` 	 3 
+`` 	 7092 
+CD MD 	 75 
+CD 	 36568 
+NN $ 	 34 
+NN 	 132935 
+DT CC 	 60 
+DT 	 81832 
+VBG VBP 	 9 
+VBG 	 14846 
+VBD : 	 94 
+VBD 	 29889 
+WRB VBZ 	 17 
+WRB 	 2143 
+'' VB 	 16 
+'' 	 6919 
+POS VBN 	 64 
+POS 	 8701 
+RP JJS 	 7 
+RP 	 2662 
+NNP WP 	 54 
+NNP 	 91466 
+VBN : 	 73 
+VBN 	 20024 
+TO JJ 	 8 
+TO 	 13049 
+JJ FW 	 8 
+JJ 	 61217 
+FW VBZ 	 7 
+FW 	 234 
+PRP$ JJR 	 25 
+PRP$ 	 8407 
+. RBS 	 20 
+. 	 39478 
+'' TO 	 72 
+'' 	 6919 
+NNP PRP 	 79 
+NNP 	 91466 
+JJS CD 	 144 
+JJS 	 1947 
+RP '' 	 15 
+RP 	 2662 
+RB WDT 	 6 
+RB 	 30970 
+WRB . 	 7 
+WRB 	 2143 
+POS RB 	 48 
+POS 	 8701 
+VBP $ 	 33 
+VBP 	 12491 
+CD '' 	 14 
+CD 	 36568 
+VBN VBZ 	 34 
+VBN 	 20024 
+VBZ MD 	 18 
+VBZ 	 21672 
+IN EX 	 156 
+IN 	 107862 
+RBR VBN 	 33 
+RBR 	 1768 
+, JJR 	 82 
+, 	 48727 
+`` WDT 	 13 
+`` 	 7092 
+PRP JJS 	 2 
+PRP 	 17436 
+FW CC 	 3 
+FW 	 234 
+DT VB 	 21 
+DT 	 81832 
+PRP WDT 	 5 
+PRP 	 17436 
+TO NN 	 46 
+TO 	 13049 
+WRB RB 	 85 
+WRB 	 2143 
+. EX 	 152 
+. 	 39478 
+VBG VBZ 	 31 
+VBG 	 14846 
+. VBP 	 13 
+. 	 39478 
+: MD 	 44 
+: 	 4772 
+CC $ 	 472 
+CC 	 23959 
+JJR CC 	 65 
+JJR 	 3238 
+VBZ : 	 90 
+VBZ 	 21672 
+WP NNS 	 21 
+WP 	 2363 
+WRB VBP 	 11 
+WRB 	 2143 
+'' '' 	 48 
+'' 	 6919 
+VBP VBD 	 46 
+VBP 	 12491 
+WP JJS 	 2 
+WP 	 2363 
+: WRB 	 31 
+: 	 4772 
+VBP CC 	 55 
+VBP 	 12491 
+POS WRB 	 1 
+POS 	 8701 
+NNPS : 	 52 
+NNPS 	 2673 
+: PRP$ 	 39 
+: 	 4772 
+NNPS VBN 	 8 
+NNPS 	 2673 
+CC ( 	 9 
+CC 	 23959 
+RP RBR 	 12 
+RP 	 2662 
+MD NNP 	 7 
+MD 	 9803 
+PRP '' 	 9 
+PRP 	 17436 
+RB RBS 	 6 
+RB 	 30970 
+DT PRP 	 40 
+DT 	 81832 
+VB VBD 	 34 
+VB 	 26438 
+MD '' 	 2 
+MD 	 9803 
+WDT , 	 26 
+WDT 	 4294 
+WRB CC 	 9 
+WRB 	 2143 
+NNPS JJ 	 18 
+NNPS 	 2673 
+JJ JJS 	 22 
+JJ 	 61217 
+DT WDT 	 16 
+DT 	 81832 
+VB FW 	 2 
+VB 	 26438 
+FW TO 	 2 
+FW 	 234 
+) JJ 	 30 
+) 	 1376 
+`` JJR 	 26 
+`` 	 7092 
+: : 	 15 
+: 	 4772 
+. : 	 97 
+. 	 39478 
+VBN VBD 	 44 
+VBN 	 20024 
+RB EX 	 25 
+RB 	 30970 
+POS . 	 42 
+POS 	 8701 
+POS RBR 	 3 
+POS 	 8701 
+`` JJS 	 27 
+`` 	 7092 
+POS , 	 52 
+POS 	 8701 
+POS MD 	 10 
+POS 	 8701 
+POS IN 	 24 
+POS 	 8701 
+( TO 	 5 
+( 	 1366 
+) VBN 	 10 
+) 	 1376 
+RBS : 	 2 
+RBS 	 451 
+$ JJ 	 63 
+$ 	 7372 
+VBG '' 	 32 
+VBG 	 14846 
+JJR RP 	 5 
+JJR 	 3238 
+VBD '' 	 11 
+VBD 	 29889 
+PRP WP 	 11 
+PRP 	 17436 
+WP NN 	 29 
+WP 	 2363 
+POS VBP 	 5 
+POS 	 8701 
+VBP MD 	 20 
+VBP 	 12491 
+WDT CC 	 2 
+WDT 	 4294 
+PRP ) 	 9 
+PRP 	 17436 
+MD CC 	 10 
+MD 	 9803 
+JJS NNP 	 22 
+JJS 	 1947 
+WRB JJS 	 4 
+WRB 	 2143 
+JJS DT 	 38 
+JJS 	 1947 
+JJ JJR 	 42 
+JJ 	 61217 
+RBR VB 	 22 
+RBR 	 1768 
+CD JJS 	 31 
+CD 	 36568 
+WP VB 	 11 
+WP 	 2363 
+VBP RBS 	 11 
+VBP 	 12491 
+JJS VBN 	 9 
+JJS 	 1947 
+RBR VBG 	 9 
+RBR 	 1768 
+WDT PRP$ 	 7 
+WDT 	 4294 
+RP `` 	 14 
+RP 	 2662 
+DT '' 	 3 
+DT 	 81832 
+WRB MD 	 26 
+WRB 	 2143 
+VB MD 	 13 
+VB 	 26438 
+RP : 	 8 
+RP 	 2662 
+CC WP 	 51 
+CC 	 23959 
+MD , 	 33 
+MD 	 9803 
+FW JJ 	 7 
+FW 	 234 
+RB # 	 11 
+RB 	 30970 
+EX POS 	 11 
+EX 	 863 
+PRP VBN 	 43 
+PRP 	 17436 
+VBD ( 	 6 
+VBD 	 29889 
+) VB 	 11 
+) 	 1376 
+VBD VBD 	 54 
+VBD 	 29889 
+MD . 	 21 
+MD 	 9803 
+TO RBR 	 14 
+TO 	 13049 
+RBR NN 	 8 
+RBR 	 1768 
+VB NNPS 	 12 
+VB 	 26438 
+RBR : 	 10 
+RBR 	 1768 
+MD VBD 	 6 
+MD 	 9803 
+PRP$ ( 	 8 
+PRP$ 	 8407 
+VBZ VBD 	 59 
+VBZ 	 21672 
+( MD 	 1 
+( 	 1366 
+MD ) 	 2 
+MD 	 9803 
+) NNS 	 35 
+) 	 1376 
+RB NNPS 	 9 
+RB 	 30970 
+JJR `` 	 4 
+JJR 	 3238 
+WP TO 	 15 
+WP 	 2363 
+'' WRB 	 33 
+'' 	 6919 
+PDT PRP$ 	 26 
+PDT 	 368 
+VBP VBP 	 13 
+VBP 	 12491 
+RB ) 	 13 
+RB 	 30970 
+WP . 	 4 
+WP 	 2363 
+( WRB 	 4 
+( 	 1366 
+VBP PDT 	 8 
+VBP 	 12491 
+JJ VB 	 7 
+JJ 	 61217 
+'' ) 	 35 
+'' 	 6919 
+WRB IN 	 19 
+WRB 	 2143 
+NN JJS 	 7 
+NN 	 132935 
+IN POS 	 2 
+IN 	 107862 
+POS PRP$ 	 2 
+POS 	 8701 
+NNP JJR 	 9 
+NNP 	 91466 
+VB JJS 	 19 
+VB 	 26438 
+VBN # 	 1 
+VBN 	 20024 
+JJ # 	 5 
+JJ 	 61217 
+WP$ RB 	 1 
+WP$ 	 168 
+DT # 	 13 
+DT 	 81832 
+MD ( 	 2 
+MD 	 9803 
+RP # 	 2 
+RP 	 2662 
+CC # 	 4 
+CC 	 23959 
+CD RBR 	 6 
+CD 	 36568 
+( NNPS 	 3 
+( 	 1366 
+NNPS ) 	 6 
+NNPS 	 2673 
+JJR CD 	 8 
+JJR 	 3238 
+DT : 	 33 
+DT 	 81832 
+NNS EX 	 5 
+NNS 	 59856 
+RP VBN 	 6 
+RP 	 2662 
+JJS CC 	 17 
+JJS 	 1947 
+CC RBS 	 22 
+CC 	 23959 
+JJS PRP 	 10 
+JJS 	 1947 
+'' EX 	 13 
+'' 	 6919 
+WRB , 	 27 
+WRB 	 2143 
+PRP$ VBN 	 54 
+PRP$ 	 8407 
+PRP$ VBD 	 3 
+PRP$ 	 8407 
+VBZ EX 	 16 
+VBZ 	 21672 
+JJ RP 	 6 
+JJ 	 61217 
+( CD 	 43 
+( 	 1366 
+NNS RBS 	 7 
+NNS 	 59856 
+VBZ WDT 	 8 
+VBZ 	 21672 
+VBP VBZ 	 36 
+VBP 	 12491 
+VBZ JJS 	 14 
+VBZ 	 21672 
+WRB JJR 	 3 
+WRB 	 2143 
+VBN RBS 	 5 
+VBN 	 20024 
+RBS . 	 3 
+RBS 	 451 
+: JJR 	 14 
+: 	 4772 
+. UH 	 21 
+. 	 39478 
+POS JJR 	 19 
+POS 	 8701 
+VBZ VBZ 	 20 
+VBZ 	 21672 
+VBZ FW 	 1 
+VBZ 	 21672 
+NNP PRP$ 	 11 
+NNP 	 91466 
+RBR PRP 	 7 
+RBR 	 1768 
+VBG MD 	 9 
+VBG 	 14846 
+WRB VB 	 4 
+WRB 	 2143 
+VB POS 	 5 
+VB 	 26438 
+POS VB 	 3 
+POS 	 8701 
+CC RP 	 3 
+CC 	 23959 
+WDT EX 	 7 
+WDT 	 4294 
+VBN ) 	 18 
+VBN 	 20024 
+JJS : 	 9 
+JJS 	 1947 
+VBG JJS 	 10 
+VBG 	 14846 
+. SYM 	 29 
+. 	 39478 
+SYM : 	 33 
+SYM 	 58 
+CD POS 	 25 
+CD 	 36568 
+WDT VB 	 6 
+WDT 	 4294 
+JJR DT 	 20 
+JJR 	 3238 
+MD VBP 	 3 
+MD 	 9803 
+VBP ( 	 5 
+VBP 	 12491 
+RP ) 	 1 
+RP 	 2662 
+RBR TO 	 13 
+RBR 	 1768 
+VBD VBZ 	 11 
+VBD 	 29889 
+'' VBP 	 17 
+'' 	 6919 
+VBD EX 	 36 
+VBD 	 29889 
+`` ( 	 2 
+`` 	 7092 
+POS DT 	 2 
+POS 	 8701 
+PRP CD 	 17 
+PRP 	 17436 
+VBG WRB 	 27 
+VBG 	 14846 
+: , 	 3 
+: 	 4772 
+( VBP 	 1 
+( 	 1366 
+VBP ) 	 4 
+VBP 	 12491 
+VBN WDT 	 6 
+VBN 	 20024 
+) TO 	 16 
+) 	 1376 
+: SYM 	 3 
+: 	 4772 
+WP$ NNP 	 11 
+WP$ 	 168 
+NNP RBS 	 1 
+NNP 	 91466 
+WRB VBG 	 23 
+WRB 	 2143 
+RBR VBP 	 1 
+RBR 	 1768 
+WP CD 	 3 
+WP 	 2363 
+RP WP 	 15 
+RP 	 2662 
+CD WDT 	 26 
+CD 	 36568 
+NNS WP$ 	 26 
+NNS 	 59856 
+TO VBG 	 3 
+TO 	 13049 
+JJS EX 	 3 
+JJS 	 1947 
+IN ) 	 9 
+IN 	 107862 
+PRP RBS 	 4 
+PRP 	 17436 
+PRP$ RBS 	 17 
+PRP$ 	 8407 
+JJR '' 	 5 
+JJR 	 3238 
+PRP NNP 	 14 
+PRP 	 17436 
+MD IN 	 19 
+MD 	 9803 
+VBG POS 	 1 
+VBG 	 14846 
+DT POS 	 3 
+DT 	 81832 
+JJ WP 	 16 
+JJ 	 61217 
+RP VBD 	 3 
+RP 	 2662 
+NNS $ 	 18 
+NNS 	 59856 
+JJS VBG 	 10 
+JJS 	 1947 
+, RP 	 5 
+, 	 48727 
+: WP$ 	 1 
+: 	 4772 
+VBN WP 	 13 
+VBN 	 20024 
+VBN VB 	 15 
+VBN 	 20024 
+VBG EX 	 4 
+VBG 	 14846 
+NN RBS 	 11 
+NN 	 132935 
+RBS VBN 	 25 
+RBS 	 451 
+JJ WDT 	 9 
+JJ 	 61217 
+WRB WDT 	 1 
+WRB 	 2143 
+WDT `` 	 2 
+WDT 	 4294 
+RP JJR 	 13 
+RP 	 2662 
+WDT CD 	 22 
+WDT 	 4294 
+PRP NNPS 	 1 
+PRP 	 17436 
+NNPS WP$ 	 1 
+NNPS 	 2673 
+VBN PDT 	 15 
+VBN 	 20024 
+NNPS DT 	 10 
+NNPS 	 2673 
+EX VB 	 2 
+EX 	 863 
+CD PRP$ 	 3 
+CD 	 36568 
+WDT TO 	 4 
+WDT 	 4294 
+: EX 	 7 
+: 	 4772 
+MD JJ 	 3 
+MD 	 9803 
+( WP 	 6 
+( 	 1366 
+WP ) 	 3 
+WP 	 2363 
+NN NNPS 	 12 
+NN 	 132935 
+( WDT 	 10 
+( 	 1366 
+WP$ VBG 	 2 
+WP$ 	 168 
+VBG WDT 	 3 
+VBG 	 14846 
+MD : 	 7 
+MD 	 9803 
+VBN JJS 	 4 
+VBN 	 20024 
+MD VBZ 	 1 
+MD 	 9803 
+JJR PRP 	 7 
+JJR 	 3238 
+NNS PRP$ 	 13 
+NNS 	 59856 
+JJS TO 	 6 
+JJS 	 1947 
+VBD WDT 	 4 
+VBD 	 29889 
+WP ( 	 1 
+WP 	 2363 
+IN MD 	 11 
+IN 	 107862 
+NNP PDT 	 1 
+NNP 	 91466 
+VB EX 	 14 
+VB 	 26438 
+PRP NNS 	 19 
+PRP 	 17436 
+IN '' 	 11 
+IN 	 107862 
+TO VBD 	 3 
+TO 	 13049 
+TO ( 	 2 
+TO 	 13049 
+JJR $ 	 3 
+JJR 	 3238 
+WRB VBD 	 13 
+WRB 	 2143 
+: '' 	 6 
+: 	 4772 
+, RBS 	 18 
+, 	 48727 
+POS '' 	 2 
+POS 	 8701 
+VBN ( 	 9 
+VBN 	 20024 
+: UH 	 3 
+: 	 4772 
+TO DT 	 4 
+TO 	 13049 
+CC : 	 7 
+CC 	 23959 
+CD WP 	 7 
+CD 	 36568 
+WP PRP$ 	 12 
+WP 	 2363 
+WDT POS 	 1 
+WDT 	 4294 
+POS FW 	 2 
+POS 	 8701 
+VB UH 	 3 
+VB 	 26438 
+UH '' 	 6 
+UH 	 97 
+. $ 	 6 
+. 	 39478 
+( VBG 	 9 
+( 	 1366 
+) `` 	 7 
+) 	 1376 
+`` UH 	 27 
+`` 	 7092 
+UH . 	 21 
+UH 	 97 
+) WDT 	 6 
+) 	 1376 
+, : 	 5 
+, 	 48727 
+UH PRP$ 	 1 
+UH 	 97 
+'' JJS 	 5 
+'' 	 6919 
+WP$ CD 	 2 
+WP$ 	 168 
+NNS SYM 	 4 
+NNS 	 59856 
+WRB CD 	 14 
+WRB 	 2143 
+UH UH 	 3 
+UH 	 97 
+VBZ ( 	 7 
+VBZ 	 21672 
+WRB EX 	 23 
+WRB 	 2143 
+'' PDT 	 3 
+'' 	 6919 
+VBN EX 	 2 
+VBN 	 20024 
+`` $ 	 1 
+`` 	 7092 
+: # 	 3 
+: 	 4772 
+'' , 	 7 
+'' 	 6919 
+VBD UH 	 3 
+VBD 	 29889 
+UH IN 	 7 
+UH 	 97 
+CC CC 	 5 
+CC 	 23959 
+RP RP 	 2 
+RP 	 2662 
+) JJS 	 1 
+) 	 1376 
+VBZ '' 	 3 
+VBZ 	 21672 
+RBS PRP 	 1 
+RBS 	 451 
+POS # 	 5 
+POS 	 8701 
+JJ EX 	 4 
+JJ 	 61217 
+'' . 	 16 
+'' 	 6919 
+( FW 	 4 
+( 	 1366 
+JJS WRB 	 4 
+JJS 	 1947 
+PRP$ VBZ 	 1 
+PRP$ 	 8407 
+EX PRP 	 1 
+EX 	 863 
+MD RBS 	 2 
+MD 	 9803 
+RBS VB 	 2 
+RBS 	 451 
+DT RP 	 6 
+DT 	 81832 
+WDT JJS 	 2 
+WDT 	 4294 
+RBS , 	 4 
+RBS 	 451 
+: RBR 	 3 
+: 	 4772 
+IN UH 	 2 
+IN 	 107862 
+IN WP$ 	 2 
+IN 	 107862 
+RBS NNS 	 2 
+RBS 	 451 
+EX , 	 4 
+EX 	 863 
+`` PDT 	 6 
+`` 	 7092 
+POS PRP 	 1 
+POS 	 8701 
+'' RBR 	 3 
+'' 	 6919 
+FW ( 	 4 
+FW 	 234 
+LS : 	 5 
+LS 	 36 
+JJR ( 	 1 
+JJR 	 3238 
+RBS TO 	 2 
+RBS 	 451 
+FW `` 	 1 
+FW 	 234 
+( EX 	 2 
+( 	 1366 
+NNPS VB 	 2 
+NNPS 	 2673 
+JJ RBS 	 6 
+JJ 	 61217 
+NN # 	 2 
+NN 	 132935 
+VBN NNPS 	 4 
+VBN 	 20024 
+CC FW 	 3 
+CC 	 23959 
+JJR VBG 	 4 
+JJR 	 3238 
+VBP NNPS 	 4 
+VBP 	 12491 
+VBP FW 	 1 
+VBP 	 12491 
+NNP EX 	 2 
+NNP 	 91466 
+) JJR 	 2 
+) 	 1376 
+: NNPS 	 5 
+: 	 4772 
+WDT NNPS 	 1 
+WDT 	 4294 
+JJR VBZ 	 4 
+JJR 	 3238 
+MD NN 	 6 
+MD 	 9803 
+JJS PRP$ 	 1 
+JJS 	 1947 
+VBP '' 	 5 
+VBP 	 12491 
+'' WP$ 	 2 
+'' 	 6919 
+JJS '' 	 4 
+JJS 	 1947 
+NNPS EX 	 2 
+NNPS 	 2673 
+RBR VBD 	 10 
+RBR 	 1768 
+TO : 	 1 
+TO 	 13049 
+EX WP 	 2 
+EX 	 863 
+RP PDT 	 3 
+RP 	 2662 
+POS ( 	 2 
+POS 	 8701 
+NN PDT 	 2 
+NN 	 132935 
+) EX 	 1 
+) 	 1376 
+NNPS RBR 	 1 
+NNPS 	 2673 
+RP ( 	 1 
+RP 	 2662 
+RBR MD 	 3 
+RBR 	 1768 
+NNS NNPS 	 2 
+NNS 	 59856 
+CC UH 	 2 
+CC 	 23959 
+VB RBS 	 6 
+VB 	 26438 
+JJR MD 	 4 
+JJR 	 3238 
+WRB WRB 	 1 
+WRB 	 2143 
+WP WDT 	 1 
+WP 	 2363 
+CC ) 	 1 
+CC 	 23959 
+) PRP$ 	 2 
+) 	 1376 
+POS TO 	 2 
+POS 	 8701 
+WDT $ 	 3 
+WDT 	 4294 
+WDT VBN 	 4 
+WDT 	 4294 
+JJR PRP$ 	 2 
+JJR 	 3238 
+NNP RP 	 4 
+NNP 	 91466 
+CD SYM 	 5 
+CD 	 36568 
+SYM NN 	 4 
+SYM 	 58 
+NN SYM 	 7 
+NN 	 132935 
+SYM JJ 	 4 
+SYM 	 58 
+: ( 	 3 
+: 	 4772 
+) FW 	 1 
+) 	 1376 
+SYM VBZ 	 3 
+SYM 	 58 
+'' UH 	 2 
+'' 	 6919 
+WRB PDT 	 4 
+WRB 	 2143 
+VBP WDT 	 3 
+VBP 	 12491 
+RBR RP 	 1 
+RBR 	 1768 
+WRB NNPS 	 3 
+WRB 	 2143 
+: LS 	 9 
+: 	 4772 
+LS ) 	 11 
+LS 	 36 
+WRB WP 	 1 
+WRB 	 2143 
+JJR VBP 	 5 
+JJR 	 3238 
+PRP $ 	 5 
+PRP 	 17436 
+PRP$ , 	 2 
+PRP$ 	 8407 
+LS . 	 12 
+LS 	 36 
+( UH 	 5 
+( 	 1366 
+FW POS 	 2 
+FW 	 234 
+RP VBP 	 2 
+RP 	 2662 
+PRP PDT 	 2 
+PRP 	 17436 
+JJS PDT 	 3 
+JJS 	 1947 
+( VBD 	 2 
+( 	 1366 
+VBD ) 	 3 
+VBD 	 29889 
+MD JJR 	 1 
+MD 	 9803 
+RBS VBP 	 1 
+RBS 	 451 
+# , 	 1 
+# 	 142 
+JJS ( 	 1 
+JJS 	 1947 
+WP$ $ 	 4 
+WP$ 	 168 
+RBS ( 	 1 
+RBS 	 451 
+VB # 	 3 
+VB 	 26438 
+NNPS JJR 	 1 
+NNPS 	 2673 
+JJR PDT 	 1 
+JJR 	 3238 
+) $ 	 1 
+) 	 1376 
+FW ) 	 1 
+FW 	 234 
+DT ) 	 2 
+DT 	 81832 
+TO VBZ 	 1 
+TO 	 13049 
+: RBS 	 4 
+: 	 4772 
+PRP PRP$ 	 2 
+PRP 	 17436 
+'' RBS 	 1 
+'' 	 6919 
+VBD # 	 3 
+VBD 	 29889 
+VBZ # 	 1 
+VBZ 	 21672 
+) ( 	 1 
+) 	 1376 
+RBR CD 	 1 
+RBR 	 1768 
+WP$ JJS 	 1 
+WP$ 	 168 
+JJR ) 	 2 
+JJR 	 3238 
+VBD FW 	 1 
+VBD 	 29889 
+UH NN 	 2 
+UH 	 97 
+VBP WP$ 	 1 
+VBP 	 12491 
+RBS DT 	 1 
+RBS 	 451 
+PRP$ RBR 	 1 
+PRP$ 	 8407 
+WRB ( 	 1 
+WRB 	 2143 
+) RBS 	 1 
+) 	 1376 
+`` : 	 3 
+`` 	 7092 
+WDT ( 	 1 
+WDT 	 4294 
+JJS `` 	 3 
+JJS 	 1947 
+JJ UH 	 1 
+JJ 	 61217 
+JJS VBZ 	 6 
+JJS 	 1947 
+PRP FW 	 1 
+PRP 	 17436 
+IN SYM 	 2 
+IN 	 107862 
+SYM CD 	 4 
+SYM 	 58 
+: PDT 	 1 
+: 	 4772 
+CD VB 	 1 
+CD 	 36568 
+FW DT 	 2 
+FW 	 234 
+JJS MD 	 2 
+JJS 	 1947 
+( JJR 	 1 
+( 	 1366 
+RBR RBR 	 1 
+RBR 	 1768 
+RBR NNS 	 1 
+RBR 	 1768 
+SYM RB 	 2 
+SYM 	 58 
+SYM IN 	 2 
+SYM 	 58 
+NNPS SYM 	 1 
+NNPS 	 2673 
+FW $ 	 2 
+FW 	 234 
+MD CD 	 2 
+MD 	 9803 
+MD MD 	 2 
+MD 	 9803 
+UH ) 	 3 
+UH 	 97 
+UH VB 	 2 
+UH 	 97 
+: FW 	 1 
+: 	 4772 
+RBR WRB 	 1 
+RBR 	 1768 
+PRP EX 	 2 
+PRP 	 17436 
+WP JJR 	 1 
+WP 	 2363 
+) WRB 	 2 
+) 	 1376 
+PRP$ . 	 1 
+PRP$ 	 8407 
+WDT JJR 	 2 
+WDT 	 4294 
+VBG UH 	 3 
+VBG 	 14846 
+RP MD 	 1 
+RP 	 2662 
+RP VBZ 	 1 
+RP 	 2662 
+VBN POS 	 3 
+VBN 	 20024 
+RB SYM 	 1 
+RB 	 30970 
+WP `` 	 2 
+WP 	 2363 
+SYM FW 	 2 
+SYM 	 58 
+IN LS 	 1 
+IN 	 107862 
+WDT : 	 1 
+WDT 	 4294 
+VBG RBS 	 1 
+VBG 	 14846 
+EX DT 	 2 
+EX 	 863 
+RBR ) 	 1 
+RBR 	 1768 
+FW VBP 	 1 
+FW 	 234 
+RP PRP 	 2 
+RP 	 2662 
+DT UH 	 2 
+DT 	 81832 
+UH PRP 	 1 
+UH 	 97 
+WP$ VBN 	 1 
+WP$ 	 168 
+) NNPS 	 1 
+) 	 1376 
+( VBZ 	 1 
+( 	 1366 
+VBG SYM 	 1 
+VBG 	 14846 
+TO VBN 	 2 
+TO 	 13049 
+TO IN 	 2 
+TO 	 13049 
+'' $ 	 1 
+'' 	 6919 
+JJR WRB 	 2 
+JJR 	 3238 
+. WP$ 	 1 
+. 	 39478 
+JJ PDT 	 1 
+JJ 	 61217 
+WP$ JJR 	 1 
+WP$ 	 168 
+. , 	 3 
+. 	 39478 
+WP VBN 	 2 
+WP 	 2363 
+POS : 	 2 
+POS 	 8701 
+NNPS PRP$ 	 1 
+NNPS 	 2673 
+DT PDT 	 1 
+DT 	 81832 
+RBS NN 	 1 
+RBS 	 451 
+RBS VBD 	 1 
+RBS 	 451 
+NNS PDT 	 3 
+NNS 	 59856 
+PDT JJ 	 1 
+PDT 	 368 
+) SYM 	 1 
+) 	 1376 
+PRP$ : 	 1 
+PRP$ 	 8407 
+WRB $ 	 1 
+WRB 	 2143 
+WP$ `` 	 1 
+WP$ 	 168 
+EX TO 	 1 
+EX 	 863 
+RBS MD 	 1 
+RBS 	 451 
+WRB ) 	 1 
+WRB 	 2143 
+( LS 	 2 
+( 	 1366 
+RBR JJR 	 1 
+RBR 	 1768 
+'' FW 	 1 
+'' 	 6919 
+FW VBN 	 1 
+FW 	 234 
+NNPS WDT 	 1 
+NNPS 	 2673 
+'' SYM 	 1 
+'' 	 6919 
+SYM VBN 	 1 
+SYM 	 58 
+UH : 	 4 
+UH 	 97 
+IN RP 	 1 
+IN 	 107862 
+VBZ UH 	 1 
+VBZ 	 21672 
+IN 	 107862 
+All tags 	 950028 
+DT 	 81832 
+All tags 	 950028 
+NNP 	 91466 
+All tags 	 950028 
+CD 	 36568 
+All tags 	 950028 
+NN 	 132935 
+All tags 	 950028 
+`` 	 7092 
+All tags 	 950028 
+'' 	 6919 
+All tags 	 950028 
+POS 	 8701 
+All tags 	 950028 
+( 	 1366 
+All tags 	 950028 
+VBN 	 20024 
+All tags 	 950028 
+NNS 	 59856 
+All tags 	 950028 
+VBP 	 12491 
+All tags 	 950028 
+, 	 48727 
+All tags 	 950028 
+CC 	 23959 
+All tags 	 950028 
+) 	 1376 
+All tags 	 950028 
+VBD 	 29889 
+All tags 	 950028 
+RB 	 30970 
+All tags 	 950028 
+. 	 39478 
+All tags 	 950028 
+VBZ 	 21672 
+All tags 	 950028 
+NNPS 	 2673 
+All tags 	 950028 
+PRP 	 17436 
+All tags 	 950028 
+PRP$ 	 8407 
+All tags 	 950028 
+TO 	 13049 
+All tags 	 950028 
+VB 	 26438 
+All tags 	 950028 
+JJ 	 61217 
+All tags 	 950028 
+MD 	 9803 
+All tags 	 950028 
+VBG 	 14846 
+All tags 	 950028 
+RBR 	 1768 
+All tags 	 950028 
+: 	 4772 
+All tags 	 950028 
+WP 	 2363 
+All tags 	 950028 
+WDT 	 4294 
+All tags 	 950028 
+JJR 	 3238 
+All tags 	 950028 
+PDT 	 368 
+All tags 	 950028 
+RBS 	 451 
+All tags 	 950028 
+WRB 	 2143 
+All tags 	 950028 
+JJS 	 1947 
+All tags 	 950028 
+$ 	 7372 
+All tags 	 950028 
+RP 	 2662 
+All tags 	 950028 
+FW 	 234 
+All tags 	 950028 
+EX 	 863 
+All tags 	 950028 
+SYM 	 58 
+All tags 	 950028 
+# 	 142 
+All tags 	 950028 
+LS 	 36 
+All tags 	 950028 
+UH 	 97 
+All tags 	 950028 
+WP$ 	 168 
+All tags 	 950028 
