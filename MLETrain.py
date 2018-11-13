@@ -3,6 +3,10 @@ from itertools import islice
 import sys
 
 
+START_SYMBOL = '*'
+STOP_SYMBOL = 'STOP'
+
+
 def reading_input(fname):
     """ data is list of words and there tags (in one string)"""
     tags = []
@@ -75,11 +79,11 @@ def get_q(t1, t2, t3, lambda_values, q_dic):
     l1, l2, l3 = lambda_values
     #print(lambda_values)
     #print(str(t1) + "    " + str(t2) + "   " + str(t3) + "\n")
-    if t1 is None:
+    if t1 == START_SYMBOL:
         pred1 = 0
     else:
         pred1 = l1 * q_dic.get(join([t1, t2, t3]), 0)
-    if t2 is None:
+    if t2 == START_SYMBOL:
         pred2 = 0
     else:
         pred2 = l2 * q_dic.get(join([t2, t3]), 0)

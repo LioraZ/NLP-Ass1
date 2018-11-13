@@ -2,6 +2,7 @@ import sys
 import MLETrain as mle
 import math
 #from MLETrain import join
+from MLETrain import START_SYMBOL
 
 
 def read_input(f_name):
@@ -21,7 +22,7 @@ def get_lambda_values():
 def greedy_train(sentence):
     tags = mle.get_possible_tags()
     lambda_values = get_lambda_values()
-    preds = [None, None]
+    preds = [START_SYMBOL, START_SYMBOL]
 
     for word in sentence.split():
         max_score = 0
@@ -98,8 +99,8 @@ if __name__ == '__main__':
     script_name, f_input, q_mle, e_mle, f_output, f_extra = sys.argv
     e_dict = mle.get_e_dict(e_mle)
     q_dict = mle.get_q_dict(q_mle)
-    check_test()
-    #all_preds = read_input(f_input)
-    #write_predictions(f_output, all_preds)
+    #check_test()
+    all_preds = read_input(f_input)
+    write_predictions(f_output, all_preds)
 
 
