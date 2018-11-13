@@ -136,10 +136,6 @@ def get_e_dict(f_name):
 
 def get_e(w, t, e_dict):
     return e_dict.get(join([w, t]), 0)
-    """word_and_tag = join([w, t])
-    #e = e_dict.get(join([w, t]), 0)
-    if word_and_tag in e_dict.keys():
-        return e_dict[word_and_tag]"""
 
 
 def get_unknown_e(w, t, e_dict):
@@ -180,7 +176,8 @@ def train_unknown(data):
     data1 = [[k, data1[k][1]] for k in data1 if data1[k][0] is 1] #now data1 is list of words which appear only once and there tag [word, tag]
     dict_to_e = {} # dictionary of unknowns to add to e.mle
     for word, tag in data1:
-        current_str = "^unk"
+        current_str = classify_unknown(word)
+        """current_str = "^unk"
         if (word[0].isupper()):
             current_str = "^Unk"
         if (word[-3:] is "ing"):    
@@ -200,7 +197,7 @@ def train_unknown(data):
             word = float(word)
             current_str = "^unk-num"
         except ValueError:
-            pass  # it was a string, not an float
+            pass  # it was a string, not an float"""
         if current_str == "^unk":
             continue
         current_str = current_str + " " + tag
@@ -213,39 +210,57 @@ def train_unknown(data):
 
 
 def classify_unknown(word):
+    suffix_1 = ["s"]
+    suffix_2 = ["ly", "ed", "al", "ul", "er", "es", "ty", "en"]
+    suffix_3 = ["ing", "ous", "age", "ies", "ive", "ery", "ers", "ity", "ist", "ent", "ian", "ism", "ary", "ory",
+                "phy", "ate", "est"]
+    suffix_4 = ["ness", "tial", "tion", "sion", "able", "ence", "ance"]
+
     current_str = "^unk"
-    if (word[0].isupper()):
+    if word[0].isupper():
         current_str = "^Unk"
-    if (word[-3:] is "ing"):
-        current_str = current_str + "ing"
-    elif (word[-2:] == 'ly'):
-        current_str = current_str + "ly"
-    elif (word[-4:] == 'tial'):
-        current_str = current_str + "tial"
-    elif (word[-2:] == 'al'):
-        current_str = current_str + "al"
-    elif (word[-4:] == 'tion'):
-        current_str = current_str + "tion"
-    elif (word[-4:] == 'ed'):
-        current_str = current_str + "ed"
-        # maybe should add some more ifs..
-    try:
-        word = float(word)
-        current_str = "^unk-num"
-    except ValueError:
-        pass  # it was a string, not an float
+
+    if word[-4:] in suffix_4:
+        current_str += word[-4:]
+    elif word[-3:] in suffix_3:
+        current_str += word[-3:]
+    elif word[-2:] in suffix_2:
+        current_str += word[-2:]
+    elif word[-1:] in suffix_1:
+        current_str += word[-1:]
+    elif len(word.split("-")) >= 2:
+        subs = word.split("-")
+        for sub in subs:
+            if is_number(sub):
+                current_str += "-num"
+            else:
+                current_str += "-not_num"
+    elif are_all_numbers(word, ":") or are_all_numbers(word, "/"):
+        current_str += "time"
+    elif are_all_numbers(word, ",") or are_all_numbers(word, "."):
+        current_str += "num"
+    elif "'" in word:
+        current_str += "slang"
     return current_str
 
-    """if word[-3:] is "ing":
-        return unk_type
-    # word contains a number
-    # word contains an upper-case letter
-    # word contains a hyphen
-    # word is all upper-case
-    # word contains a particular prefix (up to length 4)
-    # word contains a particular suffix (up to length 4)
-    # word is upper-case and has a digit and and a dash
-    return "NN"""""
+
+def are_all_numbers(str, delim):
+    all_num = True
+    subs = str.split(delim)
+    for sub in subs:
+        if not is_number(sub):
+            all_num = False
+    return all_num
+
+
+def is_number(str):
+    try:
+        word = float(str)
+        return True
+    except ValueError:
+        return False
+        pass  # it was a string, not an float
+
 
 
 if __name__ == '__main__':

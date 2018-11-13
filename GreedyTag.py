@@ -1,14 +1,12 @@
 import sys
 import MLETrain as mle
 import math
-#from MLETrain import join
 from MLETrain import START_SYMBOL
 
 
 def read_input(f_name):
     with open(f_name, "r") as file:
         return [[line, greedy_train(line)] for line in file]
-        #return [greedy_train(words) for line in file for words in line.split()]
 
 
 def get_lambda_values():
@@ -25,37 +23,39 @@ def greedy_train(sentence):
     preds = [START_SYMBOL, START_SYMBOL]
 
     for word in sentence.split():
-        max_score = 0
-        best_tag = ""
-        best_unknown_score = 0
-        best_unknown_tag = ""
-        #best_tag = {"", 0}
+        max_known = {'score': 0, 'tag': ""}
+        max_unknown = {'score': 0, 'tag': ""}
+
         for tag in tags:
             e = mle.get_e(word, tag, e_dict)
             q = mle.get_q(preds[-2], preds[-1], tag, lambda_values, q_dict)
-            #best_tag =
+
             # till we do interpolation and assign non zero values
             """if q is not 0:
                 q = - math.log(q)
             if e is not 0:
                 e = - math.log(e)"""
-            if e * q > max_score:
-                max_score = e * q
-                best_tag = tag
+            max_known = update_max(e * q, tag, max_known)
             if e == 0:
                 temp_score = q * mle.get_unknown_e(word, tag, e_dict)
-                if temp_score > best_unknown_score:
-                    best_unknown_score = temp_score
-                    best_unknown_tag = tag
-        if max_score == 0:
-            best_tag = best_unknown_tag
-        preds.append(best_tag)
+                max_unknown = update_max(temp_score, tag, max_unknown)
+        if max_known['score'] == 0:
+            preds.append(max_unknown["tag"])
+        else:
+            preds.append(max_known["tag"])
+        if preds[-1] == "":
+            words_with_no_tag.append(word)
     return preds[2::]
 
 
+def update_max(score, tag, max):
+    if score > max["score"]:
+        max["score"] = score
+        max["tag"] = tag
+    return max
+
+
 def greedy_train_with_tag(num_epoch, sentence):
-    if int(num_epoch) == 1:
-        print("yay")
     print("Epoch: " + str(num_epoch) + "\n")
     tags = []
     data = []
@@ -74,7 +74,7 @@ def greedy_train_with_tag(num_epoch, sentence):
         else:
             bad += 1
     print("Accuracy: " + str((good / (good + bad)) * 100) + "%" + "\n\n")
-
+    return good, bad
 
 
 def write_predictions(f_output, preds):
@@ -90,17 +90,28 @@ def write_predictions(f_output, preds):
 def check_test():
     with open("data/ass1-tagger-test", "r") as file:
         epoch_counter = 0.0
+        all_good = 0.0
+        all_bad = 0.0
         for line in file:
             epoch_counter = epoch_counter + 1
-            greedy_train_with_tag(epoch_counter, line)
+            num_good, num_bad = greedy_train_with_tag(epoch_counter, line)
+            all_good += num_good
+            all_bad += num_bad
+        print("Total Accuracy: " + str(100 * (all_good / (all_good + all_bad))) + "%\n")
 
 
 if __name__ == '__main__':
     script_name, f_input, q_mle, e_mle, f_output, f_extra = sys.argv
     e_dict = mle.get_e_dict(e_mle)
     q_dict = mle.get_q_dict(q_mle)
-    #check_test()
-    all_preds = read_input(f_input)
-    write_predictions(f_output, all_preds)
+
+    words_with_no_tag = []
+    check_test()
+    with open("unk-words.txt", "w") as file:
+        for word in words_with_no_tag:
+            file.write(word + "\n")
+
+    #all_preds = read_input(f_input)
+    #write_predictions(f_output, all_preds)
 
 
