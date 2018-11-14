@@ -1,2 +1,8 @@
 1. We handled the unknown characters by using lists of possible suffix's and checking for capital letters and numbers. We started first by checking for capitals and then initializing the multiple suffix lists, each list containing suffix's of a specific length. Then we checked for the current word, if it's in one of the suffix lists and tagged it accordingly (starting from the longest length suffix, since it is more detailed). If the word did not have any common suffix we checked if it had a hyphon, is a date or time, or is a number and tagged it accordingly. 
 During the train we added the unknowns on the train data to the estimation dictionary and files, and therefore, when we tested the test data, we just classified the word to the type of unknown (by suffix, capitalization, hyphon, number, date and time or slang), and extracted its probability from the dictionary we've built.
+
+
+
+3.
+On train data - 95.6 accuracy
+On test data - 94.24 accuracy

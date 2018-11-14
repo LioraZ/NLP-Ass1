@@ -89,11 +89,9 @@ def write_predictions(f_output, preds):
 
 def check_test():
     with open("data/ass1-tagger-test", "r") as file:
-        epoch_counter = 0.0
-        all_good = 0.0
-        all_bad = 0.0
+        epoch_counter = all_good = all_bad = 0.0
         for line in file:
-            epoch_counter = epoch_counter + 1
+            epoch_counter += 1
             num_good, num_bad = greedy_train_with_tag(epoch_counter, line)
             all_good += num_good
             all_bad += num_bad

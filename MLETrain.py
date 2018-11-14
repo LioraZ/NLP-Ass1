@@ -87,7 +87,10 @@ def get_q(t1, t2, t3, lambda_values, q_dic):
         pred2 = 0
     else:
         pred2 = l2 * q_dic.get(join([t2, t3]), 0)
-    pred3 = l3 * q_dic.get(t3, 0)
+    if t3 == STOP_SYMBOL:
+        pred3 = 0
+    else:
+        pred3 = l3 * q_dic.get(t3, 0)
     return pred1 + pred2 + pred3
 
 
@@ -159,14 +162,13 @@ def get_possible_tags():
 
 
 def my_counter(data):
-    wordsCount = {}
-    words = []  # list of words
+    words_count = {}
     for word in data:
-        if word[0] not in wordsCount:
-            wordsCount[word[0]] = [0, ""]
-        wordsCount[word[0]][0] += 1   
-        wordsCount[word[0]][1] = word[1]
-    return wordsCount
+        if word[0] not in words_count:
+            words_count[word[0]] = [0, ""]
+        words_count[word[0]][0] += 1
+        words_count[word[0]][1] = word[1]
+    return words_count
 
 
 def train_unknown(data):
@@ -262,11 +264,9 @@ def is_number(str):
         pass  # it was a string, not an float
 
 
-
 if __name__ == '__main__':
     script_name, f_name, q_mle, e_mle = sys.argv
     tags, data = reading_input(f_name)
-    #unknown_dict = train_unknown(data)
     pairs, triplets, singles, tags_size = counting_quantities(tags)
     create_possible_tags(tags)
     write_quantities()
