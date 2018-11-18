@@ -26,11 +26,12 @@ def greedy_train(sentence):
 
     print (sentence)
     exit()
-    for word in sentence.split():
+    for word,i in zip(sentence.split(), range(len(sentence.split())):
         max_known = {'score': 0, 'tag': ""}
         max_unknown = {'score': 0, 'tag': ""}
-
-        for tag in tags:
+        pt = "start"
+        ppt = "start"
+        contex = get_sentence_context(i, sentence, pt, ppt)
             #e = mle.get_e(word, tag, e_dict)
             #q = mle.get_q(preds[-2], preds[-1], tag, lambda_values, q_dict)
 
@@ -50,6 +51,9 @@ def greedy_train(sentence):
         if preds[-1] == "":
             words_with_no_tag.append(word)
     return preds[2::]
+
+
+def craete_feature_vec(word_context):
 
 def get_sentence_context(i, sentence, pt, ppt):
     dc = { 'word': sentence[i][0],
