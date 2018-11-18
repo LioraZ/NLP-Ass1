@@ -103322,22 +103322,36 @@ hardball NN 	 1
  NN 	 132935 
 ^unktime CD 	 3756 
  CD 	 36568 
+^unk `` 	 2 
+ `` 	 7092 
 ^Unk NN 	 313 
  NN 	 132935 
 ^unkslang '' 	 1 
  '' 	 6919 
 ^Unk NNP 	 7499 
  NNP 	 91466 
+^unk ( 	 2 
+ ( 	 1366 
 ^Unked VBN 	 89 
  VBN 	 20024 
 ^Unks NNS 	 268 
  NNS 	 59856 
+^unk , 	 1 
+ , 	 48727 
+^unk ) 	 2 
+ ) 	 1376 
+^unk NN 	 2944 
+ NN 	 132935 
 ^unks VBD 	 1 
  VBD 	 29889 
 ^unkly RB 	 715 
  RB 	 30970 
+^unk . 	 3 
+ . 	 39478 
 ^Unk-not_num-not_num NNP 	 228 
  NNP 	 91466 
+^unk PRP 	 13 
+ PRP 	 17436 
 ^unks VBZ 	 336 
  VBZ 	 21672 
 ^unks PRP$ 	 1 
@@ -103352,8 +103366,12 @@ hardball NN 	 1
  NNP 	 91466 
 ^unkes VBZ 	 325 
  VBZ 	 21672 
+^unk IN 	 26 
+ IN 	 107862 
 ^unken CD 	 2 
  CD 	 36568 
+^unk JJ 	 1027 
+ JJ 	 61217 
 ^unkable JJ 	 197 
  JJ 	 61217 
 ^unkslang RB 	 2 
@@ -103364,6 +103382,10 @@ hardball NN 	 1
  NNP 	 91466 
 ^Unkes NNP 	 139 
  NNP 	 91466 
+^unk RB 	 71 
+ RB 	 30970 
+^unk PRP$ 	 3 
+ PRP$ 	 8407 
 ^unktion NN 	 568 
  NN 	 132935 
 ^unkate JJ 	 61 
@@ -103374,6 +103396,8 @@ hardball NN 	 1
  NN 	 132935 
 ^unkes NNS 	 727 
  NNS 	 59856 
+^unk MD 	 10 
+ MD 	 9803 
 ^unkness NN 	 114 
  NN 	 132935 
 ^Unk PRP 	 12 
@@ -103400,24 +103424,36 @@ hardball NN 	 1
  RB 	 30970 
 ^unkance NN 	 74 
  NN 	 132935 
+^unk VBD 	 51 
+ VBD 	 29889 
 ^Unkly RB 	 111 
  RB 	 30970 
 ^unksion NN 	 89 
  NN 	 132935 
 ^unking VBG 	 1273 
  VBG 	 14846 
+^unk VB 	 527 
+ VB 	 26438 
 ^unkal JJ 	 359 
  JJ 	 61217 
+^unk WP 	 2 
+ WP 	 2363 
 ^Unkian NNP 	 37 
  NNP 	 91466 
+^unk WDT 	 2 
+ WDT 	 4294 
 ^unkory NN 	 19 
  NN 	 132935 
 ^Unk RB 	 43 
  RB 	 30970 
+^unk DT 	 3 
+ DT 	 81832 
 ^unkary JJ 	 63 
  JJ 	 61217 
 ^unkity NN 	 198 
  NN 	 132935 
+^unk CC 	 3 
+ CC 	 23959 
 ^Unking VBG 	 206 
  VBG 	 14846 
 ^unken WRB 	 1 
@@ -103428,6 +103464,10 @@ hardball NN 	 1
  NN 	 132935 
 ^unkest JJS 	 77 
  JJS 	 1947 
+^unk $ 	 1 
+ $ 	 7372 
+^unk CD 	 16 
+ CD 	 36568 
 ^Unkers NNPS 	 32 
  NNPS 	 2673 
 ^Unkity NNP 	 17 
@@ -103448,6 +103488,8 @@ hardball NN 	 1
  JJ 	 61217 
 ^unkist NN 	 80 
  NN 	 132935 
+^unk : 	 3 
+ : 	 4772 
 ^unker JJR 	 87 
  JJR 	 3238 
 ^unked VBD 	 418 
@@ -103494,10 +103536,16 @@ hardball NN 	 1
  JJ 	 61217 
 ^Unks VBD 	 1 
  VBD 	 29889 
+^unk WRB 	 4 
+ WRB 	 2143 
 ^unking IN 	 1 
  IN 	 107862 
+^unk VBN 	 32 
+ VBN 	 20024 
 ^unktial JJ 	 15 
  JJ 	 61217 
+^unk VBP 	 74 
+ VBP 	 12491 
 ^Unkent JJ 	 8 
  JJ 	 61217 
 ^unks PRP 	 1 
@@ -103618,6 +103666,8 @@ hardball NN 	 1
  NNP 	 91466 
 ^unkest NN 	 15 
  NN 	 132935 
+^unk # 	 1 
+ # 	 142 
 ^Unktion NN 	 32 
  NN 	 132935 
 ^Unker DT 	 1 
@@ -103648,6 +103698,8 @@ hardball NN 	 1
  NN 	 132935 
 ^unkes RB 	 2 
  RB 	 30970 
+^unk FW 	 41 
+ FW 	 234 
 ^unkes FW 	 3 
  FW 	 234 
 ^Unks JJ 	 8 
@@ -103662,10 +103714,16 @@ hardball NN 	 1
  VB 	 26438 
 ^Unk WDT 	 3 
  WDT 	 4294 
+^unk NNS 	 38 
+ NNS 	 59856 
 ^unk-num-num JJ 	 17 
  JJ 	 61217 
 ^unkent FW 	 1 
  FW 	 234 
+^unk WP$ 	 1 
+ WP$ 	 168 
+^unk UH 	 7 
+ UH 	 97 
 ^unkul VB 	 1 
  VB 	 26438 
 ^Unkies NNP 	 11 
@@ -103698,6 +103756,8 @@ hardball NN 	 1
  RB 	 30970 
 ^Unks VBZ 	 23 
  VBZ 	 21672 
+^unk JJS 	 1 
+ JJS 	 1947 
 ^Unkory NNP 	 13 
  NNP 	 91466 
 ^Unksion NNP 	 18 
@@ -103766,6 +103826,8 @@ hardball NN 	 1
  NNP 	 91466 
 ^Unk WRB 	 5 
  WRB 	 2143 
+^unk NNP 	 16 
+ NNP 	 91466 
 ^Unker VB 	 6 
  VB 	 26438 
 ^unkul JJR 	 1 
@@ -103854,10 +103916,14 @@ hardball NN 	 1
  NN 	 132935 
 ^Unk WP 	 2 
  WP 	 2363 
+^unk TO 	 1 
+ TO 	 13049 
 ^unkphy NN 	 10 
  NN 	 132935 
 ^unk-not_num-not_num NNS 	 5 
  NNS 	 59856 
+^unk VBZ 	 1 
+ VBZ 	 21672 
 ^Unk VBP 	 17 
  VBP 	 12491 
 ^Unkery JJ 	 3 
@@ -103944,6 +104010,8 @@ hardball NN 	 1
  NN 	 132935 
 ^Unken NNS 	 1 
  NNS 	 59856 
+^unk SYM 	 4 
+ SYM 	 58 
 ^unk-not_num-not_num-not_num RB 	 5 
  RB 	 30970 
 ^unksion JJ 	 5 

@@ -23,21 +23,51 @@ def greedy_train(sentence):
     preds = [START_SYMBOL, START_SYMBOL]
 
     for word in sentence.split():
-        max_known = {'score': 0, 'tag': ""}
-        max_unknown = {'score': 0, 'tag': ""}
+        max_known = {'score': 0.0, 'tag': ""}
+        max_unknown = {'score': 0.0, 'tag': ""}
 
         for tag in tags:
             e = mle.get_e(word, tag, e_dict)
             q = mle.get_q(preds[-2], preds[-1], tag, lambda_values, q_dict)
 
-            # till we do interpolation and assign non zero values
-            """if q is not 0:
-                q = - math.log(q)
-            if e is not 0:
-                e = - math.log(e)"""
             max_known = update_max(e * q, tag, max_known)
             if e == 0:
                 temp_score = q * mle.get_unknown_e(word, tag, e_dict)
+                max_unknown = update_max(temp_score, tag, max_unknown)
+        if max_known['score'] == 0:
+            preds.append(max_unknown["tag"])
+        else:
+            preds.append(max_known["tag"])
+        if preds[-1] == "":
+            preds.append(tags[0])
+            words_with_no_tag.append(word)
+    return preds[2::]
+
+
+def greedy_log(sentence):
+    LOG_PROB_OF_ZERO = -100
+
+    def log(num):
+        try:
+            return math.log(num)
+        except ValueError:
+            return LOG_PROB_OF_ZERO
+
+    tags = mle.get_possible_tags()
+    lambda_values = get_lambda_values()
+    preds = [START_SYMBOL, START_SYMBOL]
+
+    for word in sentence.split():
+        max_known = {'score': float("-Inf"), 'tag': ""}
+        max_unknown = {'score': float("-Inf"), 'tag': ""}
+
+        for tag in tags:
+            e = mle.get_e(word, tag, e_dict)
+            q = mle.get_q(preds[-2], preds[-1], tag, lambda_values, q_dict)
+
+            max_known = update_max(log(e) + log(q), tag, max_known)
+            if e == 0:
+                temp_score = log(q) + log(mle.get_unknown_e(word, tag, e_dict))
                 max_unknown = update_max(temp_score, tag, max_unknown)
         if max_known['score'] == 0:
             preds.append(max_unknown["tag"])
@@ -84,7 +114,6 @@ def write_predictions(f_output, preds):
             pred = line_and_pred[1]
             output = [word + "/" + tag for word, tag in zip(line.split(), pred)]
             file.write(" ".join(output) + "\n")
-
 
 
 def check_test():

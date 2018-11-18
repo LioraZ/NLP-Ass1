@@ -38,8 +38,8 @@ def write_estimations(pairs1, tags, f_name):
     pairs = merge_two_dicts(pairs1, train_unknown(pairs1))
     with open(f_name, "w") as file:
         for i in pairs:
-            file.write(join([i, '\t', str(pairs[i]), '\n', str(i.split(" ")[1]),
-                             '\t', str(tags[i.split(" ")[1]]), '\n']))
+            file.write(join([i, '\t', str(pairs[i]), '\n', str(i.split()[1]),
+                             '\t', str(tags[i.split()[1]]), '\n']))
 
 
 def write_quantities():
@@ -143,13 +143,14 @@ def get_e(w, t, e_dict):
 
 def get_unknown_e(w, t, e_dict):
     unk = classify_unknown(w)
-    return e_dict.get(join([unk, t]), 0)
+    return e_dict.get(join([unk, t]), 1 / len(e_dict))
 
 
 def create_possible_tags(tags):
-    tags = set(tags)
+    tags_dict = Counter(tags)
+    tags_list = sorted(tags_dict, key=tags_dict.get, reverse=True)
     with open("possible_tags", "w") as file:
-        for tag in tags:
+        for tag in tags_list:
             file.write(tag + '\n')
 
 
@@ -179,36 +180,16 @@ def train_unknown(data):
     dict_to_e = {} # dictionary of unknowns to add to e.mle
     for word, tag in data1:
         current_str = classify_unknown(word)
-        """current_str = "^unk"
-        if (word[0].isupper()):
-            current_str = "^Unk"
-        if (word[-3:] is "ing"):    
-            current_str = current_str + "ing"
-        elif (word[-2:] == 'ly'):
-            current_str = current_str + "ly"
-        elif (word[-4:] == 'tial'):
-            current_str = current_str + "tial"  
-        elif (word[-2:] == 'al'):
-            current_str = current_str + "al"
-        elif (word[-4:] == 'tion'):
-            current_str = current_str + "tion"  
-        elif (word[-4:] == 'ed'):
-            current_str = current_str + "ed"  
-        #maybe should add some more ifs..
-        try:
-            word = float(word)
-            current_str = "^unk-num"
-        except ValueError:
-            pass  # it was a string, not an float"""
-        if current_str == "^unk":
-            continue
+        """if current_str == "^unk":
+            continue"""
         current_str = current_str + " " + tag
         if current_str not in dict_to_e:
             dict_to_e[current_str] = 0
         dict_to_e[current_str] += 1
+    #dict_to_e[join(["^unk", "all"])] = 1
+    #dict_to_e["all"] = len(data)
    # print (dict_to_e)
     return dict_to_e
-    #return {**data, **dict_to_e}
 
 
 def classify_unknown(word):
@@ -267,8 +248,8 @@ def is_number(str):
 if __name__ == '__main__':
     script_name, f_name, q_mle, e_mle = sys.argv
     tags, data = reading_input(f_name)
-    pairs, triplets, singles, tags_size = counting_quantities(tags)
     create_possible_tags(tags)
+    pairs, triplets, singles, tags_size = counting_quantities(tags)
     write_quantities()
     write_estimations(Counter(data), Counter(tags), e_mle)
     
