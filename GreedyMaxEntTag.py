@@ -1,11 +1,7 @@
-from collections import Counter
-import liblin as lbln
-import MLETrain as mle
-import math
-#from MLETrain import START_SYMBOL
-from itertools import islice
 import sys
 
+import liblin as lbln
+from hmm1 import MLETrain as mle
 
 START_SYMBOL = '*'
 

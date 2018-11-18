@@ -2,7 +2,6 @@ from collections import Counter
 from itertools import islice
 import sys
 
-
 START_SYMBOL = '*'
 STOP_SYMBOL = 'STOP'
 
@@ -57,8 +56,6 @@ def write_quantities():
             file.write(join(["All tags", '\t', str(tags_size), '\n']))
 
 
-
-
 def join(str_list):
     return " ".join(str_list)
 
@@ -77,8 +74,8 @@ def combinations(seq, n=2):
 
 def get_q(t1, t2, t3, lambda_values, q_dic):
     l1, l2, l3 = lambda_values
-    #print(lambda_values)
-    #print(str(t1) + "    " + str(t2) + "   " + str(t3) + "\n")
+    # print(lambda_values)
+    # print(str(t1) + "    " + str(t2) + "   " + str(t3) + "\n")
     if t1 == START_SYMBOL:
         pred1 = 0
     else:
@@ -95,8 +92,7 @@ def get_q(t1, t2, t3, lambda_values, q_dic):
 
 
 def isclose(a, b, rel_tol=1e-09, abs_tol=0.0):
-    return abs(a-b) <= max(rel_tol * max(abs(a), abs(b)), abs_tol)
-
+    return abs(a - b) <= max(rel_tol * max(abs(a), abs(b)), abs_tol)
 
 
 def get_q_dict(f_name):
@@ -109,12 +105,12 @@ def get_q_dict(f_name):
         count = count.split("\n")[0]
         next_tags, next_count = next_line.split('\t')
         next_count = next_count.split("\n")[0]
-        if float(count) is 0 or float(next_count) is 0: #might be better way for handling division by 0
+        if float(count) is 0 or float(next_count) is 0:  # might be better way for handling division by 0
             q_dict[tags] = 0
         else:
             prob = float(count) / float(next_count)
             q_dict[tags] = prob
-            #e_dict[word_and_tag] = float(count) / float(next_count)
+            # e_dict[word_and_tag] = float(count) / float(next_count)
     return q_dict
 
 
@@ -128,12 +124,12 @@ def get_e_dict(f_name):
         count = count.split("\n")[0]
         next_tags, next_count = next_line.split('\t')
         next_count = next_count.split("\n")[0]
-        if float(count) is 0 or float(next_count) is 0: #might be better way for handling division by 0
+        if float(count) is 0 or float(next_count) is 0:  # might be better way for handling division by 0
             e_dict[word_and_tag] = 0
         else:
             prob = float(count) / float(next_count)
             e_dict[word_and_tag] = prob
-            #e_dict[word_and_tag] = float(count) / float(next_count)
+            # e_dict[word_and_tag] = float(count) / float(next_count)
     return e_dict
 
 
@@ -174,10 +170,11 @@ def my_counter(data):
 
 def train_unknown(data):
     """ data is dict of words and there tags -> there count """
-    data1 = [[k.split()[0],k.split()[1]] for k in data]    
+    data1 = [[k.split()[0], k.split()[1]] for k in data]
     data1 = my_counter(data1)
-    data1 = [[k, data1[k][1]] for k in data1 if data1[k][0] is 1] #now data1 is list of words which appear only once and there tag [word, tag]
-    dict_to_e = {} # dictionary of unknowns to add to e.mle
+    data1 = [[k, data1[k][1]] for k in data1 if
+             data1[k][0] is 1]  # now data1 is list of words which appear only once and there tag [word, tag]
+    dict_to_e = {}  # dictionary of unknowns to add to e.mle
     for word, tag in data1:
         current_str = classify_unknown(word)
         """if current_str == "^unk":
@@ -186,9 +183,9 @@ def train_unknown(data):
         if current_str not in dict_to_e:
             dict_to_e[current_str] = 0
         dict_to_e[current_str] += 1
-    #dict_to_e[join(["^unk", "all"])] = 1
-    #dict_to_e["all"] = len(data)
-   # print (dict_to_e)
+        # dict_to_e[join(["^unk", "all"])] = 1
+        # dict_to_e["all"] = len(data)
+        # print (dict_to_e)
     return dict_to_e
 
 
@@ -252,6 +249,4 @@ if __name__ == '__main__':
     pairs, triplets, singles, tags_size = counting_quantities(tags)
     write_quantities()
     write_estimations(Counter(data), Counter(tags), e_mle)
-    
-
 
