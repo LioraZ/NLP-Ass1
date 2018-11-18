@@ -1,5 +1,6 @@
 import sys
 import json
+import operator
 import liblin as lbln
 import TempMLETrain as mle
 
@@ -17,33 +18,40 @@ def update_max(score, tag, max):
     return max
 
 
-def greedy_train(sentence, feature_map, tag_map):
-   # tags = mle.get_possible_tags()
+def greedy_train(sentence):
     final_line_tags = []
     words = sentence.split()
+    pt = "start"
+    ppt = "start"
     for i, word in enumerate(words):
-        maxProb = float("-Inf")
-        maxTag = {}
-        pt = "start"
-        ppt = "start"
+        #max_tag = {}
         context = get_sentence_context(i, words, pt, ppt)
-        feature_indexes = create_feature_vec(context, feature_map)
-        #print (feature_indexes)
+        feature_indexes = create_feature_vec(context)
         tags_with_prob = llp.predict(feature_indexes)
-        #print (feature_indexes)
-        #print (tag_map)
-        for r in tag_map:   #possible pruning here
+        r = argmax(tags_with_prob)
+        max_tag = inv_tag_map[int(r)]
+        """for r in tag_map:   #possible pruning here
             if maxProb < tags_with_prob[str(tag_map[r])]:
                 maxProb = tags_with_prob[str(tag_map[r])]
-                maxTag = r
+                maxTag = r"""
         ppt = pt
-        pt = maxTag
-        #tags.append(maxTag)        
-        final_line_tags.append(maxTag)
-    return final_line_tags         
+        pt = max_tag
+        final_line_tags.append(max_tag)
+    return final_line_tags
 
 
-def create_feature_vec(word_context, feature_map):
+def get_tag(r):
+    for tag in tag_map:
+        if tag_map[tag] == int(r):
+            return tag
+    return None
+
+
+def argmax(dict_of_score):
+    return max(dict_of_score.items(), key=operator.itemgetter(1))[0]
+
+
+def create_feature_vec(word_context):
     res = []
     for k, v in word_context.items():
         s = k + "=" + v
@@ -102,7 +110,8 @@ def get_sentence_context(i, sentence, pt, ppt):
 def join(str_list):
     return " ".join(str_list)
 
-def greedy_train_with_tag(num_epoch, sentence, tag_map, feature_map):
+
+def greedy_train_with_tag(num_epoch, sentence):
     print("Epoch: " + str(num_epoch) + "\n")
     tags = []
     data = []
@@ -111,7 +120,7 @@ def greedy_train_with_tag(num_epoch, sentence, tag_map, feature_map):
         tags.append(items[-1])
         data.append("/".join(items[:-1]))
     data = join(data)
-    preds = greedy_train(data, feature_map, tag_map)
+    preds = greedy_train(data)
     good = bad = 0.0
     print("\t".join(tags) + "\n")
     print("\t".join(preds) + "\n")
@@ -129,7 +138,7 @@ def check_test():
     with open("data/ass1-tagger-test", "r") as file:
         for line in file:
             epoch_count += 1
-            g, b = greedy_train_with_tag(epoch_count, line, tag_map, feature_map)
+            g, b = greedy_train_with_tag(epoch_count, line)
             good = good + g
             bad = bad + b
 
@@ -140,6 +149,7 @@ if __name__ == '__main__':
     script_name, input_file_name, modelname, feature_map_file, out_file_name = sys.argv
     llp = lbln.LiblinearLogregPredictor(modelname)
     tag_map, feature_map = get_tags_and_features_maps()
+    inv_tag_map = {v: k for k, v in tag_map.items()}
     check_test()
     #read_input(input_file_name)
 
