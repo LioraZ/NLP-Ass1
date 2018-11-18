@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcea1fe7-e3e0-400f-9a50-c97efc66d73f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hmm2/HMMutils.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/e.mle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/possible_tags" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GreedyTag.py" afterPath="$PROJECT_DIR$/hmm2/GreedyTag.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/HMMTag.py" afterPath="$PROJECT_DIR$/hmm2/HMMTag.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/HMMTest.py" afterPath="$PROJECT_DIR$/hmm2/HMMTest.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/MLETrain.py" afterPath="$PROJECT_DIR$/hmm1/MLETrain.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lambda_vals" afterPath="$PROJECT_DIR$/hmm2/lambda_vals" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GreedyTag.py" afterPath="$PROJECT_DIR$/GreedyTag.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HMMTest.py" afterPath="$PROJECT_DIR$/HMMTest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MLETrain.py" afterPath="$PROJECT_DIR$/MLETrain.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e.mle" afterPath="$PROJECT_DIR$/e.mle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/possible_tags" afterPath="$PROJECT_DIR$/possible_tags" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unk-words.txt" afterPath="$PROJECT_DIR$/unk-words.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GreedyMaxEntTag.py" afterPath="$PROJECT_DIR$/GreedyMaxEntTag.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,18 +27,14 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="GreedyTag.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GreedyTag.py">
+        <entry file="file://$PROJECT_DIR$/hmm2/GreedyTag.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="123" column="32" lean-forward="false" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="32" />
+            <state relative-caret-position="156">
+              <caret line="123" column="18" lean-forward="false" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="18" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#110#202#0" expanded="false" />
-                <element signature="e#234#422#0" expanded="false" />
-                <element signature="e#1365#2403#0" expanded="false" />
-                <element signature="e#2443#2536#0" expanded="false" />
-                <element signature="e#3207#3477#0" expanded="false" />
-                <element signature="e#3918#4299#0" expanded="false" />
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#1431#2471#0" expanded="false" />
+                <element signature="e#2511#2604#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -61,26 +60,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="possible_tags" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/possible_tags">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="codecs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda3/Lib/codecs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="greedy.test.pred" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/greedy.test.pred">
           <provider selected="true" editor-type-id="text-editor">
@@ -92,18 +71,41 @@
         </entry>
       </file>
       <file leaf-file-name="HMMTest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HMMTest.py">
+        <entry file="file://$PROJECT_DIR$/hmm2/HMMTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            <state relative-caret-position="154">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="26" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#2941#4399#0" expanded="false" />
-                <element signature="e#4452#5100#0" expanded="false" />
-                <element signature="e#5121#5209#0" expanded="false" />
-                <element signature="e#5256#5526#0" expanded="false" />
-                <element signature="e#5558#5746#0" expanded="false" />
-                <element signature="e#6974#7147#0" expanded="false" />
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#340#458#0" expanded="false" />
+                <element signature="e#498#591#0" expanded="false" />
+                <element signature="e#618#2251#0" expanded="false" />
+                <element signature="e#2295#2871#0" expanded="false" />
+                <element signature="e#2892#2980#0" expanded="false" />
+                <element signature="e#3017#3287#0" expanded="false" />
+                <element signature="e#3557#4128#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HMMutils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hmm2/HMMutils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="151" column="45" lean-forward="true" selection-start-line="151" selection-start-column="45" selection-end-line="151" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#128#153#0" expanded="false" />
+                <element signature="e#188#505#0" expanded="false" />
+                <element signature="e#557#922#0" expanded="false" />
+                <element signature="e#952#1560#0" expanded="false" />
+                <element signature="e#1590#2238#0" expanded="false" />
+                <element signature="e#2270#2304#0" expanded="false" />
+                <element signature="e#2344#2424#0" expanded="false" />
+                <element signature="e#2869#4002#0" expanded="false" />
+                <element signature="e#4042#4183#0" expanded="false" />
+                <element signature="e#4210#4350#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -144,6 +146,7 @@
       <find>.</find>
       <find>log</find>
       <find>^unk</find>
+      <find>read_input()</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,6 +165,11 @@
         <option value="$PROJECT_DIR$/GreedyTag.py" />
         <option value="$PROJECT_DIR$/MLETrain.py" />
         <option value="$PROJECT_DIR$/HMMTest.py" />
+        <option value="$PROJECT_DIR$/hmm1/MLETrain.py" />
+        <option value="$PROJECT_DIR$/hmm2/HMMutils.py" />
+        <option value="$PROJECT_DIR$/hmm2/possible_tags" />
+        <option value="$PROJECT_DIR$/hmm2/HMMTest.py" />
+        <option value="$PROJECT_DIR$/hmm2/GreedyTag.py" />
       </list>
     </option>
   </component>
@@ -209,6 +217,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="hmm2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ass1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ass1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hmm1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ass1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ass1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -221,7 +257,13 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/HMMTest.py" />
   </component>
-  <component name="RunManager" selected="Python.HMM">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Liora\Documents\NLP\Ass1\hmm2" />
+      <recent name="C:\Users\Liora\Documents\NLP\Ass1\hmm1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.GreedyTag">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -385,8 +427,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Ass1" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MLETrain.py" />
-      <option name="PARAMETERS" value="data/ass1-tagger-train q.mle e.mle" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hmm1/MLETrain.py" />
+      <option name="PARAMETERS" value="./data/ass1-tagger-train q.mle e.mle" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -397,13 +439,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\Liora\Anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hmm2" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Ass1" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GreedyTag.py" />
-      <option name="PARAMETERS" value="data/ass1-tagger-test-input q.mle e.mle greedy.test.pred lambda_vals" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hmm2/GreedyTag.py" />
+      <option name="PARAMETERS" value="../data/ass1-tagger-test-input ../q.mle ../e.mle hmm.test.pred lambda_vals" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -414,13 +456,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\Liora\Anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hmm2" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Ass1" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HMMTest.py" />
-      <option name="PARAMETERS" value="data/ass1-tagger-test q.mle e.mle hmm.test.pred lambda_vals" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hmm2/HMMTest.py" />
+      <option name="PARAMETERS" value="../data/ass1-tagger-test-input ../q.mle ../e.mle hmm.test.pred lambda_vals" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -451,7 +493,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24920969" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44481605" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -482,7 +524,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="315" />
+      <option name="time" value="319" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -497,7 +539,7 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MLETrain.py">
+    <entry file="file://$PROJECT_DIR$/hmm1/MLETrain.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -523,18 +565,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GreedyTag.py">
+    <entry file="file://$PROJECT_DIR$/hmm2/GreedyTag.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#110#202#0" expanded="false" />
-            <element signature="e#234#422#0" expanded="false" />
-            <element signature="e#1365#2403#0" expanded="false" />
-            <element signature="e#2443#2536#0" expanded="false" />
-            <element signature="e#3207#3477#0" expanded="false" />
-            <element signature="e#3918#4299#0" expanded="false" />
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1431#2471#0" expanded="false" />
+            <element signature="e#2511#2604#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -563,7 +601,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HMMTag.py">
+    <entry file="file://$PROJECT_DIR$/hmm2/HMMTag.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
@@ -579,7 +617,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MLETrain.py">
+    <entry file="file://$PROJECT_DIR$/hmm1/MLETrain.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2508">
           <caret line="116" column="27" lean-forward="false" selection-start-line="116" selection-start-column="27" selection-end-line="116" selection-end-column="27" />
@@ -597,18 +635,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GreedyTag.py">
+    <entry file="file://$PROJECT_DIR$/hmm2/GreedyTag.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#110#202#0" expanded="false" />
-            <element signature="e#234#422#0" expanded="false" />
-            <element signature="e#1365#2403#0" expanded="false" />
-            <element signature="e#2443#2536#0" expanded="false" />
-            <element signature="e#3207#3477#0" expanded="false" />
-            <element signature="e#3918#4299#0" expanded="false" />
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1431#2471#0" expanded="false" />
+            <element signature="e#2511#2604#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -637,7 +671,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HMMTag.py">
+    <entry file="file://$PROJECT_DIR$/hmm2/HMMTag.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -661,7 +695,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MLETrain.py">
+    <entry file="file://$PROJECT_DIR$/hmm1/MLETrain.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
@@ -671,18 +705,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GreedyTag.py">
+    <entry file="file://$PROJECT_DIR$/hmm2/GreedyTag.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#110#202#0" expanded="false" />
-            <element signature="e#234#422#0" expanded="false" />
-            <element signature="e#1365#2403#0" expanded="false" />
-            <element signature="e#2443#2536#0" expanded="false" />
-            <element signature="e#3207#3477#0" expanded="false" />
-            <element signature="e#3918#4299#0" expanded="false" />
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1431#2471#0" expanded="false" />
+            <element signature="e#2511#2604#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -703,7 +733,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HMMTag.py">
+    <entry file="file://$PROJECT_DIR$/hmm2/HMMTag.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -738,7 +768,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lambda_vals">
+    <entry file="file://$PROJECT_DIR$/hmm2/lambda_vals">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
@@ -770,13 +800,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HMMTag.py">
+    <entry file="file://$PROJECT_DIR$/hmm2/HMMTag.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
           <caret line="70" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -820,45 +848,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e.mle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="103342" column="4" lean-forward="false" selection-start-line="103342" selection-start-column="0" selection-end-line="103342" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unk-words.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/possible_tags">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MLETrain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="136" column="17" lean-forward="true" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#7313#7454#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WriteUp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="179" lean-forward="false" selection-start-line="0" selection-start-column="179" selection-end-line="0" selection-end-column="179" />
           <folding />
         </state>
       </provider>
@@ -879,34 +872,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HMMTest.py">
+    <entry file="file://$PROJECT_DIR$/hmm2/hmm.test.pred">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        <state relative-caret-position="-13970">
+          <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e.mle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hmm1/MLETrain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1892">
+          <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#2941#4399#0" expanded="false" />
-            <element signature="e#4452#5100#0" expanded="false" />
-            <element signature="e#5121#5209#0" expanded="false" />
-            <element signature="e#5256#5526#0" expanded="false" />
-            <element signature="e#5558#5746#0" expanded="false" />
-            <element signature="e#6974#7147#0" expanded="false" />
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#1942#1967#0" expanded="false" />
+            <element signature="e#2002#2319#0" expanded="false" />
+            <element signature="e#2359#2439#0" expanded="false" />
+            <element signature="e#2468#2690#0" expanded="false" />
+            <element signature="e#2722#3330#0" expanded="false" />
+            <element signature="e#3365#4498#0" expanded="false" />
+            <element signature="e#4538#4679#0" expanded="false" />
+            <element signature="e#4706#4846#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GreedyTag.py">
+    <entry file="file://$PROJECT_DIR$/possible_tags">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="123" column="32" lean-forward="false" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="32" />
+        <state relative-caret-position="-2112">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WriteUp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="179" lean-forward="false" selection-start-line="0" selection-start-column="179" selection-end-line="0" selection-end-column="179" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hmm2/possible_tags">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hmm2/HMMutils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="151" column="45" lean-forward="true" selection-start-line="151" selection-start-column="45" selection-end-line="151" selection-end-column="45" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#110#202#0" expanded="false" />
-            <element signature="e#234#422#0" expanded="false" />
-            <element signature="e#1365#2403#0" expanded="false" />
-            <element signature="e#2443#2536#0" expanded="false" />
-            <element signature="e#3207#3477#0" expanded="false" />
-            <element signature="e#3918#4299#0" expanded="false" />
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#128#153#0" expanded="false" />
+            <element signature="e#188#505#0" expanded="false" />
+            <element signature="e#557#922#0" expanded="false" />
+            <element signature="e#952#1560#0" expanded="false" />
+            <element signature="e#1590#2238#0" expanded="false" />
+            <element signature="e#2270#2304#0" expanded="false" />
+            <element signature="e#2344#2424#0" expanded="false" />
+            <element signature="e#2869#4002#0" expanded="false" />
+            <element signature="e#4042#4183#0" expanded="false" />
+            <element signature="e#4210#4350#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hmm2/HMMTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#340#458#0" expanded="false" />
+            <element signature="e#498#591#0" expanded="false" />
+            <element signature="e#618#2251#0" expanded="false" />
+            <element signature="e#2295#2871#0" expanded="false" />
+            <element signature="e#2892#2980#0" expanded="false" />
+            <element signature="e#3017#3287#0" expanded="false" />
+            <element signature="e#3557#4128#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hmm2/GreedyTag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="123" column="18" lean-forward="false" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1431#2471#0" expanded="false" />
+            <element signature="e#2511#2604#0" expanded="false" />
           </folding>
         </state>
       </provider>

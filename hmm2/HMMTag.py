@@ -1,5 +1,6 @@
 import sys
-import MLETrain as mle
+
+from hmm1 import MLETrain as mle
 
 
 def read_input(f_name):

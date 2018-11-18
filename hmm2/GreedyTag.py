@@ -1,11 +1,15 @@
-import sys
-import MLETrain as mle
 import math
-from MLETrain import START_SYMBOL
+import sys
+
+import hmm2.HMMutils as utils
+from hmm2.HMMutils import START_SYMBOL, join
 
 
-def read_input(f_name):
-    with open(f_name, "r") as file:
+TAG_FILE = "possible_tags_greedy"
+
+
+def read_input():
+    with open(f_input, "r") as file:
         return [[line, greedy_train(line)] for line in file]
 
 
@@ -18,7 +22,7 @@ def get_lambda_values():
 
 
 def greedy_train(sentence):
-    tags = mle.get_possible_tags()
+    tags = utils.get_possible_tags(TAG_FILE)
     lambda_values = get_lambda_values()
     preds = [START_SYMBOL, START_SYMBOL]
 
@@ -27,12 +31,12 @@ def greedy_train(sentence):
         max_unknown = {'score': 0.0, 'tag': ""}
 
         for tag in tags:
-            e = mle.get_e(word, tag, e_dict)
-            q = mle.get_q(preds[-2], preds[-1], tag, lambda_values, q_dict)
+            e = utils.get_e(word, tag, e_dict)
+            q = utils.get_q(preds[-2], preds[-1], tag, lambda_values, q_dict)
 
             max_known = update_max(e * q, tag, max_known)
             if e == 0:
-                temp_score = q * mle.get_unknown_e(word, tag, e_dict)
+                temp_score = q * utils.get_unknown_e(word, tag, e_dict)
                 max_unknown = update_max(temp_score, tag, max_unknown)
         if max_known['score'] == 0:
             preds.append(max_unknown["tag"])
@@ -53,7 +57,7 @@ def greedy_log(sentence):
         except ValueError:
             return LOG_PROB_OF_ZERO
 
-    tags = mle.get_possible_tags()
+    tags = utils.get_possible_tags()
     lambda_values = get_lambda_values()
     preds = [START_SYMBOL, START_SYMBOL]
 
@@ -93,7 +97,7 @@ def greedy_train_with_tag(num_epoch, sentence):
         items = word.split('/')
         tags.append(items[-1])
         data.append("/".join(items[:-1]))
-    data = mle.join(data)
+    data = join(data)
     preds = greedy_train(data)
     good = bad = 0.0
     print("\t".join(tags) + "\n")
@@ -107,7 +111,7 @@ def greedy_train_with_tag(num_epoch, sentence):
     return good, bad
 
 
-def write_predictions(f_output, preds):
+def write_predictions(preds):
     with open(f_output, "w") as file:
         for line_and_pred in preds:
             line = line_and_pred[0]
@@ -117,7 +121,7 @@ def write_predictions(f_output, preds):
 
 
 def check_test():
-    with open("data/ass1-tagger-test", "r") as file:
+    with open("../data/ass1-tagger-test", "r") as file:
         epoch_counter = all_good = all_bad = 0.0
         for line in file:
             epoch_counter += 1
@@ -129,14 +133,14 @@ def check_test():
 
 if __name__ == '__main__':
     script_name, f_input, q_mle, e_mle, f_output, f_extra = sys.argv
-    e_dict = mle.get_e_dict(e_mle)
-    q_dict = mle.get_q_dict(q_mle)
+    e_dict = utils.get_e_dict(e_mle)
+    q_dict = utils.get_q_dict(q_mle)
 
-    words_with_no_tag = []
+    tag_probs = {k: v for k, v in q_dict.items() if len(k.split()) == 1}
+    utils.create_possible_tags(tag_probs, TAG_FILE)
+    #tags = utils.get_possible_tags(TAG_FILE)
+
     check_test()
-    with open("unk-words.txt", "w") as file:
-        for word in words_with_no_tag:
-            file.write(word + "\n")
 
     #all_preds = read_input(f_input)
     #write_predictions(f_output, all_preds)
