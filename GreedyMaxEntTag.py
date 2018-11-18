@@ -1,5 +1,5 @@
 import sys
-
+import json
 import liblin as lbln
 import TempMLETrain as mle
 
@@ -15,37 +15,76 @@ def update_max(score, tag, max):
         max["tag"] = tag
     return max
 
-def greedy_train(sentence):
-    tags = mle.get_possible_tags()
-    #lambda_values = get_lambda_values()
-    preds = [START_SYMBOL, START_SYMBOL]
+def greedy_train(sentence, feature_map, tag_map):
+   # tags = mle.get_possible_tags()
+    final_line_tags = []
 
-    print (sentence)
-    exit()
-    for word in sentence.split():
-        max_known = {'score': 0, 'tag': ""}
-        max_unknown = {'score': 0, 'tag': ""}
+    for word,i in zip(sentence.split(), range(len(sentence.split()))):
+        maxProb = - float("inf")
+        maxTag = {}
+        pt = "start"
+        ppt = "start"
+        contex = get_sentence_context(i, sentence, pt, ppt)
+        feature_indexes = craete_feature_vec(contex, feature_map)
+        print (feature_indexes)
+        tags_with_prob = llp.predict(feature_indexes)
+        print (feature_indexes)
+        print (tag_map)
+        for r in tag_map:   #possible pruning here
+            if maxProb < tags_with_prob[str(tag_map[r])]:
+                maxProb = tags_with_prob[str(tag_map[r])]
+                maxTag = r
+        ppt = pt
+        pt = maxTag
+        #tags.append(maxTag)        
+        final_line_tags.append(maxTag)
+    return final_line_tags         
 
-        for tag in tags:
-            #e = mle.get_e(word, tag, e_dict)
-            #q = mle.get_q(preds[-2], preds[-1], tag, lambda_values, q_dict)
 
-            # till we do interpolation and assign non zero values
-            """if q is not 0:
-                q = - math.log(q)
-            if e is not 0:
-                e = - math.log(e)"""
-            max_known = update_max(e * q, tag, max_known)
-            if e == 0:
-                temp_score = q * mle.get_unknown_e(word, tag, e_dict)
-                max_unknown = update_max(temp_score, tag, max_unknown)
-        if max_known['score'] == 0:
-            preds.append(max_unknown["tag"])
-        else:
-            preds.append(max_known["tag"])
-        if preds[-1] == "":
-            words_with_no_tag.append(word)
-    return preds[2::]
+def craete_feature_vec(word_context, feature_map):
+    res = []
+    s = ""
+    for k,v in word_context.items():
+        s = k + "=" +  v
+        if s in feature_map:
+            res.append(feature_map[s])
+    return res
+
+def get_tags_and_features_maps(feature_map_file):
+    data = {}
+    tags_map = {}
+    with open(feature_map_file) as f:
+        data = json.load(f)
+    tags_map = data["THISISTHETAGLIST"]
+    del data["THISISTHETAGLIST"]
+    return tags_map, data
+
+def get_features_of_word(word_details, rear_words = []):
+    
+    features = {}
+    #features[""] = word_details["tag"] #the word tag
+    word = word_details["word"]
+    if (word in rear_words or rear_words == []):
+        for i in range(1, min(5, len(word))):
+            features['prefix'+str(i)] = word[:i]
+        for i in range(1, min(5, len(word))):
+            features['suffix'+str(i)] = word[-i:]
+        if any(x.isdigit() for x in word):
+            features['has_number'] = 'has_number'
+        if any(x.isupper() for x in word):
+            features['has_upper'] = 'has_upper'
+            #features.append('has_upper')
+        if '-' in word:
+           features['contains_hyphen'] = 'contains_hyphen'
+
+    features["form"] = word_details["word"]
+    features["ptag"] = word_details["previous_tag"]
+    features["pptag"] = word_details["pre_previous_tag"]
+    features["pword"] = word_details["previous_word"]
+    features["ppword"] = word_details["pre_previous_word"]
+    features["nword"] = word_details["next_word"]
+    features["nnword"] = word_details["next_next_word"]
+    return features    
 
 def get_sentence_context(i, sentence, pt, ppt):
     dc = { 'word': sentence[i][0],
@@ -53,13 +92,62 @@ def get_sentence_context(i, sentence, pt, ppt):
  'pre_previous_word': sentence[i - 2][0] if i > 1 else 'start',
  'next_word': sentence[i + 1][0] if i < len(sentence) - 1 else 'end',
  'next_next_word': sentence[i + 2][0] if i < len(sentence) - 2 else 'end',
- 'tag': sentence[i][1],
- 'previous_tag': pt
+ 'previous_tag': pt,
  'pre_previous_tag': ppt  }
-    return dc
+    return get_features_of_word(dc)
+
+
+def join(str_list):
+    return " ".join(str_list)
+
+def greedy_train_with_tag(num_epoch, sentence, tag_map, feature_map):
+    #print("Epoch: " + str(num_epoch) + "\n")
+    tags = []
+    data = []
+    for word in sentence.split():
+        items = word.split('/')
+        tags.append(items[-1])
+        data.append("/".join(items[:-1]))
+    data = join(data)
+    #print ("1")
+    preds = greedy_train(data, feature_map, tag_map)
+    good = bad = 0.0
+    print ("real tags")
+    print(" ".join(tags) + "\n")
+    #print ("1")
+    print("preds")
+    print(" ".join(preds) + "\n")
+    #print ("1")
+    for tag, pred in zip(tags, preds):
+        if tag == pred:
+            good += 1
+        else:
+            bad += 1
+    print("Accuracy: " + str((good / (good + bad)) * 100) + "%" + "\n\n")
+    return good, bad
+
+
+
+
+
 
 if __name__ == '__main__':
 
     script_name, input_file_name, modelname, feature_map_file, out_file_name = sys.argv
     llp = lbln.LiblinearLogregPredictor(modelname)
-    read_input(input_file_name)
+    tag_map, feature_map = get_tags_and_features_maps(feature_map_file)
+    #read_input(input_file_name)
+    good = bad = 0.0
+    with open(input_file_name, "r") as file:
+        for line in file:
+            g, b = greedy_train_with_tag(10, line, tag_map, feature_map)
+            good = good + g
+            bad = bad + b
+   
+    print("Accuracy: " + str((good / (good + bad)) * 100) + "%" + "\n\n")
+
+
+
+
+
+

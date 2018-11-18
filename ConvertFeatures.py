@@ -49,7 +49,8 @@ def write_featurs_vecs(tags_map, feature_map, lines):
         f.write(':1\n')
     f.close()
 
-def write_featurs_map(feature_map):
+def write_featurs_map(feature_map, tag_map):
+    feature_map.update({"THISISTHETAGLIST":tag_map})
     with open(feature_map_file, 'w') as file:
         file.write(json.dumps(feature_map))
 
@@ -62,5 +63,5 @@ if __name__ == '__main__':
     feat_map = get_featurs_map(data)
     tag_map = create_tags_map(tags)
     write_featurs_vecs(tag_map, feat_map, lines)
-    write_featurs_map(feat_map)
+    write_featurs_map(feat_map, tag_map)
     #get_featurs_map(data)
