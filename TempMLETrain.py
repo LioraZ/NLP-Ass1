@@ -142,17 +142,17 @@ def get_unknown_e(w, t, e_dict):
     return e_dict.get(join([unk, t]), 1 / len(e_dict))
 
 
-def create_possible_tags(tags):
+def create_possible_tags(tags_file, tags):
     tags_dict = Counter(tags)
     tags_list = sorted(tags_dict, key=tags_dict.get, reverse=True)
-    with open("possible_tags", "w") as file:
+    with open(tags_file, "w") as file:
         for tag in tags_list:
             file.write(tag + '\n')
 
 
-def get_possible_tags():
+def get_possible_tags(tags_file):
     tags = []
-    with open("possible_tags", "r") as file:
+    with open(tags_file, "r") as file:
         for line in file:
             tags.append(line.split("\n")[0])
     return tags

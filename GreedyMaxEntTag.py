@@ -1,7 +1,7 @@
 import sys
 
 import liblin as lbln
-from hmm1 import MLETrain as mle
+import TempMLETrain as mle
 
 START_SYMBOL = '*'
 

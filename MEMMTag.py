@@ -1,7 +1,7 @@
 import math
 import sys
-import hmm2.HMMutils as utils
-from hmm2.HMMutils import START_SYMBOL, join
+import TempMLETrain as utils
+from TempMLETrain import START_SYMBOL, join
 
 LOG_PROB_OF_ZERO = -100
 MIN_VALUE = float("-Inf")
@@ -9,7 +9,7 @@ TAG_FILE = "possible_tags"
 
 
 def read_input():
-    with open(f_input, "r") as file:
+    with open(input_file_name, "r") as file:
         return [[line, get_viterbi_output(line)] for line in file]
 
 
@@ -170,9 +170,9 @@ def get_pruning_dicts():
 
 
 if __name__ == '__main__':
-    script_name, f_input, q_mle, e_mle, f_output, f_extra = sys.argv
-    e_dict = utils.get_e_dict(e_mle)
-    q_dict = utils.get_q_dict(q_mle)
+    script_name, input_file_name, modelname, feature_map_file, out_file_name = sys.argv
+
+
     tag_probs, pruned_tags_pairs, pruned_words = get_pruning_dicts()
     utils.create_possible_tags(tag_probs, TAG_FILE)
     tags = utils.get_possible_tags(TAG_FILE)
