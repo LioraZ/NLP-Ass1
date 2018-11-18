@@ -26,6 +26,7 @@ def reading_input(fname):
 def get_features_of_word(word_details, rear_words):
     
     features = {}
+    features[""] = word_details["tag"] #the word tag
     word = word_details["word"]
     if (word in rear_words):
         for i in range(1, min(5, len(word))):
@@ -43,8 +44,6 @@ def get_features_of_word(word_details, rear_words):
         features["form"] = word_details["word"]
     
 
-
-    features[""] = word_details["tag"] #the word tag
     features["ptag"] = word_details["previous_tag"]
     features["pptag"] = word_details["pre_previous_tag"]
     features["pword"] = word_details["previous_word"]
@@ -60,8 +59,9 @@ def write_res(fname, wt, rear_words):
         for i, val in enumerate(ls):
             dct = get_sentence_context(i,ls)
             s = " ".join("{}={}".format(k, v) for k, v in get_features_of_word(dct, rear_words).items())
+           # print (s)
             s = s[1:] # cut the '=' from the string to feet the requseted format
-            #print (s)
+           # print (s)
             f.write(s)
             f.write("\n")
     f.close()
