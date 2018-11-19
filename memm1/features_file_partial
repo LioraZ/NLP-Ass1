@@ -1,0 +1,200 @@
+*PRP$ 22
+*VBG 27
+*VBD 16
+*VBN 10
+*, 13
+*'' 7
+*VBP 12
+*WDT 31
+*JJ 25
+*WP 30
+*VBZ 19
+*DT 2
+*# 42
+*RP 38
+*$ 37
+*NN 5
+*) 15
+*( 9
+*FW 39
+*POS 8
+*. 18
+*TO 23
+*PRP 21
+*RB 17
+*: 29
+*NNS 11
+*NNP 3
+*`` 6
+*WRB 35
+*CC 14
+*LS 43
+*PDT 33
+*RBS 34
+*RBR 28
+*CD 4
+*EX 40
+*IN 1
+*WP$ 45
+*MD 26
+*NNPS 20
+*JJS 36
+*JJR 32
+*SYM 41
+*VB 24
+*UH 44
+%endorsed VBN VBD
+%writings NNS
+%1,800 CD
+%yellow NN JJ
+%four CD
+%Does VBZ NNP
+%Olympics NNPS NNP
+%hanging VBG NN
+%Until IN
+%Antar NNP
+%increase VB VBP NN
+%granting VBG
+%eligible NN JJ
+%electricity NN
+%Hiroshima NNP
+%Ronald NNP
+%refunding VBG JJ NN
+%Western JJ NNP
+%herbicide NN
+%Euro NNP
+%sinking VBG NN
+%Frankly RB NNP
+%propane NN
+%regional JJ
+%Brody NNP
+%Donnelley NNP
+%disruptions NNS
+%bringing VBG NN
+%ASSETS NNPS NNS NNP
+%wooden JJ
+%Tele-Communications NNPS NNP
+%Honeywell NNP
+%Classic JJ NNP
+%new-issue JJ
+%Nasdaq NNP
+%Larsen NNP
+%Quist NNP
+%Paul NNP
+%reliable JJ
+%Lesk NNP
+%non-violent JJ
+%Pinkerton NNP
+%charter JJ NN
+%mission NN
+%infringed VBN VBD
+%rebuilding VBG
+%Toledo NNP
+%270 CD
+%elegant JJ
+%second RB NN JJ LS
+%Mercedes-Benz NNP
+%275 CD
+%resignations NNS
+%quite PDT RB
+%errors NNS
+p_word=repeat 63650
+nn_word=measure 17002
+n_word=instituting 63311
+n_word=grappled 88703
+p_word=correct 28366
+pp_word=Value 52491
+form=liquor 32495
+p_word=lump-sum 108918
+nn_word=Irian 74558
+suff3=sup 140443
+form=2662.91 140734
+nn_word=1721.4 16431
+p_word=Princess 147134
+pp_word=Sanderson 100421
+nn_word=primitive 116898
+nn_word=digging 116064
+n_word=coke 145568
+nn_word=menacing 186965
+n_word=oneself 198059
+suff3=sly 4227
+p_word=Sark 179458
+n_word=rubber-necking 138217
+p_word=pi 193768
+nn_word=striking 40893
+p_word=Sara 145821
+p_word=swathed 76377
+pp_word=serving 27284
+n_word=retirement-savings 115471
+form=driving 14327
+p_word=patent-infringement 198469
+p_word=oil-leasing 163716
+suff3=sle 165349
+pp_word=537 192184
+pp_word=cop 169336
+pp_word=535 173809
+pp_word=532 139423
+pp_word=530 75311
+pp_word=coy 116868
+pp_word=W.J. 108412
+pp_word=furloughs 94606
+nn_word=357.5 122385
+p_word=uproar 109086
+n_word=Manfred 30763
+pp_word=realms 197879
+pp_word=7.0826 28971
+nn_word=Payne 147739
+pp_word=con 137783
+nn_word=nervy 30870
+n_word=GNP 46739
+p_word=breast-cancer 141893
+nn_word=miserly 102549
+pp_word=mid-1991 127226
+suff3=aaf 109756
+pp_word=gnawing 113281
+p_word=speciality 139539
+suff3=sue 158718
+pp_word=entitled 67675
+p_word=Fraumeni 190864
+n_word=mints 189957
+pp_word=76-page 170230
+nn_word=MetWest 194880
+n_word=market-based 143294
+n_word=Womack 190917
+nn_word=frauds 169700
+p_word=Burlington 82824
+n_word=Pa. 22160
+pp_word=African-Americans 127666
+pp_word=tapestry 5195
+nn_word=legend 102734
+pp_word=Mentor 125506
+n_word=co-manager 118182
+n_word=World-wide 141699
+n_word=Laos 174190
+n_word=films 43154
+p_word=jogs 155061
+p_word=Erskine 111064
+n_word=co-managed 187371
+pp_word=top-drawer 193464
+p_word=glimmer 71250
+nn_word=erodes 162940
+nn_word=disproportionately 60484
+n_word=BAKER 172746
+n_word=Pat 92005
+nn_word=Brawls 178450
+nn_word=stalwarts 159064
+nn_word=billowing 145363
+n_word=Pay 155935
+pp_word=curbed 94695
+p_word=Clifford 23367
+nn_word=delinquent 130684
+pp_word=devoured 168671
+pp_word=Roseanne 142929
+nn_word=HOUSE 124758
+n_word=Pao 36577
+n_word=Pan 75181
+pp_word=settlements 33384
+nn_word=enduring 102794
+nn_word=Thrifts 144203
+p_word=representation 53242
+n_word=beeswax 157090
