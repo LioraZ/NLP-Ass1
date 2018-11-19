@@ -63,9 +63,19 @@ def get_sentence_context(i, sentence):
     return dc
 
 
+"""def create_pruning_dict():
+    pruning_dict =
+    for sentence in wt:
+        for word, tag in sentence:
+            if word in rare_words:
+                print("get rare words list")
+            else:"""
+
+
+
 if __name__ == '__main__':
     script_name, input_file, output_file = sys.argv
-    wt1, words1 = reading_input()
-    words_count = Counter(words1)
+    wt, words = reading_input()
+    words_count = Counter(words)
     rare_words = set([word for word, appear in words_count.items() if appear <= 4])
-    write_res(wt1)
+    write_res(wt)

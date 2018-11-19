@@ -26,31 +26,48 @@ def update_max(score, tag, max):
     return max
 
 
+def get_tags_for_first_word(i, sentence, w, u):
+    max_list = []
+    context = utils.get_sentence_context(i, sentence, w, u)
+    feature_indexes = utils.create_feature_vec(context, feature_map)
+    tags_with_prob = llp.predict(feature_indexes)
+    for tag, prob in tags_with_prob.items():
+        max_tag = inv_tag_map[int(tag)]
+        max_list = max_add(prob, max_tag, max_list)
+    return max_list
+    """
+    r, score = utils.argmax(tags_with_prob)
+    max_tag = inv_tag_map[int(r)]
+    max_list = max_add(score, max_tag, max_list)"""
+
+
 def viterbi(words):
     pi = {}
     default = [0.0, '']
-    pi[(0, START_SYMBOL, START_SYMBOL)] = default
+    pi[(0, START_SYMBOL, START_SYMBOL)] = [0.0, ""]
     prev_prev_tags = [START_SYMBOL]
     prev_tags = [START_SYMBOL]
     #max_r = [0.0]
     #max_tag = ""
     max_list = [(0, tag) for tag in tag_map.keys()]
     n = len(words)
-    #possible_tags_for_word = [tag for tag in tag_map.keys()]
+    tags = [tag for tag in tag_map.keys()]
+
     for k in range(1, n + 1):
-        possible_tags_for_word = [tag for score, tag in max_list]
-        max_list = []
+        possible_tags_for_word = pruning_dict.get(words[k - 1], tags)
         for v in possible_tags_for_word:
             for u in prev_tags:
+                max_score = 0.0
+                max_tag = ""
                 for w in prev_prev_tags:
                     context = utils.get_sentence_context(k - 1, words, w, u)
                     feature_indexes = utils.create_feature_vec(context, feature_map)
                     tags_with_prob = llp.predict(feature_indexes)
                     r, score = utils.argmax(tags_with_prob)
-                    score += pi.get((k - 1, w, u), default)[0]
-                    max_tag = inv_tag_map[int(r)]
-                    max_list = max_add(score, max_tag, max_list)
-                max_score, max_tag = get_max_from_list(max_list)
+                    score = 2 * score + pi.get((k - 1, w, u), default)[0]
+                    if score > max_score:
+                        max_score = score
+                        max_tag = w
                 pi[(k, u, v)] = [max_score, max_tag]
         prev_prev_tags = prev_tags
         prev_tags = possible_tags_for_word
@@ -139,43 +156,12 @@ def check_test():
         print("Total Accuracy: " + str(100 * (all_good / (all_good + all_bad))) + "%\n")
 
 
-def get_pruning_dicts():
-    tags = {k: v for k, v in q_dict.items() if len(k.split()) == 1}
-    triplets = [key for key in q_dict.keys() if len(key.split()) == 3]
-    new_dict = {}
-    for item in triplets:
-        key = join(item.split()[1:])
-        if key in new_dict.keys():
-            new_dict[key].append(item.split()[0])
-        else:
-            new_dict[key] = [item.split()[0]]
-    word_to_tags = {}
-    for item in e_dict:
-        word, tag = item.split()
-        if word in word_to_tags:
-            word_to_tags[word].append(tag)
-        else:
-            word_to_tags[word] = [tag]
-
-    return tags, new_dict, word_to_tags
-
-
 if __name__ == '__main__':
     script_name, input_file_name, modelname, feature_map_file, out_file_name = sys.argv
     llp = lbln.LiblinearLogregPredictor(modelname)
-    tag_map, feature_map = utils.get_tags_and_features_maps(feature_map_file)
-   # tag_probs, pruned_tags_pairs, pruned_words = get_pruning_dicts()
+    tag_map, feature_map, pruning_dict = utils.get_tags_and_features_maps(feature_map_file)
     inv_tag_map = {v: k for k, v in tag_map.items()}
     check_test()
-    """llp = lbln.LiblinearLogregPredictor(modelname)
-    tag_map, feature_map = get_tags_and_features_maps()
-    inv_tag_map = {v: k for k, v in tag_map.items()}
-    check_test()
-    tag_probs, pruned_tags_pairs, pruned_words = get_pruning_dicts()
-    utils.create_possible_tags(tag_probs, TAG_FILE)
-    tags = utils.get_possible_tags(TAG_FILE)
-    lambda_values = get_lambda_values()
-    #check_test()
-    all_preds = read_input()
+    """all_preds = read_input()
     write_predictions(all_preds)"""
 
