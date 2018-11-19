@@ -1,8 +1,56 @@
 1. We handled the unknown characters by using lists of possible suffix's and checking for capital letters and numbers. We started first by checking for capitals and then initializing the multiple suffix lists, each list containing suffix's of a specific length. Then we checked for the current word, if it's in one of the suffix lists and tagged it accordingly (starting from the longest length suffix, since it is more detailed). If the word did not have any common suffix we checked if it had a hyphon, is a date or time, or is a number and tagged it accordingly. 
 During the train we added the unknowns on the train data to the estimation dictionary and files, and therefore, when we tested the test data, we just classified the word to the type of unknown (by suffix, capitalization, hyphon, number, date and time or slang), and extracted its probability from the dictionary we've built.
 
+2. my idea was: the tags that I need to choose from to tag the current word, are not the whole tag set. Instead, I iterate on the tags I have seen associated to this word in the training corpus.
 
 
 3.
+HMM:
 On train data - 95.6 accuracy
 On test data - 94.24 accuracy
+MEMM:
+On train data - TODO% Accuracy
+On test data - TODO% Accuracy
+
+hmm:
+Accuracy: 0.956512466556
+
+	All-types 	Prec:0.741284977333 Rec:0.798047795355
+	       LOC 	Prec:0.853814793244 Rec:0.79804028307
+               MISC 	Prec:0.769053117783 Rec:0.722342733189
+	       PER 	Prec:0.702293202293 Rec:0.93105320304
+	       ORG 	Prec:0.652332361516 Rec:0.667412378822
+
+Out of all words (51578) there were 49610 raw correct matches (96%)
+F = 0.447865368956
+
+memm:
+
+Accuracy: 0.967854511613
+	All-types       Prec:0.839377380361 Rec:0.853079771121
+		LOC      Prec:0.89603960396 Rec:0.886771910724
+		MISC      Prec:0.826815642458 Rec:0.802603036876
+		PER      Prec:0.85699535364 Rec:0.901194353963
+		ORG      Prec:0.748740100792 Rec:0.775540641312
+
+Out of all words (51578) there were 50036 raw correct matches (97%)
+F = 0.451614157915 
+
+Answers:
+We got much lower scores here because our metrics don't properly factor in "spans" of words.  We only look at a per-word/per-previous-word basis. we're looking for long 'strings' of words, so we should have metrics that factor in whether the word we're looking at frequently appears in X-Tag spans, and if the 'n-chunk' it is in has 'span like' characteristics. The f measure is lower because the relationship between the precision and the accuracy.  Because the relationship here is quite off, the f measure goes lower.
+
+4.
+ The MEMM tagger was a lot easier to expand for a variety of features, and in general
+experiment with.  The HMM tagger feels 'tightly coupled' to the statistics/probability aspect
+of the method, and is thus good - but difficult to apply generally.
+
+5. 
+ NER dataset has much less tags, therefore the per-token accuracy was very high.
+6.
+ Change the scoring function, find the best parameters.and add more context (next words) to the score function.
+7.
+ create features to take into account 'spans' of words, and the probability of words
+appearing in spans vs. their probability of appearing out of spans.
+8.
+ Obviously, spans are a combination of multiple tokens together. One bad tag could ruin a whole span, while barely damaging the per token accuracy. There are less spans than tags, therefore span accuracy is lower.
+
