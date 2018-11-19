@@ -21,9 +21,11 @@ def create_feature_vec(word_context, feature_map):
 def get_tags_and_features_maps(feature_map_file):
     with open(feature_map_file) as f:
         data = json.load(f)
-    tags_map = data["THISISTHETAGLIST"]
-    del data["THISISTHETAGLIST"]
-    return tags_map, data
+    tags_map = data["THIS_IS_THE_TAGLIST"]
+    pruning_dict = data["PRUNED_WORDS_TAGS"]
+    del data["THIS_IS_THE_TAGLIST"]
+    del data["PRUNED_WORDS_TAGS"]
+    return tags_map, data, pruning_dict
 
 
 def get_features_of_word(word_details, rare_words=[]):
