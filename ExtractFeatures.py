@@ -1,5 +1,4 @@
 from collections import Counter
-from itertools import islice
 import sys
 
 START_TAG = "start"
@@ -17,7 +16,7 @@ def reading_input():
 
 def get_features_of_word(word_details):
     features = {}
-    features[""] = word_details["tag"] #the word tag
+    features[""] = word_details["tag"]
     word = word_details["word"]
     if word in rare_words:
         for i in range(1, min(5, len(word))):

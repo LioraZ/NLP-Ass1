@@ -1,11 +1,10 @@
 import math
 import sys
-import TempMLETrain as utils
-from TempMLETrain import START_SYMBOL, join
-
-LOG_PROB_OF_ZERO = -100
-MIN_VALUE = float("-Inf")
-TAG_FILE = "possible_tags"
+import operator
+import liblin as lbln
+import MEMMutils as utils
+from MEMMutils import START_SYMBOL, join
+T = 8
 
 
 def read_input():
@@ -33,52 +32,59 @@ def viterbi(words):
     pi[(0, START_SYMBOL, START_SYMBOL)] = default
     prev_prev_tags = [START_SYMBOL]
     prev_tags = [START_SYMBOL]
+    #max_r = [0.0]
+    #max_tag = ""
+    max_list = [(0, tag) for tag in tag_map.keys()]
     n = len(words)
+    #possible_tags_for_word = [tag for tag in tag_map.keys()]
     for k in range(1, n + 1):
-        word = words[k - 1]
-        possible_tags_for_word = pruned_words.get(word, None)
-        if possible_tags_for_word == None:
-            possible_tags_for_word = pruned_words.get(utils.classify_unknown(word), tags)
+        possible_tags_for_word = [tag for score, tag in max_list]
+        max_list = []
         for v in possible_tags_for_word:
             for u in prev_tags:
-                unknown_score = max_score = MIN_VALUE
-                unknown_tag = max_tag = ""
                 for w in prev_prev_tags:
-                    prev_v = pi.get((k - 1, w, u), default)[0]
-                    q = log(utils.get_q(w, u, v, lambda_values, q_dict))
-                    e = utils.get_e(word, v, e_dict)
-                    if e != 0:
-                        score = (prev_v + q + 3 * log(e)) / 3
-                        if score > max_score:
-                            max_score = score
-                            max_tag = w
-                    elif utils.get_unknown_e(word, v, e_dict) != 0:
-                        score = (prev_v + q + 3 * log(utils.get_unknown_e(word, v, e_dict))) / 3
-                        if score > unknown_score:
-                            unknown_score = score
-                            unknown_tag = w
-                if max_score == MIN_VALUE:
-                    pi[(k, u, v)] = [unknown_score, unknown_tag]
-                else:
-                    pi[(k, u, v)] = [max_score, max_tag]
+                    context = utils.get_sentence_context(k - 1, words, w, u)
+                    feature_indexes = utils.create_feature_vec(context, feature_map)
+                    tags_with_prob = llp.predict(feature_indexes)
+                    r, score = utils.argmax(tags_with_prob)
+                    score += pi.get((k - 1, w, u), default)[0]
+                    max_tag = inv_tag_map[int(r)]
+                    max_list = max_add(score, max_tag, max_list)
+                max_score, max_tag = get_max_from_list(max_list)
+                pi[(k, u, v)] = [max_score, max_tag]
         prev_prev_tags = prev_tags
         prev_tags = possible_tags_for_word
     return pi
 
 
+def get_max_from_list(max_list):
+    max_item = max(max_list, key=operator.itemgetter(0))
+    return max_item[0], max_item[1]
+
+
+def max_add(score, tag, max_list):
+    for item in max_list:
+        if tag == item[1] and score <= item[0]:
+            return max_list
+    max_list.append((score, tag))
+    temp_list = sorted(max_list, key=lambda tup: tup[0])
+    return temp_list[:T]
+
+
 def backtrack_viterbi_output(pi, n):
     default = [0.0, '']
-    max_score = MIN_VALUE
+    max_score = 0.0
     u_max, v_max = "", ""
-    for pair in pruned_tags_pairs:
-        u, v = pair.split()
-        if (n, u, v) not in pi:
-            continue
-        score = pi.get((n, u, v), default)[0]
-        if score > max_score:
-            max_score = score
-            u_max = u
-            v_max = v
+    tags = [tag for tag in tag_map.keys()]
+    for u in tags:
+        for v in tags:
+            if (n, u, v) not in pi:
+                continue
+            score = pi.get((n, u, v), default)[0]
+            if score > max_score:
+                max_score = score
+                u_max = u
+                v_max = v
 
     tagset = []
     tagset.append(v_max)
@@ -91,28 +97,13 @@ def backtrack_viterbi_output(pi, n):
     return tagged
 
 
-def log(num):
-    try:
-        return math.log(num)
-    except ValueError:
-        return LOG_PROB_OF_ZERO
-
-
 def write_predictions(preds):
-    with open(f_output, "w") as file:
+    with open(out_file_name, "w") as file:
         for line_and_pred in preds:
             line = line_and_pred[0]
             pred = line_and_pred[1]
             output = [word + "/" + tag for word, tag in zip(line.split(), pred)]
             file.write(" ".join(output) + "\n")
-
-
-def get_lambda_values():
-    lambda_values = []
-    with open(f_extra, "r") as file:
-        for line in file:
-            lambda_values = [float(lambda_val) for lambda_val in line.split(",")]
-    return lambda_values
 
 
 def viterbi_with_tag(num_epoch, sentence):
@@ -138,7 +129,7 @@ def viterbi_with_tag(num_epoch, sentence):
 
 
 def check_test():
-    with open("../data/ass1-tagger-test", "r") as file:
+    with open("data/ass1-tagger-test", "r") as file:
         epoch_counter = all_good = all_bad = 0.0
         for line in file:
             epoch_counter += 1
@@ -171,13 +162,20 @@ def get_pruning_dicts():
 
 if __name__ == '__main__':
     script_name, input_file_name, modelname, feature_map_file, out_file_name = sys.argv
-
-
+    llp = lbln.LiblinearLogregPredictor(modelname)
+    tag_map, feature_map = utils.get_tags_and_features_maps(feature_map_file)
+   # tag_probs, pruned_tags_pairs, pruned_words = get_pruning_dicts()
+    inv_tag_map = {v: k for k, v in tag_map.items()}
+    check_test()
+    """llp = lbln.LiblinearLogregPredictor(modelname)
+    tag_map, feature_map = get_tags_and_features_maps()
+    inv_tag_map = {v: k for k, v in tag_map.items()}
+    check_test()
     tag_probs, pruned_tags_pairs, pruned_words = get_pruning_dicts()
     utils.create_possible_tags(tag_probs, TAG_FILE)
     tags = utils.get_possible_tags(TAG_FILE)
     lambda_values = get_lambda_values()
     #check_test()
     all_preds = read_input()
-    write_predictions(all_preds)
+    write_predictions(all_preds)"""
 

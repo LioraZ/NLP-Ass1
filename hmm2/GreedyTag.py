@@ -44,7 +44,6 @@ def greedy_train(sentence):
             preds.append(max_known["tag"])
         if preds[-1] == "":
             preds.append(tags[0])
-            words_with_no_tag.append(word)
     return preds[2::]
 
 

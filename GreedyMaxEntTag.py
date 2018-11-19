@@ -1,10 +1,8 @@
 import sys
-import json
-import operator
 import liblin as lbln
-import TempMLETrain as mle
+import MEMMutils as utils
+from MEMMutils import START_SYMBOL
 
-START_SYMBOL = '*'
 
 def read_input():
     with open(input_file_name, "r") as file:
@@ -19,92 +17,16 @@ def update_max(score, tag, max):
 
 
 def greedy_train(sentence):
-    final_line_tags = []
+    final_line_tags = [START_SYMBOL, START_SYMBOL]
     words = sentence.split()
-    pt = "start"
-    ppt = "start"
     for i, word in enumerate(words):
-        #max_tag = {}
-        context = get_sentence_context(i, words, pt, ppt)
-        feature_indexes = create_feature_vec(context)
+        context = utils.get_sentence_context(i, words, final_line_tags[-2], final_line_tags[-1])
+        feature_indexes = utils.create_feature_vec(context, feature_map)
         tags_with_prob = llp.predict(feature_indexes)
-        r = argmax(tags_with_prob)
+        r = utils.argmax(tags_with_prob)
         max_tag = inv_tag_map[int(r)]
-        """for r in tag_map:   #possible pruning here
-            if maxProb < tags_with_prob[str(tag_map[r])]:
-                maxProb = tags_with_prob[str(tag_map[r])]
-                maxTag = r"""
-        ppt = pt
-        pt = max_tag
         final_line_tags.append(max_tag)
-    return final_line_tags
-
-
-def get_tag(r):
-    for tag in tag_map:
-        if tag_map[tag] == int(r):
-            return tag
-    return None
-
-
-def argmax(dict_of_score):
-    return max(dict_of_score.items(), key=operator.itemgetter(1))[0]
-
-
-def create_feature_vec(word_context):
-    res = []
-    for k, v in word_context.items():
-        s = k + "=" + v
-        if s in feature_map:
-            res.append(feature_map[s])
-    return res
-
-
-def get_tags_and_features_maps():
-    data = {}
-    tags_map = {}
-    with open(feature_map_file) as f:
-        data = json.load(f)
-    tags_map = data["THISISTHETAGLIST"]
-    del data["THISISTHETAGLIST"]
-    return tags_map, data
-
-
-def get_features_of_word(word_details, rear_words = []):
-    
-    features = {}
-    word = word_details["word"]
-    if (word in rear_words or rear_words == []):
-        for i in range(1, min(5, len(word))):
-            features['prefix'+str(i)] = word[:i]
-        for i in range(1, min(5, len(word))):
-            features['suffix'+str(i)] = word[-i:]
-        if any(x.isdigit() for x in word):
-            features['has_number'] = 'has_number'
-        if any(x.isupper() for x in word):
-            features['has_upper'] = 'has_upper'
-        if '-' in word:
-           features['contains_hyphen'] = 'contains_hyphen'
-
-    features["form"] = word_details["word"]
-    features["ptag"] = word_details["previous_tag"]
-    features["pptag"] = word_details["pre_previous_tag"]
-    features["pword"] = word_details["previous_word"]
-    features["ppword"] = word_details["pre_previous_word"]
-    features["nword"] = word_details["next_word"]
-    features["nnword"] = word_details["next_next_word"]
-    return features    
-
-
-def get_sentence_context(i, sentence, pt, ppt):
-    dc = {'word': sentence[i],
-    'previous_word': sentence[i - 1] if i > 0 else 'start',
-    'pre_previous_word': sentence[i - 2] if i > 1 else 'start',
-    'next_word': sentence[i + 1] if i < len(sentence) - 1 else 'end',
-    'next_next_word': sentence[i + 2] if i < len(sentence) - 2 else 'end',
-    'previous_tag': pt,
-    'pre_previous_tag': ppt}
-    return get_features_of_word(dc)
+    return final_line_tags[2:]
 
 
 def join(str_list):
@@ -148,7 +70,7 @@ def check_test():
 if __name__ == '__main__':
     script_name, input_file_name, modelname, feature_map_file, out_file_name = sys.argv
     llp = lbln.LiblinearLogregPredictor(modelname)
-    tag_map, feature_map = get_tags_and_features_maps()
+    tag_map, feature_map = utils.get_tags_and_features_maps(feature_map_file)
     inv_tag_map = {v: k for k, v in tag_map.items()}
     check_test()
     #read_input(input_file_name)
