@@ -64,13 +64,14 @@ def create_vector(word, prev_tags, prev_words, next_words, feature_map):
 t0 = time.time()
 input_filename = sys.argv[1]
 modelname = sys.argv[2]
-output_filename = sys.argv[3]
-feature_map_file = sys.argv[4]
+output_filename = sys.argv[4]
+feature_map_file = sys.argv[3]
 
 word_predict = load_model_file(modelname)
 tag_map, feature_map, tagged_words = load_features_file(feature_map_file)
 
-tag_list = tag_map.values()
+tag_list = list(tag_map.values())
+#print (tag_list)
 tag_list.insert(0, START)
 
 with open(input_filename, 'r') as infile, open(output_filename, 'w') as outfile:    
@@ -111,7 +112,7 @@ with open(input_filename, 'r') as infile, open(output_filename, 'w') as outfile:
                 V[i + 1][p_tag] = {}
                 bp[i + 1][p_tag] = {}
                 for tag in all_tags:
-                    tag_num = tag_map.keys()[tag_map.values().index(tag)]
+                    tag_num = list(tag_map.keys())[list(tag_map.values()).index(tag)]
                     double_back = {}
                     # Loop through all potential double-backs and find the max element
                     for pp_tag in pp_tag_set:
@@ -159,7 +160,7 @@ with open(input_filename, 'r') as infile, open(output_filename, 'w') as outfile:
         output += '\n'
         outfile.write(output[1:])
 t1 = time.time()
-print 'Runtime = ' + str(t1 - t0) + ' seconds'
+print ('Runtime = ' + str(t1 - t0) + ' seconds')
 
 
     
