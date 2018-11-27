@@ -14,6 +14,16 @@ By Adwait Ratnaparkhi
 def is_rare(word, word_counts):
     return word_counts[word] < 5
 
+def write_res(wt, get_sentence_context, get_features_of_word):
+    s = ""
+    with open(output_file, 'w') as f:
+        for ls in wt:
+            for i, val in enumerate(ls):
+                dct = get_sentence_context(i, ls)
+                s = " ".join("{}={}".format(k, v) for k, v in get_features_of_word(dct).items())
+                f.write(s[1:] + "\n")
+
+
 def calc_rare_features(word, features):
     features['caps'] = any([letter.isupper() for letter in word])
     features['hyph'] = '-' in word

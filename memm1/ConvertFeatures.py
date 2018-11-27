@@ -8,6 +8,21 @@ def add_mapped_element(element, element_map):
         # initialize from -1)
         element_map[element] = len(element_map) + 1
 
+def reading_input(fname):
+    """ data is list of words and there tags (in one string)"""
+    tags = []
+    featurs_list = []
+    with open(fname, encoding="utf8") as file:
+        input_feat = [line[:-1] for line in file]
+
+    for feature_line in input_feat:
+        splited_feature_line = feature_line.split(" ")
+        tags.append(splited_feature_line[0])
+        for feature in splited_feature_line[1:]:
+            featurs_list.append(feature)
+    return list(set(tags)), featurs_list, input_feat
+
+
 
 features_file = sys.argv[1]
 output_vec_file = sys.argv[2]
@@ -16,6 +31,9 @@ output_map_file = sys.argv[3]
 features_map = defaultdict(int)
 labels_map = defaultdict(int)
 num_lines = sum(1 for line in open(features_file, 'r'))
+
+
+
 
 with open(features_file, 'r') as input_file, open(output_vec_file, 'w') as output:
     word_tag_dict = defaultdict(set)

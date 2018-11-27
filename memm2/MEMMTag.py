@@ -7,6 +7,33 @@ START = 'start'
 def load_model_file(filename):
     return LiblinearLogregPredictor(filename)
 
+
+def update_max(score, tag, max):
+    if score > max["score"]:
+        max["score"] = score
+        max["tag"] = tag
+    return max
+
+
+def get_tags_for_first_word(i, sentence, w, u, utils, llp):
+    max_list = []
+    max_add = []
+    inv_tag_map = []
+    context = utils.get_sentence_context(i, sentence, w, u)
+    feature_indexes = utils.create_feature_vec(context, feature_map)
+    tags_with_prob = llp.predict(feature_indexes)
+    for tag, prob in tags_with_prob.items():
+        max_tag = inv_tag_map[int(tag)]
+        max_list = max_add(prob, max_tag, max_list)
+    return max_list
+    """
+    r, score = utils.argmax(tags_with_prob)
+    max_tag = inv_tag_map[int(r)]
+    max_list = max_add(score, max_tag, max_list)"""
+
+
+
+
 def load_features_file(filename):
     tag_map = {}
     feature_map = {}
@@ -58,6 +85,17 @@ def create_vector(word, prev_tags, prev_words, next_words, feature_map):
     append_feature(feature_map, return_vec, 'pp_tags', pp_tags)
     return_vec.sort()
     return return_vec
+
+def get_viterbi_output(sentence):
+    backtrack_viterbi_output = []
+    viterbi = []
+    words = sentence.split()
+    pi = viterbi(words)
+    preds = backtrack_viterbi_output(pi, len(words))
+    return preds
+
+
+
 
 # Main #
 

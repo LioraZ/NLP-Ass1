@@ -1,6 +1,0 @@
-
-with open('data.txt', 'r') as myfile:
-    data1 = myfile.read().replace('\n', ' ')
-
-data = data1.split(" ")
-print (data) 

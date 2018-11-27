@@ -1,3 +1,7 @@
+Liora Zaidner 323742774
+Tomer Addady 207162678
+
+
 1. We handled the unknown characters by using lists of possible suffix's and checking for capital letters and numbers. We started first by checking for capitals and then initializing the multiple suffix lists, each list containing suffix's of a specific length. Then we checked for the current word, if it's in one of the suffix lists and tagged it accordingly (starting from the longest length suffix, since it is more detailed). If the word did not have any common suffix we checked if it had a hyphon, is a date or time, or is a number and tagged it accordingly. 
 During the train we added the unknowns on the train data to the estimation dictionary and files, and therefore, when we tested the test data, we just classified the word to the type of unknown (by suffix, capitalization, hyphon, number, date and time or slang), and extracted its probability from the dictionary we've built.
 
@@ -36,8 +40,6 @@ Accuracy: 0.967854511613
 Out of all words (51578) there were 50036 raw correct matches (97%)
 F = 0.451614157915 
 
-Answers:
-We got much lower scores here because our metrics don't properly factor in "spans" of words.  We only look at a per-word/per-previous-word basis. we're looking for long 'strings' of words, so we should have metrics that factor in whether the word we're looking at frequently appears in X-Tag spans, and if the 'n-chunk' it is in has 'span like' characteristics. The f measure is lower because the relationship between the precision and the accuracy.  Because the relationship here is quite off, the f measure goes lower.
 
 4.
  The MEMM tagger was a lot easier to expand for a variety of features, and in general

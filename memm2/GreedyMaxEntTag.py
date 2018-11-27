@@ -31,6 +31,20 @@ def load_features_file(filename):
     return (tag_map, feature_map)
 
 
+def read_input(input_file_name):
+    """"updating the max as needed"""
+    before_greedy_train = []
+    with open(input_file_name, "r") as file:
+        return [[line, greedy_train[int(line)]] for line in file]
+
+
+def update_max(score, tag, max):
+    if score > max["score"]:
+        max["score"] = score
+        max["tag"] = tag
+    return max
+
+
 def append_feature(feature_map, return_vec, feature_name, feature_val):
     full_feature = feature_name + "=" + str(feature_val)
     if full_feature in feature_map:
