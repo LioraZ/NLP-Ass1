@@ -38,7 +38,7 @@ def get_features_of_word(word_details):
     features["ppword"] = word_details["pre_previous_word"]
     features["nword"] = word_details["next_word"]
     features["nnword"] = word_details["next_next_word"]
-    return features
+    return sorted(features)
 
 
 def write_res(wt):
@@ -63,19 +63,9 @@ def get_sentence_context(i, sentence):
     return dc
 
 
-"""def create_pruning_dict():
-    pruning_dict =
-    for sentence in wt:
-        for word, tag in sentence:
-            if word in rare_words:
-                print("get rare words list")
-            else:"""
-
-
-
 if __name__ == '__main__':
     script_name, input_file, output_file = sys.argv
     wt, words = reading_input()
     words_count = Counter(words)
-    rare_words = set([word for word, appear in words_count.items() if appear <= 4])
+    rare_words = set([word for word, appear in words_count.items() if appear <= 5])
     write_res(wt)

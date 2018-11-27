@@ -10,6 +10,7 @@ def read_input():
 
 
 def update_max(score, tag, max):
+    """"updating the max as needed"""
     if score > max["score"]:
         max["score"] = score
         max["tag"] = tag
@@ -23,7 +24,7 @@ def greedy_train(sentence):
         context = utils.get_sentence_context(i, words, final_line_tags[-2], final_line_tags[-1])
         feature_indexes = utils.create_feature_vec(context, feature_map)
         tags_with_prob = llp.predict(feature_indexes)
-        r = utils.argmax(tags_with_prob)
+        r = utils.argmax(tags_with_prob)[0]
         max_tag = inv_tag_map[int(r)]
         final_line_tags.append(max_tag)
     return final_line_tags[2:]
@@ -70,7 +71,7 @@ def check_test():
 if __name__ == '__main__':
     script_name, input_file_name, modelname, feature_map_file, out_file_name = sys.argv
     llp = lbln.LiblinearLogregPredictor(modelname)
-    tag_map, feature_map = utils.get_tags_and_features_maps(feature_map_file)
+    tag_map, feature_map, pruning_map = utils.get_tags_and_features_maps(feature_map_file)
     inv_tag_map = {v: k for k, v in tag_map.items()}
     check_test()
     #read_input(input_file_name)

@@ -4,7 +4,6 @@ import operator
 import liblin as lbln
 import MEMMutils as utils
 from MEMMutils import START_SYMBOL, join
-T = 8
 
 
 def read_input():
@@ -44,12 +43,9 @@ def get_tags_for_first_word(i, sentence, w, u):
 def viterbi(words):
     pi = {}
     default = [0.0, '']
-    pi[(0, START_SYMBOL, START_SYMBOL)] = [0.0, ""]
+    pi[(0, START_SYMBOL, START_SYMBOL)] = [0, ""]
     prev_prev_tags = [START_SYMBOL]
     prev_tags = [START_SYMBOL]
-    #max_r = [0.0]
-    #max_tag = ""
-    max_list = [(0, tag) for tag in tag_map.keys()]
     n = len(words)
     tags = [tag for tag in tag_map.keys()]
 
@@ -64,7 +60,7 @@ def viterbi(words):
                     feature_indexes = utils.create_feature_vec(context, feature_map)
                     tags_with_prob = llp.predict(feature_indexes)
                     r, score = utils.argmax(tags_with_prob)
-                    score = 2 * score + pi.get((k - 1, w, u), default)[0]
+                    score = (score + pi.get((k - 1, w, u), default)[0]) / 2
                     if score > max_score:
                         max_score = score
                         max_tag = w
@@ -85,7 +81,7 @@ def max_add(score, tag, max_list):
             return max_list
     max_list.append((score, tag))
     temp_list = sorted(max_list, key=lambda tup: tup[0])
-    return temp_list[:T]
+    return temp_list[:8]
 
 
 def backtrack_viterbi_output(pi, n):
