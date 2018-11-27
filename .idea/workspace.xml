@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcea1fe7-e3e0-400f-9a50-c97efc66d73f" name="Default" comment="" />
+    <list default="true" id="bcea1fe7-e3e0-400f-9a50-c97efc66d73f" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/ConvertFeatures.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/ExtractFeatures.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/GreedyMaxEntTag.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/MEMMTag.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/MEMMutils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/TempMLETrain.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/TrainSolver.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/WriteUp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/greedy.test.pred" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/liblin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/liblinear-2.11.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/ass1-tagger-test" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/ass1-tagger-test-input" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/ass1-tagger-train" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hmm1/MLETrain.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hmm2/GreedyTag.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hmm2/HMMTag.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hmm2/HMMutils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hmm2/hmm.test.pred" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hmm2/lambda_vals" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hmm2/possible_tags" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hmm2/possible_tags_greedy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm1/ConvertFeatures.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm1/ExtractFeatures.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm1/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm1/TrainSolver.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm1/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm1/feat_map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm1/feature_vecs_partial" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm1/features_file" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm1/features_file_partial" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm1/liblinear-1.94.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm1/vec_feat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm2/EvaluateMethod.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm2/GreedyMaxEntTag.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm2/MEMMTag.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/memm2/liblin.py" afterPath="" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,66 +52,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ExtractFeatures.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/memm1/ExtractFeatures.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/memm1/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GreedyTag.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hmm2/GreedyTag.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#1388#2428#0" expanded="false" />
-                <element signature="e#2468#2561#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConvertFeatures.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/memm1/ConvertFeatures.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GreedyMaxEntTag.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/memm2/GreedyMaxEntTag.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -582,13 +561,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24920969" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24920969" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3277592" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3277592" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -644,11 +623,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#1388#2428#0" expanded="false" />
-            <element signature="e#2468#2561#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -808,16 +783,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-            <element signature="e#1942#1967#0" expanded="false" />
-            <element signature="e#2002#2319#0" expanded="false" />
-            <element signature="e#2359#2439#0" expanded="false" />
-            <element signature="e#2468#2690#0" expanded="false" />
-            <element signature="e#2722#3330#0" expanded="false" />
-            <element signature="e#4538#4679#0" expanded="false" />
-            <element signature="e#4706#4846#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -970,9 +936,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -980,11 +944,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#1388#2428#0" expanded="false" />
-            <element signature="e#2468#2561#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1002,9 +962,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
           <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>

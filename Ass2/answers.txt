@@ -1,0 +1,10 @@
+part one:
+
+a. the program generate so many long sentences becuase of the grammar rule: NP -> NP PP. this rule is spacial because he is very likley to cause a deep recursion.
+
+b. our grammer doesn't generate multiply adjective very commonly because for this kind of scenrio we need the following evalation: 
+noun -> adj noun and than another noun -> adj noun so we wuold get(tottaly) noun -> adj adj noun. but accornding to the weights the probabilty to get noun -> adj noun ,is 1/6 so the probabily to get another one will be 1/36 and so on...
+
+c. in order to get shorter senteces we need to increase the wheight of any rule of NP thet is not  NP -> NP PP, this action will result in smaller chance to get the rule NP -> NP PP wich extends the sentence dramaticlly. and in order to get more adjactives we will need to increase the wheight of the rule noun -> adj noun.
+
+d. 
