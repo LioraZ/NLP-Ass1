@@ -17,19 +17,22 @@
 #    PP = prepositional phrase
 #    Det = determiner (sometimes called "article")
 #    Prep = preposition
-#    Adjv = adjective starting with a vowel
-#    Adjc = adjective starting with a consonant
-#    Advv = adverb starting with a vowel
-#    Advc = adverb starting with a consonant
+#    AdjV = adjective starting with a vowel
+#    AdjC = adjective starting with a consonant
+#    AdvV = adverb starting with a vowel
+#    AdvC = adverb starting with a consonant
 #    Cc = coordinator
 #    Comp = complementizer
 #    NN = general noun
 #    PNoun = proper noun
-#    CNounv = common noun starting with a vowel
-#    CNounc = common noun starting with a consonant
+#    CNounV = common noun starting with a vowel
+#    CNounC = common noun starting with a consonant
 #    Ger = gerund
-#    Deta = a
-#    Detan = an
+#    DetA = a
+#    DetAn = an
+#    Subj = subjunctive
+#    Vh = helper verbs
+#    Vpart = participle
 
 # Rules for creating full sentences.
 5	ROOT	S .
@@ -47,27 +50,34 @@
 1   NP  NP Cc NP
 1   VP  VP Cc VP
 1   NN  PNoun
-1   NN  Deta CNounc
-1   NN  Detan CNounv
 5   NP  NN
-1   Adj Adjc
-1   Adv Adjv
-1   Adjc Advc Adj
-1   Adjv Advv Adj
-2   NP  Deta Adjc CNoun
-2   NP  Detan Adjv CNoun
-1   CNoun   CNounc
-1   CNoun   CNounv
 2   NP  Adj PNoun
 1   VP  Vis Ger
 2   VP  Vis Ger NN
 2   VP  Vis Adj
 1   S  PNoun Vis Prep NP
-1   NP  Deta CNounc Prep NP
-1   NP  Detan CNounv Prep NP
 1   VP  Vb Comp S
 1   VP  Vb
-#1   VP  VP NP
+
+# A vs An rules
+1   CNoun   CNounC
+1   CNoun   CNounV
+1   NN  DetA CNounC
+1   NN  DetAn CNounV
+2   NP  DetA AdjC CNoun
+2   NP  DetAn AdjV CNoun
+1   Adj AdjC
+1   Adj AdjV
+1   Adv AdjV
+1   Adv AdjC
+1   AdjC AdvC Adj
+1   AdjV AdvV Adj
+1   NP  DetA CNounC Prep NP
+1   NP  DetAn CNounV Prep NP
+
+# Tenses
+#1   Vt  Vis Ger
+1   Vis subj Vh
 
 # TERMINALS
 1	Vt	ate
@@ -80,20 +90,20 @@
 1   Vi  jumped
 
 1	Det	the
-1	Deta    a
-1   Detan    an
+1	DetA    a
+1   DetAn    an
 1	Det	every
 
-1	CNounc	president
-1	CNounc	sandwich
-1	CNounc	pickle
-1	CNounc	chief of staff
-1	CNounc  floor
+1	CNounC	president
+1	CNounC	sandwich
+1	CNounC	pickle
+1	CNounC	chief of staff
+1	CNounC  floor
 
-1	Adjc	fine
-1	Adjc	delicious
-1	Adjc	perplexed
-1	Adjc	pickled
+1	AdjC	fine
+1	AdjC	delicious
+1	AdjC	perplexed
+1	AdjC	pickled
 
 1	Prep	with
 1	Prep	on
@@ -104,23 +114,36 @@
 1   Vi   sighed
 1   Vi   worked
 1   Vb   thought
-1   Vis  is
+
+1   Vt   eats
+
+1   Vh  be
+1   Vh  have
+
+1   Vpart   eaten
+
+1   Vis is
+1   Vis was
 
 1   PNoun    sally
 1   PNoun    it
+
 1   Ger    eating
 
-1   CNounv  apple
-1   CNounv  obstacle
-1   Cnounv  envelope
+1   Subj    will
+1   Subj    could
 
-1   Advc    very
-1   Advv    almost
+1   CNounV  apple
+1   CNounV  obstacle
+1   CNounV  envelope
 
-1   Adjv    ambitious
-1   Adjv    intelligent
-1   Adjv    american
-1   Adjc    lazy
+1   AdvC    very
+1   AdvV    almost
+
+1   AdjV    ambitious
+1   AdjV    intelligent
+1   AdjV    american
+1   AdjC    lazy
 
 1   Cc  and
 

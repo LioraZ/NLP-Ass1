@@ -4,9 +4,10 @@ import sys
 
 
 class PCFG(object):
-    def __init__(self):
+    def __init__(self, should_print_tree):
         self._rules = defaultdict(list)
         self._sums = defaultdict(float)
+        self.print_tree = should_print_tree
 
     def add_rule(self, lhs, rhs, weight):
         assert (isinstance(lhs, str))
@@ -15,8 +16,8 @@ class PCFG(object):
         self._sums[lhs] += weight
 
     @classmethod
-    def from_file(cls, filename):
-        grammar = PCFG()
+    def from_file(cls, filename, should_print_tree):
+        grammar = PCFG(should_print_tree)
         with open(filename) as fh:
             for line in fh:
                 line = line.split("#")[0].strip()
@@ -32,13 +33,15 @@ class PCFG(object):
 
     def gen(self, symbol):
         if self.is_terminal(symbol):
-            #print(symbol + "\t")
             return symbol
         else:
             expansion = self.random_expansion(symbol)
-            # print expansion
-            #print(symbol + "\t" + " ".join(expansion))
-            return " ".join(self.gen(s) for s in expansion)
+            gen = " ".join(self.gen(s) for s in expansion)
+            if print_tree:
+                gen = '(' + symbol + ' ' + gen + ')'
+            return gen
+
+            #return " ".join(self.gen(s) for s in expansion)
 
     def random_sent(self):
         return self.gen("ROOT")
@@ -73,16 +76,19 @@ def gen_grammar_4():
 
 
 def get_args():
+    if len(sys.argv) == 0:
+        raise Exception("Didn't receive a command line argument!")
+    is_tree = False
     if len(sys.argv) == 1:
-        return sys.argv[1], 0
-    if sys.argv[2] == "-n":
-        return sys.argv[1], int(sys.argv[3])
-    return sys.argv[1], 0
+        return sys.argv[1], 0, is_tree
+    if "-t" in sys.argv:
+        is_tree = True
+    if "-n" in sys.argv:
+        return sys.argv[1], int(sys.argv[sys.argv.index("-n") + 1]), is_tree
+    return sys.argv[1], 0, is_tree
 
 
 if __name__ == '__main__':
-    grammar_file, num_sentences = get_args()
-    pcfg = PCFG.from_file(grammar_file)
+    grammar_file, num_sentences, print_tree = get_args()
+    pcfg = PCFG.from_file(grammar_file, print_tree)
     gen_grammar_4()
-    """for i in range(num_sentences):
-        print(pcfg.random_sent())"""
