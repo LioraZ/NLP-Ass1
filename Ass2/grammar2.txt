@@ -38,7 +38,7 @@
 # Rules for creating full sentences.
 5	ROOT	S .
 2	ROOT	S !
-1	ROOT	is it true that S ?     # mixing terminals and nonterminals is ok.
+#1	ROOT	is it true that S ?     # mixing terminals and nonterminals is ok.
 
 # Existing rules
 1	S	NP VP
@@ -65,6 +65,7 @@
 1   S  PNoun Vis Prep NP #VP instead of NP\VP
 1   NP  Det CNoun Prep NP
 1   VP  Vb Comp S
+1   VP  VP NP
 
 #1   S   Comp S
 #1   S   S Cc S

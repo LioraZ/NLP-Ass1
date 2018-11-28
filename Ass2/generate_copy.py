@@ -37,7 +37,7 @@ class PCFG(object):
         else:
             expansion = self.random_expansion(symbol)
             # print expansion
-            print(symbol + "\t" + " ".join(expansion))
+            #print(symbol + "\t" + " ".join(expansion))
             return " ".join(self.gen(s) for s in expansion)
 
     def random_sent(self):
