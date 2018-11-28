@@ -9,8 +9,8 @@ class PCFG(object):
         self._sums = defaultdict(float)
 
     def add_rule(self, lhs, rhs, weight):
-        assert(isinstance(lhs, str))
-        assert(isinstance(rhs, list))
+        assert (isinstance(lhs, str))
+        assert (isinstance(rhs, list))
         self._rules[lhs].append((rhs, weight))
         self._sums[lhs] += weight
 
@@ -21,19 +21,23 @@ class PCFG(object):
             for line in fh:
                 line = line.split("#")[0].strip()
                 if not line: continue
-                w,l,r = line.split(None, 2)
+                w, l, r = line.split(None, 2)
                 r = r.split()
                 w = float(w)
-                grammar.add_rule(l,r,w)
+                grammar.add_rule(l, r, w)
         return grammar
 
-    def is_terminal(self, symbol): return symbol not in self._rules
+    def is_terminal(self, symbol):
+        return symbol not in self._rules
 
     def gen(self, symbol):
-        if self.is_terminal(symbol): return symbol
+        if self.is_terminal(symbol):
+            #print(symbol + "\t")
+            return symbol
         else:
             expansion = self.random_expansion(symbol)
-            #print expansion
+            # print expansion
+            print(symbol + "\t" + " ".join(expansion))
             return " ".join(self.gen(s) for s in expansion)
 
     def random_sent(self):
@@ -44,11 +48,20 @@ class PCFG(object):
         Generates a random RHS for symbol, in proportion to the weights.
         """
         p = random.random() * self._sums[symbol]
-        #print self._rules[symbol]
-        for r,w in self._rules[symbol]:
+        for r, w in self._rules[symbol]:
             p = p - w
             if p < 0: return r
         return r
+
+
+def gen_grammar_2():
+    for i in range(num_sentences):
+        print(pcfg.random_sent())
+    """with open("grammar2.gen", "w") as f:
+        for i in range(num_sentences):
+            s = pcfg.random_sent()
+            f.write(s + "\n")"""
+
 
 def get_args():
     if len(sys.argv) == 1:
@@ -56,29 +69,11 @@ def get_args():
     if sys.argv[2] == "-n":
         return sys.argv[1], int(sys.argv[3])
     return sys.argv[1], 0
-    #print (sys.argv)
-    """"file_name = sys.argv[1]
-    num_of_sen = 1
-    if (len(sys.argv) > 2):
-        #print (sys.argv[2])
-        if (sys.argv[2] == "-n"):
-            #print "in"
-            try:
-		        num_of_sen = int(sys.argv[3])
-            except:
-                print ("the nmber of sentence is illegal")
-                exit()
-    return file_name, num_of_sen"""
- 
+
+
 if __name__ == '__main__':
-
-
-    file_name, num_of_sen =  get_args()
-    pcfg = PCFG.from_file(sys.argv[1])
-    for i in range(num_of_sen):
-        print(pcfg.random_sent())
-
-
-
-
-
+    grammar_file, num_sentences = get_args()
+    pcfg = PCFG.from_file(grammar_file)
+    gen_grammar_2()
+    """for i in range(num_sentences):
+        print(pcfg.random_sent())"""

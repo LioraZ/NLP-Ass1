@@ -1,0 +1,114 @@
+# Symbols in the grammar are case-sensitive.
+#
+# This grammar uses a convention that
+#    - terminals are lowercase          (president)
+#    - preterminals are capitalized     (Noun)
+#    - other nonterminals are all-caps  (NP)
+#
+# This convention just makes grammars more readable to humans.  Thus:
+#
+#    - When *you* are writing grammars, you should
+#      follow this convention unless you have a good reason not to.
+#
+#    - But the  *program* should still work with grammars that don't
+#      follow this convention.  So how can the program reliably tell
+#      the difference between terminal and nonterminal symbols?  If
+#      there is at least one rule for rewriting a symbol, then that
+#      symbol is a nonterminal and should be rewritten.
+#######################
+
+# The basic grammar rules.  Here's what the abbreviations stand for:
+#    S  = sentence
+#    NP = noun phrase
+#    VP = verb phrase
+#    PP = prepositional phrase
+#    Det = determiner (sometimes called "article")
+#    Prep = preposition
+#    Adj = adjective
+#    Cc = coordinator
+#    Comp = complementizer
+#    NN = general noun
+#    PNoun = proper noun
+#    CNoun = common noun
+#    Ger = gerund
+
+# Rules for creating full sentences.
+4	ROOT	S .
+1	ROOT	S !
+#1	ROOT	is it true that S ?     # mixing terminals and nonterminals is ok.
+
+# Existing rules
+1	S	NP VP
+#1	VP	Verb NP
+#1	NP	Det NN
+1	NP	NP PP
+1	PP	Prep NP
+#1	NN	Adj NN
+
+# New rules
+1   VP  VP PP
+2   VP  Vi
+2   VP  Vt NP
+1   NP  NP Cc NP
+1   VP  VP Cc VP
+2   NN  PNoun
+2   NN  Det CNoun
+2   NP  NN
+1   Adj Adv Adj
+1   NP  Det Adj CNoun
+1   NP  Adj PNoun
+1   VP  Vis Ger
+1   VP  Vis Adj
+
+#1   S   Comp S
+#1   S   S Cc S
+#1   Adj Adj Adj
+#1   NP  NN Cc NN
+
+# TERMINALS
+1	Vt	ate
+1	Vt	wanted
+1	Vt	kissed
+1	Vt	understood
+1	Vt	pickled
+
+1   Vi  slept
+1   Vi  jumped
+
+1	Det	the
+1	Det	a
+1	Det	every
+
+1	CNoun	president
+1	CNoun	sandwich
+1	CNoun	pickle
+1	CNoun	chief of staff
+1	CNoun	floor
+
+1	Adj	fine
+1	Adj	delicious
+1	Adj	perplexed
+1	Adj	pickled
+
+1	Prep	with
+1	Prep	on
+1	Prep	under
+1	Prep	in
+
+# New terminals
+1   Vi   sighed
+1   Vt   thought
+1   Vt   worked
+
+1   Vis  is
+
+1   PNoun    sally
+1   PNoun    it
+1   Ger    eating
+
+1   Adv very
+1   Adj lazy
+
+1   Cc  and
+
+1   Comp    that
