@@ -42,41 +42,34 @@
 
 # Existing rules
 1	S	NP VP
-#1	VP	Verb NP
-#1	NP	Det NN
-#1	NP	NP PP
 1	PP	Prep NP
-#1	NN	Adj NN
 
 # New rules
 1   VP  VP PP
 2   VP  Vi
-2   VP  Vt NP
+4   VP  Vt NP
 1   NP  NP Cc NP
 1   VP  VP Cc VP
-3   NN  PNoun
-3   NN  Det CNoun
-4   NP  NN
+1   NN  PNoun
+1   NN  Det CNoun
+5   NP  NN
 1   Adj Adv Adj
-1   NP  Det Adj CNoun
-1   NP  Adj PNoun
-2   VP  Vis Ger
+2   NP  Det Adj CNoun
+2   NP  Adj PNoun
+1   VP  Vis Ger
+2   VP  Vis Ger NN
 2   VP  Vis Adj
-1   S  PNoun Vis Prep NP #VP instead of NP\VP
+1   S  PNoun Vis Prep NP
 1   NP  Det CNoun Prep NP
 1   VP  Vb Comp S
-1   VP  VP NP
-
-#1   S   Comp S
-#1   S   S Cc S
-#1   Adj Adj Adj
-#1   NP  NN Cc NN
+1   VP  Vb
+#1   VP  VP NP
 
 # TERMINALS
 1	Vt	ate
 1	Vt	wanted
 1	Vt	kissed
-1	Vt	understood
+1	Vb	understood
 1	Vt	pickled
 
 1   Vi  slept

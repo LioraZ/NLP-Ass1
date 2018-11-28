@@ -55,12 +55,12 @@ class PCFG(object):
 
 
 def gen_grammar_2():
-    for i in range(num_sentences):
-        print(pcfg.random_sent())
-    """with open("grammar2.gen", "w") as f:
+    """for i in range(num_sentences):
+        print(pcfg.random_sent())"""
+    with open("grammar2.gen", "w") as f:
         for i in range(num_sentences):
             s = pcfg.random_sent()
-            f.write(s + "\n")"""
+            f.write(s + "\n")
 
 
 def get_args():
