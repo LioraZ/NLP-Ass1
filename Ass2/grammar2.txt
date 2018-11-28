@@ -21,6 +21,9 @@
 #    S  = sentence
 #    NP = noun phrase
 #    VP = verb phrase
+#    Vi = intransitive verbs
+#    Vt = transitive verbs
+#    Vb = verbs that can be transitive and intransitive
 #    PP = prepositional phrase
 #    Det = determiner (sometimes called "article")
 #    Prep = preposition
@@ -33,15 +36,15 @@
 #    Ger = gerund
 
 # Rules for creating full sentences.
-4	ROOT	S .
-1	ROOT	S !
-#1	ROOT	is it true that S ?     # mixing terminals and nonterminals is ok.
+5	ROOT	S .
+2	ROOT	S !
+1	ROOT	is it true that S ?     # mixing terminals and nonterminals is ok.
 
 # Existing rules
 1	S	NP VP
 #1	VP	Verb NP
 #1	NP	Det NN
-1	NP	NP PP
+#1	NP	NP PP
 1	PP	Prep NP
 #1	NN	Adj NN
 
@@ -51,14 +54,17 @@
 2   VP  Vt NP
 1   NP  NP Cc NP
 1   VP  VP Cc VP
-2   NN  PNoun
-2   NN  Det CNoun
-2   NP  NN
+3   NN  PNoun
+3   NN  Det CNoun
+4   NP  NN
 1   Adj Adv Adj
 1   NP  Det Adj CNoun
 1   NP  Adj PNoun
-1   VP  Vis Ger
-1   VP  Vis Adj
+2   VP  Vis Ger
+2   VP  Vis Adj
+1   S  PNoun Vis Prep NP #VP instead of NP\VP
+1   NP  Det CNoun Prep NP
+1   VP  Vb Comp S
 
 #1   S   Comp S
 #1   S   S Cc S
@@ -97,9 +103,8 @@
 
 # New terminals
 1   Vi   sighed
-1   Vt   thought
-1   Vt   worked
-
+1   Vi   worked
+1   Vb   thought
 1   Vis  is
 
 1   PNoun    sally
@@ -107,6 +112,7 @@
 1   Ger    eating
 
 1   Adv very
+
 1   Adj lazy
 
 1   Cc  and
