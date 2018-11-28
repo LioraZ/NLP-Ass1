@@ -17,14 +17,19 @@
 #    PP = prepositional phrase
 #    Det = determiner (sometimes called "article")
 #    Prep = preposition
-#    Adj = adjective
-#    Adv = adverb
+#    Adjv = adjective starting with a vowel
+#    Adjc = adjective starting with a consonant
+#    Advv = adverb starting with a vowel
+#    Advc = adverb starting with a consonant
 #    Cc = coordinator
 #    Comp = complementizer
 #    NN = general noun
 #    PNoun = proper noun
-#    CNoun = common noun
+#    CNounv = common noun starting with a vowel
+#    CNounc = common noun starting with a consonant
 #    Ger = gerund
+#    Deta = a
+#    Detan = an
 
 # Rules for creating full sentences.
 5	ROOT	S .
@@ -42,16 +47,24 @@
 1   NP  NP Cc NP
 1   VP  VP Cc VP
 1   NN  PNoun
-1   NN  Det CNoun
+1   NN  Deta CNounc
+1   NN  Detan CNounv
 5   NP  NN
-1   Adj Adv Adj
-2   NP  Det Adj CNoun
+1   Adj Adjc
+1   Adv Adjv
+1   Adjc Advc Adj
+1   Adjv Advv Adj
+2   NP  Deta Adjc CNoun
+2   NP  Detan Adjv CNoun
+1   CNoun   CNounc
+1   CNoun   CNounv
 2   NP  Adj PNoun
 1   VP  Vis Ger
 2   VP  Vis Ger NN
 2   VP  Vis Adj
 1   S  PNoun Vis Prep NP
-1   NP  Det CNoun Prep NP
+1   NP  Deta CNounc Prep NP
+1   NP  Detan CNounv Prep NP
 1   VP  Vb Comp S
 1   VP  Vb
 #1   VP  VP NP
@@ -67,19 +80,20 @@
 1   Vi  jumped
 
 1	Det	the
-1	Det	a
+1	Deta    a
+1   Detan    an
 1	Det	every
 
-1	CNoun	president
-1	CNoun	sandwich
-1	CNoun	pickle
-1	CNoun	chief of staff
-1	CNoun	floor
+1	CNounc	president
+1	CNounc	sandwich
+1	CNounc	pickle
+1	CNounc	chief of staff
+1	CNounc  floor
 
-1	Adj	fine
-1	Adj	delicious
-1	Adj	perplexed
-1	Adj	pickled
+1	Adjc	fine
+1	Adjc	delicious
+1	Adjc	perplexed
+1	Adjc	pickled
 
 1	Prep	with
 1	Prep	on
@@ -96,9 +110,17 @@
 1   PNoun    it
 1   Ger    eating
 
-1   Adv very
+1   CNounv  apple
+1   CNounv  obstacle
+1   Cnounv  envelope
 
-1   Adj lazy
+1   Advc    very
+1   Advv    almost
+
+1   Adjv    ambitious
+1   Adjv    intelligent
+1   Adjv    american
+1   Adjc    lazy
 
 1   Cc  and
 

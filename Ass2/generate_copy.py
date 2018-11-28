@@ -63,6 +63,15 @@ def gen_grammar_2():
             f.write(s + "\n")
 
 
+def gen_grammar_4():
+    """for i in range(num_sentences):
+        print(pcfg.random_sent())"""
+    with open("grammar4.gen", "w") as f:
+        for i in range(num_sentences):
+            s = pcfg.random_sent()
+            f.write(s + "\n")
+
+
 def get_args():
     if len(sys.argv) == 1:
         return sys.argv[1], 0
@@ -74,6 +83,6 @@ def get_args():
 if __name__ == '__main__':
     grammar_file, num_sentences = get_args()
     pcfg = PCFG.from_file(grammar_file)
-    gen_grammar_2()
+    gen_grammar_4()
     """for i in range(num_sentences):
         print(pcfg.random_sent())"""
