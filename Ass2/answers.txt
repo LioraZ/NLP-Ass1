@@ -1,10 +1,12 @@
-part one:
+Part 1:
+A. The program generates many long sentences, since the grammar rule NP→NP PP recurses, and with a high probability stop after quite a number of recursions, making the sentence very long. In addition, there are quite a few rules leading to an NP development, making the above rule pretty common.
+B. Our grammar doesn’t generate multiple adjectives very commonly, since an adjective is only one out of 11 tags in the given grammar and appears only once out of the 6 rules (not including the root). Therefore, when we land on the Noun→Adj Noun rule, the probability to produce an adjective is 1/6,  to produce 2 adjectives in a row is 1/36, and so on.
+C. In order to produce shorter sentences, we’ll need to increase the weight of all NP rules of NP other than NP→NP PP (we will get more NP’s which are likely to lead to terminals, and will not get stuck in a long recursive NP→NP PP). Doing this, the weights of the Noun→Adj Noun will increase, making adjectives more common (in addition to the terminal nouns).
+D. We made other numeric adjustments to the weights, such as majorly increasing the rule NP→Det Noun, since both are preterminal.
 
-a. the program generate so many long sentences becuase of the grammar rule: NP -> NP PP. this rule is spacial because he is very likley to cause a deep recursion.
+Part 2:
+We made quite a number of modifications to our grammar, which includes,
 
-b. our grammer doesn't generate multiply adjective very commonly because for this kind of scenrio we need the following evalation: 
-noun -> adj noun and than another noun -> adj noun so we wuold get(tottaly) noun -> adj adj noun. but accornding to the weights the probabilty to get noun -> adj noun ,is 1/6 so the probabily to get another one will be 1/36 and so on...
-
-c. in order to get shorter senteces we need to increase the wheight of any rule of NP thet is not  NP -> NP PP, this action will result in smaller chance to get the rule NP -> NP PP wich extends the sentence dramaticlly. and in order to get more adjactives we will need to increase the wheight of the rule noun -> adj noun.
-
-d. 
+Part 4:
+“A” vs. “An”: fff
+Tenses: ffff

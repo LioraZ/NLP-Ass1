@@ -41,8 +41,6 @@ class PCFG(object):
                 gen = '(' + symbol + ' ' + gen + ')'
             return gen
 
-            #return " ".join(self.gen(s) for s in expansion)
-
     def random_sent(self):
         return self.gen("ROOT")
 
@@ -75,20 +73,26 @@ def gen_grammar_4():
             f.write(s + "\n")
 
 
+def gen_grammar():
+    for i in range(num_sentences):
+        s = pcfg.random_sent()
+        print(s + "\n")
+
+
 def get_args():
     if len(sys.argv) == 0:
         raise Exception("Didn't receive a command line argument!")
     is_tree = False
     if len(sys.argv) == 1:
-        return sys.argv[1], 0, is_tree
+        return sys.argv[1], 1, is_tree
     if "-t" in sys.argv:
         is_tree = True
     if "-n" in sys.argv:
         return sys.argv[1], int(sys.argv[sys.argv.index("-n") + 1]), is_tree
-    return sys.argv[1], 0, is_tree
+    return sys.argv[1], 1, is_tree
 
 
 if __name__ == '__main__':
     grammar_file, num_sentences, print_tree = get_args()
     pcfg = PCFG.from_file(grammar_file, print_tree)
-    gen_grammar_4()
+    gen_grammar()
