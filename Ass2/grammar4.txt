@@ -46,15 +46,16 @@
 # New rules
 1   VP  VP PP
 2   VP  Vi
-4   VP  Vt NP
+8   VP  VT NP
+1   VT  Vt
 1   NP  NP Cc NP
 1   VP  VP Cc VP
 1   NN  PNoun
 5   NP  NN
 2   NP  Adj PNoun
-1   VP  Vis Ger
-2   VP  Vis Ger NN
-2   VP  Vis Adj
+1   VP  VIS Ger
+2   VP  VIS Ger NN
+2   VP  VIS Adj
 1   S  PNoun Vis Prep NP
 1   VP  Vb Comp S
 1   VP  Vb
@@ -76,8 +77,30 @@
 1   NP  DetAn CNounV Prep NP
 
 # Tenses
-#1   Vt  Vis Ger
-1   Vis subj Vh
+3   VT   VTenses
+1   VTenses VIS Ger
+1   VTenses VH VBeen Ger
+1   VTenses VH VPart
+1   VTenses VT
+
+1   VIS Vis
+1   VIS Subj VBe
+1   VH  VHPast
+1   VH  Subj VHave
+1   VT  Subj VRep # such as eat sleep etc
+
+# Tense Terminals
+1   VPart   eaten
+1   VRep    eat
+1   VBe  be
+1   VHave  have
+1   VHPast  had
+1   VHPast  has
+1   VBeen   been
+1   Vis is
+1   Vis was
+1   Subj    will
+1   Subj    could
 
 # TERMINALS
 1	Vt	ate
@@ -110,28 +133,17 @@
 1	Prep	under
 1	Prep	in
 
+
+
 # New terminals
 1   Vi   sighed
 1   Vi   worked
 1   Vb   thought
 
-1   Vt   eats
-
-1   Vh  be
-1   Vh  have
-
-1   Vpart   eaten
-
-1   Vis is
-1   Vis was
-
 1   PNoun    sally
 1   PNoun    it
 
 1   Ger    eating
-
-1   Subj    will
-1   Subj    could
 
 1   CNounV  apple
 1   CNounV  obstacle
