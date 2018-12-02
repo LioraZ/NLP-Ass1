@@ -49,14 +49,14 @@
 1   NN  Det CNoun
 5   NP  NN
 1   Adj Adv Adj
-2   NP  Det Adj CNoun
+1   NP  Det Adj CNoun
 2   NP  Adj PNoun
 1   VP  Vis Ger
 2   VP  Vis Ger NN
 2   VP  Vis Adj
 1   S  PNoun Vis Prep NP
 1   NP  Det CNoun Prep NP
-1   VP  Vb Comp S
+2   VP  Vb Comp S
 1   VP  Vb
 
 # TERMINALS

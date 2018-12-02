@@ -1,0 +1,5 @@
+(ROOT (S (NP (NN (PNoun it))) (VP (Vt wanted) (NP (NN (PNoun it))))) .)
+(ROOT (S (NP (NN (PNoun sally))) (VP (Vi jumped))) .)
+(ROOT (S (PNoun it) (Vis is) (Prep with) (NP (NN (Det every) (CNoun chief of staff)))) .)
+(ROOT (S (NP (NN (Det every) (CNoun sandwich))) (VP (Vt ate) (NP (NN (Det every) (CNoun president))))) !)
+(ROOT (S (PNoun sally) (Vis is) (Prep on) (NP (NN (PNoun sally)))) .)
