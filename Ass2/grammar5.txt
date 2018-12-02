@@ -39,6 +39,8 @@
 #    VInf = Infinitive verbs # such as eat, but for transitive verbs
 #    VBe, VHave, VBeen = be, have been # verbs that needed special representation
 #    VHPast = had, has
+#    FEEL = verbs that describe a a feeling
+#    THOUGHT = verbs that describe a thought
 
 # Rules for creating full sentences.
 5	ROOT	S .
@@ -63,7 +65,7 @@
 1   VP  VP Cc VP
 1   NN  PNoun
 5   NP  NN
-2   NP  Adj PNoun
+3   NP  Adj PNoun
 1   VP  VIS Ger
 2   VP  VIS Ger NN
 2   VP  VIS Adj
@@ -109,6 +111,32 @@
 1   VT  Subj VInf # such as eat sleep etc
 
 
+# Grammar 5 - Quote rules
+100     ROOT NP qv " QUESTION ?" 
+100     ROOT NP thought: " S " THOUGHT .
+100     ROOT " S !" xv NP
+
+1	QUESTION is it true that S
+1   Quote   NP VP
+1	THOUGHT and NP FEEL
+1	THOUGHT and NP that VP FEEL
+
+# Grammar 5 - Quote terminals
+# We added verbs with meaning to them such as feelings or thought, and added
+# appropriate verbs describing these, so we will be able to insert them into
+# quotes.
+1	FEEL liked it
+1	FEEL hated it
+1	FEEL thought it's beautiful
+
+1	qv asked
+1	qv said
+1	qv wondered
+
+1	xv said
+1	xv thought
+
+
 # TERMINALS
 1	Vt	ate
 1	Vt	wanted
@@ -147,7 +175,7 @@
 1   Vb   thought
 
 1   PNoun    sally
-1   PNoun    it
+#1   PNoun    it
 
 1   Vis is
 1   Vis was
@@ -170,6 +198,7 @@
 1   Cc  or
 
 1   Comp    that
+
 
 # Tense Terminals
 1   VPart   eaten

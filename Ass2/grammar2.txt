@@ -36,6 +36,10 @@
 1	PP	Prep NP
 
 # New rules
+# We try to construct sentences with an NP the leads to a VP, but one that more
+# or less terminates immediately, or at least after very few conjunctions.
+# In addition, we added different types of nouns, verbs, adverbs, conjunctions
+# and complementizers to create more legal grammar.
 1   VP  VP PP
 2   VP  Vi
 4   VP  Vt NP
@@ -54,7 +58,6 @@
 1   NP  Det CNoun Prep NP
 1   VP  Vb Comp S
 1   VP  Vb
-#1   VP  VP NP
 
 # TERMINALS
 1	Vt	ate
